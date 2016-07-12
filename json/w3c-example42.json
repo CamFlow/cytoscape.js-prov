@@ -1,0 +1,50 @@
+{
+    "prefix": {
+        "ex": "http://example.org",
+        "w3": "http://www.w3.org/",
+        "tr": "http://www.w3.org/TR/2011/"
+    },
+    "entity": {
+        "tr:WD-prov-dm-20111215": {
+            "prov:type": "document",
+            "ex:version": "2"
+        }
+    },
+    "activity": {
+        "ex:edit1": {
+            "prov:type": "edit"
+        }
+    },
+    "wasGeneratedBy": {
+        "_:wGB1": {
+            "prov:activity": "ex:edit1",
+            "prov:entity": "tr:WD-prov-dm-20111215"
+        }
+    },
+    "agent": {
+        "ex:Paolo": {
+            "prov:type": {
+                "$": "prov:Person",
+                "type": "xsd:QName"
+            }
+        },
+        "ex:Simon": {
+            "prov:type": {
+                "$": "prov:Person",
+                "type": "xsd:QName"
+            }
+        }
+    },
+    "wasAssociatedWith": {
+        "_:wAW1": {
+            "prov:activity": "ex:edit1",
+            "prov:agent": "ex:Paolo",
+            "prov:role": "editor"
+        },
+        "_:wAW2": {
+            "prov:activity": "ex:edit1",
+            "prov:agent": "ex:Simon",
+            "prov:role": "contributor"
+        }
+    }
+}

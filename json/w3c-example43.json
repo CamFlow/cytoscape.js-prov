@@ -1,0 +1,68 @@
+{
+    "prefix": {
+        "ex": "http://example.org",
+        "process": "http://www.w3.org/2005/10/Process-20051014/tr.html#",
+        "rec54": "http://www.w3.org/2001/02pd/rec54#",
+        "tr": "http://www.w3.org/TR/2011/",
+        "w3": "http://www.w3.org/",
+        "email": "https://lists.w3.org/Archives/Member/w3c-archive/"
+    },
+    "entity": {
+		"tr:WD-prov-dm-20111018": {
+            "prov:type": {
+                "$": "rec54:WD",
+                "type": "xsd:QName"
+            }
+        },
+        "tr:WD-prov-dm-20111215": {
+            "prov:type": {
+                "$": "rec54:WD",
+                "type": "xsd:QName"
+            }
+        },
+		"email:2011Dec/0111": {
+            "prov:type": {
+                "$": "rec54:WD",
+                "type": "xsd:QName"
+            }
+        }
+    },
+    "activity": {
+        "ex:act2": {
+            "prov:type": "publish"
+        }
+    },
+	"agent": {
+        "w3:Consortium": {
+            "prov:type": {
+                "$": "prov:Organization",
+                "type": "xsd:QName"
+            }
+        }
+	},
+    "wasGeneratedBy": {
+        "_:wGB4": {
+            "prov:activity": "ex:act2",
+            "prov:entity": "tr:WD-prov-dm-20111215"
+        }
+    },
+    "wasDerivedFrom": {
+        "_:wDF2":{
+            "prov:generatedEntity": "tr:WD-prov-dm-20111215",
+            "prov:usedEntity": "tr:WD-prov-dm-20111018"
+        }
+    },
+    "used": {
+        "_:u2": {
+            "prov:activity": "ex:act2",
+            "prov:entity": "email:2011Dec/0111"
+        }
+    },
+    "wasAssociatedWith": {
+        "_:wAW6": {
+            "prov:activity": "ex:act2",
+            "prov:agent": "w3:Consortium",
+            "prov:plan": "process:rec-advance"
+        }
+    }
+}

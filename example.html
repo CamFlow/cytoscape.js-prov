@@ -1,0 +1,61 @@
+<!DOCTYPE>
+
+<html>
+
+	<head>
+		<title>JSProvViewer demo</title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
+
+		<!-- for testing with local version of cytoscape.js -->
+		<!--<script src="../cytoscape.js/build/cytoscape.js"></script>-->
+
+		<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.min.js"></script>
+		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.1.2/cytoscape-dagre.js"></script>
+		<script src="./js/JSProvViewer-core.js"></script>
+		<script src="./js/JSProvViewer-json.js"></script>
+
+		<style>
+			#cy {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 430;
+				top: 0;
+				z-index: 999;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="file" id="fileinput" />
+		<script type="text/javascript">
+		  function readSingleFile(evt) {
+			//Retrieve the first (and only!) File from the FileList object
+			var f = evt.target.files[0]; 
+
+			if (f) {
+			  var r = new FileReader();
+			  r.onload = function(e) { 
+				var contents = e.target.result;
+				document.getElementById('area').value=  contents;
+				JSProvParseJSON(contents);
+			  }
+			  r.readAsText(f);
+			} else { 
+			  alert("Failed to load file");
+			}
+		  }
+
+		  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+		</script>
+
+		<textarea rows=20 id="area"></textarea>
+		
+		<div id="cy"></div>
+	</body>
+
+</html>
