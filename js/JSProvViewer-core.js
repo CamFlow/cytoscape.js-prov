@@ -1,3 +1,5 @@
+var graphType = 'dagre';
+
 $(function(){
 	var cy = window.cy = cytoscape({
 		container: document.getElementById('cy'),
@@ -48,20 +50,22 @@ $(function(){
 			}
 		]
 	});
-	cy.on('add', function(event){
-		var layout = cy.makeLayout({
-			name: 'dagre'
-		});
-		layout.run();
-	});
-	
-	cy.on('remove', function(event){
-		var layout = cy.makeLayout({
-			name: 'dagre'
-		});
-		layout.run();
-	});
 });
+
+function JSProvDraw(){
+	var layout = cy.makeLayout({
+		name: graphType
+	});
+	layout.run();
+}
+
+function JSProvGetGraphType(){
+	return graphType;
+}
+
+function JSProvSetGraphType(type){
+	graphType = type;
+}
 
 function location(name){
 	cy.add([{ group: "nodes", data: { id: name, color: '#66B2FF', shape: 'rectangle'}}]);				
@@ -114,4 +118,24 @@ function actedOnBehalfOf(acted, of){
 
 function wasInformedBy(entityInformant, entityInformed){
 	cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: '#CC00CC', label: 'wasInformedBy'}}]);
+}
+
+function derivedByInsertionFrom(before, after){
+	cy.add([{ group: "edges", data: { source: before, target: after, color: '#CC00CC', label: 'derivedByInsertionFrom'}}]);
+}
+
+function hadDictionaryMember(dictionary, entry){
+	cy.add([{ group: "edges", data: { source: entry, target: dictionary, color: '#CC00CC', label: 'hadDictionaryMember'}}]);
+}
+
+function specializationOf(entity, specialization){
+	cy.add([{ group: "edges", data: { source: entity, target: specialization, color: '#CC00CC', label: 'specializationOf'}}]);
+}
+
+function alternateOf(entity, alternate){
+	cy.add([{ group: "edges", data: { source: entity, target: alternate, color: '#CC00CC', label: 'alternateOf'}}]);
+}
+
+function hadPlan(agent, plan){
+	cy.add([{ group: "edges", data: { source: plan, target: agent, color: '#CC00CC', label: 'hadPlan'}}]);	
 }

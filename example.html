@@ -15,13 +15,15 @@
 
 		<script src="https://cdn.rawgit.com/cpettitt/dagre/v0.7.4/dist/dagre.min.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.1.2/cytoscape-dagre.js"></script>
+		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.0.2/cytoscape-cose-bilkent.js"></script>
+		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
 		<script src="./js/JSProvViewer-core.js"></script>
 		<script src="./js/JSProvViewer-json.js"></script>
 
 		<style>
 			#cy {
-				width: 100%;
-				height: 100%;
+				width: 800px;
+				height: 600px;
 				position: absolute;
 				left: 430;
 				top: 0;
@@ -31,6 +33,7 @@
 	</head>
 
 	<body>
+		<div>
 		<input type="file" id="fileinput" />
 		<script type="text/javascript">
 		  function readSingleFile(evt) {
@@ -54,6 +57,47 @@
 		</script>
 
 		<textarea rows=20 id="area"></textarea>
+		</div>
+		
+		<div>
+		
+		
+		<script type="text/javascript">
+		  function changeGraphType() {
+			switch(JSProvGetGraphType()){
+				case 'dagre':
+					JSProvSetGraphType('circle');
+					break;
+				case 'circle':
+					JSProvSetGraphType('concentric');
+					break;
+				case 'concentric':
+					JSProvSetGraphType('cose');
+					break;
+				case 'cose':
+					JSProvSetGraphType('cose-bilkent');
+					break;
+				case 'cose-bilkent':
+					JSProvSetGraphType('grid');
+					break;
+				case 'grid':
+					JSProvSetGraphType('spread');
+					break;
+				case 'spread':
+					JSProvSetGraphType('dagre');
+					break;
+				default:
+					JSProvSetGraphType('dagre');
+			}
+			document.getElementById("graph_type").innerHTML=JSProvGetGraphType(); 
+			JSProvDraw();
+		  }
+		</script>
+		<span>Graph type: 
+		<span id="graph_type">dagre</span>
+		</span>
+		<button type="button" onclick="changeGraphType();">Change</button>
+		</div>
 		
 		<div id="cy"></div>
 	</body>
