@@ -1,5 +1,7 @@
 var graphType = 'dagre';
 var previously_selected = undefined;
+var showAncestors=true;
+var showSuccessors=true;
 
 $(function(){
 	var cy = window.cy = cytoscape({
@@ -94,29 +96,33 @@ $(function(){
 		cy.elements().removeClass('prov_ancestor');
 		node.removeClass('faded');
 
-		function rec_successor(node){
-			cy.elements('edge[source="'+node.id()+'"]').each(function(i, edge){
-				edge.removeClass('faded');
-				edge.target().each(function(i, node){
-					node.addClass('prov_successor');
-					this.removeClass('faded');
-					rec_successor(node);
-				})
-			});
+		if(showSuccessors){
+			function rec_successor(node){
+				cy.elements('edge[source="'+node.id()+'"]').each(function(i, edge){
+					edge.removeClass('faded');
+					edge.target().each(function(i, node){
+						node.addClass('prov_successor');
+						this.removeClass('faded');
+						rec_successor(node);
+					})
+				});
+			}
+			rec_successor(node);
 		}
-		rec_successor(node);
 		
-		function rec_ancestor(node){
-			cy.elements('edge[target="'+node.id()+'"]').each(function(i, edge){
-				edge.removeClass('faded');
-				edge.source().each(function(i, node){
-					node.addClass('prov_ancestor');
-					this.removeClass('faded');
-					rec_ancestor(node);
-				})
-			});
+		if(showAncestors){
+			function rec_ancestor(node){
+				cy.elements('edge[target="'+node.id()+'"]').each(function(i, edge){
+					edge.removeClass('faded');
+					edge.source().each(function(i, node){
+						node.addClass('prov_ancestor');
+						this.removeClass('faded');
+						rec_ancestor(node);
+					})
+				});
+			}
+			rec_ancestor(node);
 		}
-		rec_ancestor(node);
 	});
 });
 
@@ -133,6 +139,14 @@ function JSProvGetGraphType(){
 
 function JSProvSetGraphType(type){
 	graphType = type;
+}
+
+function JSProvSetShowAncestors(bool){
+	showAncestors=bool;
+}
+
+function JSProvSetShowSuccessors(bool){
+	showSuccessors=bool;
 }
 
 function location(name){

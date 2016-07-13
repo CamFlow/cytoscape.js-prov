@@ -99,6 +99,20 @@
 		</span>
 		<button type="button" onclick="changeGraphType();">Change</button>
 		</div>
+		<script>
+			function showAncestor(){
+				var show = document.getElementById("ancestors").checked;
+				JSProvSetShowAncestors(show);
+			}
+			function showSuccessor(){
+				var show = document.getElementById("successors").checked;
+				JSProvSetShowSuccessors(show);
+			}
+		</script>
+		<div>
+		  <input type="checkbox" id="ancestors" name="ancestors" value="ancestors" onclick="showAncestor();"checked>Show Ancestor<br>
+		  <input type="checkbox" id="successors" name="successors" value="successors" onclick="showSuccessor();" checked>Show Successor
+		</div>
 		
 		<div id="cy"></div>
 	</body>
