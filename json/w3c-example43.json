@@ -25,7 +25,8 @@
                 "$": "rec54:WD",
                 "type": "xsd:QName"
             }
-        }
+        },
+		"process:rec-advance":{}
     },
     "activity": {
         "ex:act2": {

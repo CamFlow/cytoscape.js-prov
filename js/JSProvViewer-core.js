@@ -1,11 +1,11 @@
 var graphType = 'dagre';
+var previously_selected = undefined;
 
 $(function(){
 	var cy = window.cy = cytoscape({
 		container: document.getElementById('cy'),
 
 		boxSelectionEnabled: false,
-		autounselectify: true,
 
 		layout: {
 			name: 'dagre'
@@ -36,19 +36,87 @@ $(function(){
 					'line-color': 'data(color)',
 					'source-arrow-color': 'data(color)',
 					'curve-style': 'bezier',
+					'control-point-step-size': 40,
 					'font-size': 6,
 					'text-outline-color': '#FFFFFF',
 					'text-outline-width': 1,
 				}
-			},
-			
+			},			
 			{
 			  selector: ':parent',
 			  style: {
 				'background-opacity': 0.333
 			  }
+			},
+			{
+				selector: ':selected',
+				style: {
+					'border-width': 3,
+					'border-color': '#333'
+				}
+			},
+			{
+				selector: '.faded',
+				style: {
+					'opacity': 0.1
+				}
+			}
+			,
+			{
+				selector: 'node.prov_successor',
+				style: {
+					'border-width': 3,
+					'border-color': 'blue'
+				}
+			}
+			,
+			{
+				selector: 'node.prov_ancestor',
+				style: {
+					'border-width': 3,
+					'border-color': 'red'
+				}
 			}
 		]
+	});
+	
+	cy.on('tap', function(evt){
+		cy.elements().removeClass('faded');
+		cy.elements().removeClass('prov_successor');
+		cy.elements().removeClass('prov_ancestor');
+	});
+	
+	cy.on('tap', 'node', function(evt){
+		var node = evt.cyTarget;
+		console.log( 'tapped ' + node.id() );
+		cy.elements().addClass('faded');
+		cy.elements().removeClass('prov_successor');
+		cy.elements().removeClass('prov_ancestor');
+		node.removeClass('faded');
+
+		function rec_successor(node){
+			cy.elements('edge[source="'+node.id()+'"]').each(function(i, edge){
+				edge.removeClass('faded');
+				edge.target().each(function(i, node){
+					node.addClass('prov_successor');
+					this.removeClass('faded');
+					rec_successor(node);
+				})
+			});
+		}
+		rec_successor(node);
+		
+		function rec_ancestor(node){
+			cy.elements('edge[target="'+node.id()+'"]').each(function(i, edge){
+				edge.removeClass('faded');
+				edge.source().each(function(i, node){
+					node.addClass('prov_ancestor');
+					this.removeClass('faded');
+					rec_ancestor(node);
+				})
+			});
+		}
+		rec_ancestor(node);
 	});
 });
 
