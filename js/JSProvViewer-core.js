@@ -90,38 +90,41 @@ $(function(){
 	
 	cy.on('tap', 'node', function(evt){
 		var node = evt.cyTarget;
-		console.log( 'tapped ' + node.id() );
 		cy.elements().addClass('faded');
 		cy.elements().removeClass('prov_successor');
 		cy.elements().removeClass('prov_ancestor');
 		node.removeClass('faded');
-
+		
+		
+		
 		if(showSuccessors){
-			function rec_successor(node){
-				cy.elements('edge[source="'+node.id()+'"]').each(function(i, edge){
+			successors = [node];
+			while(successors.length>0){
+				current = successors.pop();
+				cy.elements('edge[source="'+current.id()+'"]').each(function(i, edge){
 					edge.removeClass('faded');
 					edge.target().each(function(i, node){
 						node.addClass('prov_successor');
 						this.removeClass('faded');
-						rec_successor(node);
+						successors.push(node);
 					})
 				});
 			}
-			rec_successor(node);
 		}
 		
 		if(showAncestors){
-			function rec_ancestor(node){
-				cy.elements('edge[target="'+node.id()+'"]').each(function(i, edge){
+			ancestors = [node];
+			while(ancestors.length>0){
+				current = ancestors.pop();
+				cy.elements('edge[target="'+current.id()+'"]').each(function(i, edge){
 					edge.removeClass('faded');
 					edge.source().each(function(i, node){
 						node.addClass('prov_ancestor');
 						this.removeClass('faded');
-						rec_ancestor(node);
+						ancestors.push(node);
 					})
 				});
 			}
-			rec_ancestor(node);
 		}
 	});
 });

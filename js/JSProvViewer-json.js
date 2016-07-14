@@ -10,7 +10,6 @@ function JSProvParseJSON(text){
 	}
 	activities = data.activity;
 	for(key in activities){
-		console.log(key);
 		activity(key);
 	}
 	agents = data.agent;
