@@ -4,9 +4,714 @@
 "prov" : "http://www.w3.org/ns/prov#",
 "rdt" : "http://rdatatracker.org/"
 },
+"activity":{
 
-"entity" : {
-"rdt:environment" : {
+"p1" : {
+"rdt:name" : "nineender-r.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "0.272000000000048",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "library(foreign)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.275999999999954",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "14"
+} ,
+
+"p3" : {
+"rdt:name" : "library(Hmisc)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.288000000000011",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "15"
+} ,
+
+"p4" : {
+"rdt:name" : "library(MASS)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.296000000000049",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "16"
+} ,
+
+"p5" : {
+"rdt:name" : "library(ggplot2)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.299999999999955",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "17"
+} ,
+
+"p6" : {
+"rdt:name" : "library(lme4)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.307999999999993",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "18"
+} ,
+
+"p7" : {
+"rdt:name" : "library(BMA)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.312000000000012",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "19"
+} ,
+
+"p8" : {
+"rdt:name" : "library(gridExtra)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.351999999999975",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "20"
+} ,
+
+"p9" : {
+"rdt:name" : "library(tidyr)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.360000000000014",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "21"
+} ,
+
+"p10" : {
+"rdt:name" : "s1.w1 <- read.csv(\"wvs-w1.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.419999999999959",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "29"
+} ,
+
+"p11" : {
+"rdt:name" : "s1.w2 <- read.csv(\"wvs-w2.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.551999999999907",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "30"
+} ,
+
+"p12" : {
+"rdt:name" : "s1.w3 <- read.csv(\"wvs-w3.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.94399999999996",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "31"
+} ,
+
+"p13" : {
+"rdt:name" : "s1.w4 <- read.csv(\"wvs-w4.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.20000000000005",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "32"
+} ,
+
+"p14" : {
+"rdt:name" : "s1.w5 <- read.csv(\"wvs-w5.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "1.66399999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "33"
+} ,
+
+"p15" : {
+"rdt:name" : "s1.w6 <- read.csv(\"wvs-w6.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.06799999999998",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "34"
+} ,
+
+"p16" : {
+"rdt:name" : "s1.ah <- read.csv(\"study-1-pnas-18886.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.36400000000003",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "38"
+} ,
+
+"p17" : {
+"rdt:name" : "s1.ah$NineEnd <- ifelse(s1.ah$NineEnd == 9, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.40800000000002",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "39"
+} ,
+
+"p18" : {
+"rdt:name" : "s1.ah.slr <- lm(Meaning ~ NineEnd, data = s1.ah)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "2.56799999999998",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "43"
+} ,
+
+"p19" : {
+"rdt:name" : "s1.w1.slr <- lm(Meaning ~ NineEnd, data = s1.w1)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "6.36000000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "44"
+} ,
+
+"p20" : {
+"rdt:name" : "s1.w2.slr <- lm(Meaning ~ NineEnd, data = s1.w2)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "6.98799999999994",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "45"
+} ,
+
+"p21" : {
+"rdt:name" : "s1.w3.slr <- lm(Meaning ~ NineEnd, data = s1.w3)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "8.12400000000002",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "46"
+} ,
+
+"p22" : {
+"rdt:name" : "s1.w4.slr <- lm(Meaning ~ NineEnd, data = s1.w4)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "12.552",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "47"
+} ,
+
+"p23" : {
+"rdt:name" : "s1.w5.slr <- lm(Meaning ~ NineEnd, data = s1.w5)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "16.248",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "48"
+} ,
+
+"p24" : {
+"rdt:name" : "s1.w6.slr <- lm(Meaning ~ NineEnd, data = s1.w6)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "21.7320000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "49"
+} ,
+
+"p25" : {
+"rdt:name" : "s1.ah.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.ah,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "32.0519999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "52"
+} ,
+
+"p26" : {
+"rdt:name" : "s1.w1.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w1,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "36.144",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "53"
+} ,
+
+"p27" : {
+"rdt:name" : "s1.w2.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w2,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "37.3680000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "54"
+} ,
+
+"p28" : {
+"rdt:name" : "s1.w3.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w3,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "42.304",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "55"
+} ,
+
+"p29" : {
+"rdt:name" : "s1.w4.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w4,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "50.736",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "56"
+} ,
+
+"p30" : {
+"rdt:name" : "s1.w5.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w5,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "59.436",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "57"
+} ,
+
+"p31" : {
+"rdt:name" : "s1.w6.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w6,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "70.624",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "58"
+} ,
+
+"p32" : {
+"rdt:name" : "s1.ah.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.a",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "78.528",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "61"
+} ,
+
+"p33" : {
+"rdt:name" : "s1.w1.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "79.152",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "62"
+} ,
+
+"p34" : {
+"rdt:name" : "s1.w2.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "79.4599999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "63"
+} ,
+
+"p35" : {
+"rdt:name" : "s1.w3.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "80.452",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "64"
+} ,
+
+"p36" : {
+"rdt:name" : "s1.w4.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "81.224",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "65"
+} ,
+
+"p37" : {
+"rdt:name" : "s1.w5.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "82.42",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "66"
+} ,
+
+"p38" : {
+"rdt:name" : "s1.w6.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "83.6920000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "67"
+} ,
+
+"p39" : {
+"rdt:name" : "s1.results <- data.frame(type = c(rep(c(\"(A.1) Mean differen",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "84.568",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "70"
+} ,
+
+"p40" : {
+"rdt:name" : "s1.results <- ggplot(s1.results, aes(x = study, y = estimate",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.2080000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "128"
+} ,
+
+"p41" : {
+"rdt:name" : "s4 <- read.csv(\"study-4-pnas-18987.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.336",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "144"
+} ,
+
+"p42" : {
+"rdt:name" : "s4$RC.1 <- ifelse(s4$RegionCode == 1, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.3720000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "147"
+} ,
+
+"p43" : {
+"rdt:name" : "s4$RC.2 <- ifelse(s4$RegionCode == 2, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.428",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "148"
+} ,
+
+"p44" : {
+"rdt:name" : "s4$RC.3 <- ifelse(s4$RegionCode == 3, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.504",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "149"
+} ,
+
+"p45" : {
+"rdt:name" : "s4$RC.4 <- ifelse(s4$RegionCode == 4, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.532",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "150"
+} ,
+
+"p46" : {
+"rdt:name" : "rcorr(s4$SuicideRate, s4$NineEnd, type = \"spearman\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.6",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "153"
+} ,
+
+"p47" : {
+"rdt:name" : "s4.ancova <- aov(SuicideRate ~ NineEnd + Age + RegionCode + ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.648",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "157"
+} ,
+
+"p48" : {
+"rdt:name" : "summary(s4.ancova)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "85.9760000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "158"
+} ,
+
+"p49" : {
+"rdt:name" : "s4.anova <- aov(SuicideRate ~ NineEnd, data = s4)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.024",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "161"
+} ,
+
+"p50" : {
+"rdt:name" : "summary(s4.anova)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.2239999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "162"
+} ,
+
+"p51" : {
+"rdt:name" : "s4.c <- s4[, c(\"NineEnd\", \"RC.1\", \"RC.2\", \"RC.3\", \"RC.4\", \"A",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.236",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "165"
+} ,
+
+"p52" : {
+"rdt:name" : "s4.c <- as.matrix(s4.c)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.268",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "166"
+} ,
+
+"p53" : {
+"rdt:name" : "s4.bma <- bicreg(s4.c, s4$SuicideRate)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.436",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "169"
+} ,
+
+"p54" : {
+"rdt:name" : "s4.bma$probne0[[1]]",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.468",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "172"
+} ,
+
+"p55" : {
+"rdt:name" : "s5 <- read.csv(\"study-5-pnas-19017.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.4880000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "176"
+} ,
+
+"p56" : {
+"rdt:name" : "transform_data = function() {    s5.long <<- gather(s5, age,",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.552",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "178"
+} ,
+
+"p57" : {
+"rdt:name" : "transform_data()",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "86.5600000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p58" : {
+"rdt:name" : "transform_data",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.564",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p59" : {
+"rdt:name" : "s5.long <<- gather(s5, age, time, Time27:Time41)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.568",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p60" : {
+"rdt:name" : "s5.long$age <<- as.numeric(sub(\"Time\", \"\", s5.long$age))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.6320000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p61" : {
+"rdt:name" : "s5.long$nineend <<- ifelse(s5.long$age == 29 | s5.long$age ==     39, 1, 0)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.676",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p62" : {
+"rdt:name" : "return (s5.long$nineend <<- ifelse(s5.long$age == 29 | s5.)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.7",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p63" : {
+"rdt:name" : "transform_data()",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "86.724",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "188"
+} ,
+
+"p64" : {
+"rdt:name" : "code_end_digit <- function() {    s5.long$enddigit <<- NA   ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.7360000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "190"
+} ,
+
+"p65" : {
+"rdt:name" : "code_end_digit()",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "86.752",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p66" : {
+"rdt:name" : "code_end_digit",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.752",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p67" : {
+"rdt:name" : "s5.long$enddigit <<- NA",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.7959999999999",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p68" : {
+"rdt:name" : "s5.long$enddigit[s5.long$age == 27 | s5.long$age == 37] <<- ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.824",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p69" : {
+"rdt:name" : "s5.long$enddigit[s5.long$age == 28 | s5.long$age == 38] <<- ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.8480000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p70" : {
+"rdt:name" : "s5.long$enddigit[s5.long$age == 29 | s5.long$age == 39] <<- ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.9160000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p71" : {
+"rdt:name" : "s5.long$enddigit[s5.long$age == 30 | s5.long$age == 40] <<- ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "86.956",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p72" : {
+"rdt:name" : "s5.long$enddigit[s5.long$age == 31 | s5.long$age == 41] <<- 5",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.004",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p73" : {
+"rdt:name" : "return (s5.long$enddigit[s5.long$age == 31 | s5.long$age =)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.0160000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p74" : {
+"rdt:name" : "code_end_digit()",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "87.032",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "198"
+} ,
+
+"p75" : {
+"rdt:name" : "s5.reg.nine <- lmer(time ~ nineend + (1 | Participant), data",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.1160000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "201"
+} ,
+
+"p76" : {
+"rdt:name" : "s5.reg.end <- lmer(time ~ as.factor(enddigit) + (1 | Partici",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.26",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "202"
+} ,
+
+"p77" : {
+"rdt:name" : "s5.reg.age <- lmer(time ~ as.factor(age) + (1 | Participant)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.4480000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "203"
+} ,
+
+"p78" : {
+"rdt:name" : "s5.fig.data.nine <- data.frame(nineend = c(\"7|8|0|1\", \"9\"), ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "87.6600000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "206"
+} ,
+
+"p79" : {
+"rdt:name" : "s5.fig.data.end <- data.frame(digit = c(1:5), enddigit = c(\"",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "88.076",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "214"
+} ,
+
+"p80" : {
+"rdt:name" : "s5.fig.data.age <- data.frame(digit = c(1:10), age = c(\"27\",",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "88.828",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "230"
+} ,
+
+"p81" : {
+"rdt:name" : "s5.fig.nine <- ggplot(s5.fig.data.nine, aes(x = nineend, y =",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "88.936",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "258"
+} ,
+
+"p82" : {
+"rdt:name" : "s5.fig.end <- ggplot(s5.fig.data.end, aes(x = digit, y = est",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "89.0880000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "273"
+} ,
+
+"p83" : {
+"rdt:name" : "s5.fig.age <- ggplot(s5.fig.data.age, aes(x = digit, y = est",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "89.2800000000001",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "289"
+} ,
+
+"p84" : {
+"rdt:name" : "jpeg(\"results.jpeg\", height = 5, width = 7, units = \"in\", re",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "89.444",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "305"
+} ,
+
+"p85" : {
+"rdt:name" : "grid.arrange(s1.results, arrangeGrob(s5.fig.nine, s5.fig.end",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "90.972",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "306"
+} ,
+
+"p86" : {
+"rdt:name" : "dev.off()",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "91.28",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "307"
+} ,
+
+"p87" : {
+"rdt:name" : "writeLines(capture.output(sessionInfo()), \"sessionInfo.txt\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "91.34",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "310"
+} ,
+
+"p88" : {
+"rdt:name" : "nineender-r.R",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "91.36",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
 "rdt:architecture" : "x86_64",
 "rdt:operatingSystem" : "unix",
 "rdt:language" : "R",
@@ -15,8 +720,8 @@
 "rdt:scriptTimeStamp" : "2016-07-11T16.55.21UTC",
 "rdt:workingDirectory" : "/home/vagrant/Desktop/tutorial",
 "rdt:ddgDirectory" : "./nineender-r_ddg",
-"rdt:ddgTimeStamp" : "2016-07-11T20.17.47UTC",
-"rdt:rdatatrackerVersion" : "2.24.0",
+"rdt:ddgTimeStamp" : "2016-07-14T15.24.07UTC",
+"rdt:rdatatrackerVersion" : "2.24.1",
 "rdt:InstalledPackages": [
 	{"package":"BMA", "version":"3.18.6"},
 	{"package":"foreign", "version":"0.8-66"},
@@ -30,177 +735,14 @@
 	{"package":"lme4", "version":"1.1-12"},
 	{"package":"MASS", "version":"7.3-45"},
 	{"package":"Matrix", "version":"1.2-3"},
-	{"package":"RDataTracker", "version":"2.24.0"},
+	{"package":"RDataTracker", "version":"2.24.1"},
 	{"package":"robustbase", "version":"0.92-6"},
 	{"package":"rrcov", "version":"1.3-11"},
 	{"package":"survival", "version":"2.38-3"},
-	{"package":"tidyr", "version":"0.5.1"}]}
-},
+	{"package":"tidyr", "version":"0.5.1"}]
+}},
+"entity":{
 
-"activity" : {
-"p1" : {
-"rdt:name" : "nineender-r.R",
-"rdt:type" : "Start",
-"rdt:elapsedTime" : "0.240000000000002",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "NA"
-}
-},
-
-"activity" : {
-"p2" : {
-"rdt:name" : "library(foreign)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.244000000000007",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "14"
-}
-},
-
-"wasInformedBy" : {
-"e1" : {
-"prov:informant" : "p1",
-"prov:informed" : "p2"
-}
-},
-
-"activity" : {
-"p3" : {
-"rdt:name" : "library(Hmisc)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.256",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "15"
-}
-},
-
-"wasInformedBy" : {
-"e2" : {
-"prov:informant" : "p2",
-"prov:informed" : "p3"
-}
-},
-
-"activity" : {
-"p4" : {
-"rdt:name" : "library(MASS)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.259999999999998",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "16"
-}
-},
-
-"wasInformedBy" : {
-"e3" : {
-"prov:informant" : "p3",
-"prov:informed" : "p4"
-}
-},
-
-"activity" : {
-"p5" : {
-"rdt:name" : "library(ggplot2)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.308",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "17"
-}
-},
-
-"wasInformedBy" : {
-"e4" : {
-"prov:informant" : "p4",
-"prov:informed" : "p5"
-}
-},
-
-"activity" : {
-"p6" : {
-"rdt:name" : "library(lme4)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.316000000000003",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "18"
-}
-},
-
-"wasInformedBy" : {
-"e5" : {
-"prov:informant" : "p5",
-"prov:informed" : "p6"
-}
-},
-
-"activity" : {
-"p7" : {
-"rdt:name" : "library(BMA)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.32",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "19"
-}
-},
-
-"wasInformedBy" : {
-"e6" : {
-"prov:informant" : "p6",
-"prov:informed" : "p7"
-}
-},
-
-"activity" : {
-"p8" : {
-"rdt:name" : "library(gridExtra)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.324000000000005",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "20"
-}
-},
-
-"wasInformedBy" : {
-"e7" : {
-"prov:informant" : "p7",
-"prov:informed" : "p8"
-}
-},
-
-"activity" : {
-"p9" : {
-"rdt:name" : "library(tidyr)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.332000000000001",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "21"
-}
-},
-
-"wasInformedBy" : {
-"e8" : {
-"prov:informant" : "p8",
-"prov:informed" : "p9"
-}
-},
-
-"activity" : {
-"p10" : {
-"rdt:name" : "s1.w1 <- read.csv(\"wvs-w1.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.364000000000004",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "29"
-}
-},
-
-"wasInformedBy" : {
-"e9" : {
-"prov:informant" : "p9",
-"prov:informed" : "p10"
-}
-},
-
-"entity" : {
 "d1" : {
 "rdt:name" : "wvs-w1.csv",
 "rdt:value" : "./nineender-r_ddg/1-wvs-w1.csv",
@@ -209,17 +751,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e10" : {
-"prov:activity" : "d1",
-"prov:entity" : "p10"
-}
-},
-
-"entity" : {
 "d2" : {
 "rdt:name" : "s1.w1",
 "rdt:value" : "./nineender-r_ddg/2-s1.w1-PARTIAL.csv",
@@ -228,34 +761,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e11" : {
-"prov:entity" : "p10",
-"prov:activity" : "d2"
-}
-},
-
-"activity" : {
-"p11" : {
-"rdt:name" : "s1.w2 <- read.csv(\"wvs-w2.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.508000000000003",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "30"
-}
-},
-
-"wasInformedBy" : {
-"e12" : {
-"prov:informant" : "p10",
-"prov:informed" : "p11"
-}
-},
-
-"entity" : {
 "d3" : {
 "rdt:name" : "wvs-w2.csv",
 "rdt:value" : "./nineender-r_ddg/3-wvs-w2.csv",
@@ -264,17 +771,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e13" : {
-"prov:activity" : "d3",
-"prov:entity" : "p11"
-}
-},
-
-"entity" : {
 "d4" : {
 "rdt:name" : "s1.w2",
 "rdt:value" : "./nineender-r_ddg/4-s1.w2-PARTIAL.csv",
@@ -283,34 +781,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e14" : {
-"prov:entity" : "p11",
-"prov:activity" : "d4"
-}
-},
-
-"activity" : {
-"p12" : {
-"rdt:name" : "s1.w3 <- read.csv(\"wvs-w3.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "0.848000000000006",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "31"
-}
-},
-
-"wasInformedBy" : {
-"e15" : {
-"prov:informant" : "p11",
-"prov:informed" : "p12"
-}
-},
-
-"entity" : {
 "d5" : {
 "rdt:name" : "wvs-w3.csv",
 "rdt:value" : "./nineender-r_ddg/5-wvs-w3.csv",
@@ -319,17 +791,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e16" : {
-"prov:activity" : "d5",
-"prov:entity" : "p12"
-}
-},
-
-"entity" : {
 "d6" : {
 "rdt:name" : "s1.w3",
 "rdt:value" : "./nineender-r_ddg/6-s1.w3-PARTIAL.csv",
@@ -338,34 +801,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e17" : {
-"prov:entity" : "p12",
-"prov:activity" : "d6"
-}
-},
-
-"activity" : {
-"p13" : {
-"rdt:name" : "s1.w4 <- read.csv(\"wvs-w4.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.192",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "32"
-}
-},
-
-"wasInformedBy" : {
-"e18" : {
-"prov:informant" : "p12",
-"prov:informed" : "p13"
-}
-},
-
-"entity" : {
 "d7" : {
 "rdt:name" : "wvs-w4.csv",
 "rdt:value" : "./nineender-r_ddg/7-wvs-w4.csv",
@@ -374,17 +811,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e19" : {
-"prov:activity" : "d7",
-"prov:entity" : "p13"
-}
-},
-
-"entity" : {
 "d8" : {
 "rdt:name" : "s1.w4",
 "rdt:value" : "./nineender-r_ddg/8-s1.w4-PARTIAL.csv",
@@ -393,34 +821,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e20" : {
-"prov:entity" : "p13",
-"prov:activity" : "d8"
-}
-},
-
-"activity" : {
-"p14" : {
-"rdt:name" : "s1.w5 <- read.csv(\"wvs-w5.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "1.612",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "33"
-}
-},
-
-"wasInformedBy" : {
-"e21" : {
-"prov:informant" : "p13",
-"prov:informed" : "p14"
-}
-},
-
-"entity" : {
 "d9" : {
 "rdt:name" : "wvs-w5.csv",
 "rdt:value" : "./nineender-r_ddg/9-wvs-w5.csv",
@@ -429,17 +831,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e22" : {
-"prov:activity" : "d9",
-"prov:entity" : "p14"
-}
-},
-
-"entity" : {
 "d10" : {
 "rdt:name" : "s1.w5",
 "rdt:value" : "./nineender-r_ddg/10-s1.w5-PARTIAL.csv",
@@ -448,34 +841,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e23" : {
-"prov:entity" : "p14",
-"prov:activity" : "d10"
-}
-},
-
-"activity" : {
-"p15" : {
-"rdt:name" : "s1.w6 <- read.csv(\"wvs-w6.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.024",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "34"
-}
-},
-
-"wasInformedBy" : {
-"e24" : {
-"prov:informant" : "p14",
-"prov:informed" : "p15"
-}
-},
-
-"entity" : {
 "d11" : {
 "rdt:name" : "wvs-w6.csv",
 "rdt:value" : "./nineender-r_ddg/11-wvs-w6.csv",
@@ -484,17 +851,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e25" : {
-"prov:activity" : "d11",
-"prov:entity" : "p15"
-}
-},
-
-"entity" : {
 "d12" : {
 "rdt:name" : "s1.w6",
 "rdt:value" : "./nineender-r_ddg/12-s1.w6-PARTIAL.csv",
@@ -503,34 +861,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e26" : {
-"prov:entity" : "p15",
-"prov:activity" : "d12"
-}
-},
-
-"activity" : {
-"p16" : {
-"rdt:name" : "s1.ah <- read.csv(\"study-1-pnas-18886.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.248",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "38"
-}
-},
-
-"wasInformedBy" : {
-"e27" : {
-"prov:informant" : "p15",
-"prov:informed" : "p16"
-}
-},
-
-"entity" : {
 "d13" : {
 "rdt:name" : "study-1-pnas-18886.csv",
 "rdt:value" : "./nineender-r_ddg/13-study-1-pnas-18886.csv",
@@ -539,17 +871,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e28" : {
-"prov:activity" : "d13",
-"prov:entity" : "p16"
-}
-},
-
-"entity" : {
 "d14" : {
 "rdt:name" : "s1.ah",
 "rdt:value" : "./nineender-r_ddg/14-s1.ah-PARTIAL.csv",
@@ -558,34 +881,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e29" : {
-"prov:entity" : "p16",
-"prov:activity" : "d14"
-}
-},
-
-"activity" : {
-"p17" : {
-"rdt:name" : "s1.ah$NineEnd <- ifelse(s1.ah$NineEnd == 9, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.32",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "39"
-}
-},
-
-"wasInformedBy" : {
-"e30" : {
-"prov:informant" : "p16",
-"prov:informed" : "p17"
-}
-},
-
-"entity" : {
 "d15" : {
 "rdt:name" : "s1.ah",
 "rdt:value" : "./nineender-r_ddg/15-s1.ah-PARTIAL.csv",
@@ -594,41 +891,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e31" : {
-"prov:entity" : "p17",
-"prov:activity" : "d15"
-}
-},
-
-"activity" : {
-"p18" : {
-"rdt:name" : "s1.ah.slr <- lm(Meaning ~ NineEnd, data = s1.ah)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "2.444",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "43"
-}
-},
-
-"wasInformedBy" : {
-"e32" : {
-"prov:informant" : "p17",
-"prov:informed" : "p18"
-}
-},
-
-"used" : {
-"e33" : {
-"prov:activity" : "d15",
-"prov:entity" : "p18"
-}
-},
-
-"entity" : {
 "d16" : {
 "rdt:name" : "s1.ah.slr",
 "rdt:value" : "./nineender-r_ddg/16-s1.ah.slr-PARTIAL.txt",
@@ -637,41 +901,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e34" : {
-"prov:entity" : "p18",
-"prov:activity" : "d16"
-}
-},
-
-"activity" : {
-"p19" : {
-"rdt:name" : "s1.w1.slr <- lm(Meaning ~ NineEnd, data = s1.w1)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "6.448",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "44"
-}
-},
-
-"wasInformedBy" : {
-"e35" : {
-"prov:informant" : "p18",
-"prov:informed" : "p19"
-}
-},
-
-"used" : {
-"e36" : {
-"prov:activity" : "d2",
-"prov:entity" : "p19"
-}
-},
-
-"entity" : {
 "d17" : {
 "rdt:name" : "s1.w1.slr",
 "rdt:value" : "./nineender-r_ddg/17-s1.w1.slr-PARTIAL.txt",
@@ -680,41 +911,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e37" : {
-"prov:entity" : "p19",
-"prov:activity" : "d17"
-}
-},
-
-"activity" : {
-"p20" : {
-"rdt:name" : "s1.w2.slr <- lm(Meaning ~ NineEnd, data = s1.w2)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "7.116",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "45"
-}
-},
-
-"wasInformedBy" : {
-"e38" : {
-"prov:informant" : "p19",
-"prov:informed" : "p20"
-}
-},
-
-"used" : {
-"e39" : {
-"prov:activity" : "d4",
-"prov:entity" : "p20"
-}
-},
-
-"entity" : {
 "d18" : {
 "rdt:name" : "s1.w2.slr",
 "rdt:value" : "./nineender-r_ddg/18-s1.w2.slr-PARTIAL.txt",
@@ -723,41 +921,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e40" : {
-"prov:entity" : "p20",
-"prov:activity" : "d18"
-}
-},
-
-"activity" : {
-"p21" : {
-"rdt:name" : "s1.w3.slr <- lm(Meaning ~ NineEnd, data = s1.w3)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "8.5",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "46"
-}
-},
-
-"wasInformedBy" : {
-"e41" : {
-"prov:informant" : "p20",
-"prov:informed" : "p21"
-}
-},
-
-"used" : {
-"e42" : {
-"prov:activity" : "d6",
-"prov:entity" : "p21"
-}
-},
-
-"entity" : {
 "d19" : {
 "rdt:name" : "s1.w3.slr",
 "rdt:value" : "./nineender-r_ddg/19-s1.w3.slr-PARTIAL.txt",
@@ -766,41 +931,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e43" : {
-"prov:entity" : "p21",
-"prov:activity" : "d19"
-}
-},
-
-"activity" : {
-"p22" : {
-"rdt:name" : "s1.w4.slr <- lm(Meaning ~ NineEnd, data = s1.w4)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "12.832",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "47"
-}
-},
-
-"wasInformedBy" : {
-"e44" : {
-"prov:informant" : "p21",
-"prov:informed" : "p22"
-}
-},
-
-"used" : {
-"e45" : {
-"prov:activity" : "d8",
-"prov:entity" : "p22"
-}
-},
-
-"entity" : {
 "d20" : {
 "rdt:name" : "s1.w4.slr",
 "rdt:value" : "./nineender-r_ddg/20-s1.w4.slr-PARTIAL.txt",
@@ -809,41 +941,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e46" : {
-"prov:entity" : "p22",
-"prov:activity" : "d20"
-}
-},
-
-"activity" : {
-"p23" : {
-"rdt:name" : "s1.w5.slr <- lm(Meaning ~ NineEnd, data = s1.w5)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "16.68",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "48"
-}
-},
-
-"wasInformedBy" : {
-"e47" : {
-"prov:informant" : "p22",
-"prov:informed" : "p23"
-}
-},
-
-"used" : {
-"e48" : {
-"prov:activity" : "d10",
-"prov:entity" : "p23"
-}
-},
-
-"entity" : {
 "d21" : {
 "rdt:name" : "s1.w5.slr",
 "rdt:value" : "./nineender-r_ddg/21-s1.w5.slr-PARTIAL.txt",
@@ -852,41 +951,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e49" : {
-"prov:entity" : "p23",
-"prov:activity" : "d21"
-}
-},
-
-"activity" : {
-"p24" : {
-"rdt:name" : "s1.w6.slr <- lm(Meaning ~ NineEnd, data = s1.w6)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "21.808",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "49"
-}
-},
-
-"wasInformedBy" : {
-"e50" : {
-"prov:informant" : "p23",
-"prov:informed" : "p24"
-}
-},
-
-"used" : {
-"e51" : {
-"prov:activity" : "d12",
-"prov:entity" : "p24"
-}
-},
-
-"entity" : {
 "d22" : {
 "rdt:name" : "s1.w6.slr",
 "rdt:value" : "./nineender-r_ddg/22-s1.w6.slr-PARTIAL.txt",
@@ -895,41 +961,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e52" : {
-"prov:entity" : "p24",
-"prov:activity" : "d22"
-}
-},
-
-"activity" : {
-"p25" : {
-"rdt:name" : "s1.ah.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.ah,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "31.808",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "52"
-}
-},
-
-"wasInformedBy" : {
-"e53" : {
-"prov:informant" : "p24",
-"prov:informed" : "p25"
-}
-},
-
-"used" : {
-"e54" : {
-"prov:activity" : "d15",
-"prov:entity" : "p25"
-}
-},
-
-"entity" : {
 "d23" : {
 "rdt:name" : "s1.ah.or",
 "rdt:value" : "./nineender-r_ddg/23-s1.ah.or-PARTIAL.txt",
@@ -938,41 +971,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e55" : {
-"prov:entity" : "p25",
-"prov:activity" : "d23"
-}
-},
-
-"activity" : {
-"p26" : {
-"rdt:name" : "s1.w1.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w1,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "36.232",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "53"
-}
-},
-
-"wasInformedBy" : {
-"e56" : {
-"prov:informant" : "p25",
-"prov:informed" : "p26"
-}
-},
-
-"used" : {
-"e57" : {
-"prov:activity" : "d2",
-"prov:entity" : "p26"
-}
-},
-
-"entity" : {
 "d24" : {
 "rdt:name" : "s1.w1.or",
 "rdt:value" : "./nineender-r_ddg/24-s1.w1.or-PARTIAL.txt",
@@ -981,41 +981,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e58" : {
-"prov:entity" : "p26",
-"prov:activity" : "d24"
-}
-},
-
-"activity" : {
-"p27" : {
-"rdt:name" : "s1.w2.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w2,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "37.372",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "54"
-}
-},
-
-"wasInformedBy" : {
-"e59" : {
-"prov:informant" : "p26",
-"prov:informed" : "p27"
-}
-},
-
-"used" : {
-"e60" : {
-"prov:activity" : "d4",
-"prov:entity" : "p27"
-}
-},
-
-"entity" : {
 "d25" : {
 "rdt:name" : "s1.w2.or",
 "rdt:value" : "./nineender-r_ddg/25-s1.w2.or-PARTIAL.txt",
@@ -1024,41 +991,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e61" : {
-"prov:entity" : "p27",
-"prov:activity" : "d25"
-}
-},
-
-"activity" : {
-"p28" : {
-"rdt:name" : "s1.w3.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w3,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "41.868",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "55"
-}
-},
-
-"wasInformedBy" : {
-"e62" : {
-"prov:informant" : "p27",
-"prov:informed" : "p28"
-}
-},
-
-"used" : {
-"e63" : {
-"prov:activity" : "d6",
-"prov:entity" : "p28"
-}
-},
-
-"entity" : {
 "d26" : {
 "rdt:name" : "s1.w3.or",
 "rdt:value" : "./nineender-r_ddg/26-s1.w3.or-PARTIAL.txt",
@@ -1067,41 +1001,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e64" : {
-"prov:entity" : "p28",
-"prov:activity" : "d26"
-}
-},
-
-"activity" : {
-"p29" : {
-"rdt:name" : "s1.w4.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w4,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "49.412",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "56"
-}
-},
-
-"wasInformedBy" : {
-"e65" : {
-"prov:informant" : "p28",
-"prov:informed" : "p29"
-}
-},
-
-"used" : {
-"e66" : {
-"prov:activity" : "d8",
-"prov:entity" : "p29"
-}
-},
-
-"entity" : {
 "d27" : {
 "rdt:name" : "s1.w4.or",
 "rdt:value" : "./nineender-r_ddg/27-s1.w4.or-PARTIAL.txt",
@@ -1110,41 +1011,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e67" : {
-"prov:entity" : "p29",
-"prov:activity" : "d27"
-}
-},
-
-"activity" : {
-"p30" : {
-"rdt:name" : "s1.w5.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w5,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "57.188",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "57"
-}
-},
-
-"wasInformedBy" : {
-"e68" : {
-"prov:informant" : "p29",
-"prov:informed" : "p30"
-}
-},
-
-"used" : {
-"e69" : {
-"prov:activity" : "d10",
-"prov:entity" : "p30"
-}
-},
-
-"entity" : {
 "d28" : {
 "rdt:name" : "s1.w5.or",
 "rdt:value" : "./nineender-r_ddg/28-s1.w5.or-PARTIAL.txt",
@@ -1153,41 +1021,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e70" : {
-"prov:entity" : "p30",
-"prov:activity" : "d28"
-}
-},
-
-"activity" : {
-"p31" : {
-"rdt:name" : "s1.w6.or <- polr(as.factor(Meaning) ~ NineEnd, data = s1.w6,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "66.812",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "58"
-}
-},
-
-"wasInformedBy" : {
-"e71" : {
-"prov:informant" : "p30",
-"prov:informed" : "p31"
-}
-},
-
-"used" : {
-"e72" : {
-"prov:activity" : "d12",
-"prov:entity" : "p31"
-}
-},
-
-"entity" : {
 "d29" : {
 "rdt:name" : "s1.w6.or",
 "rdt:value" : "./nineender-r_ddg/29-s1.w6.or-PARTIAL.txt",
@@ -1196,41 +1031,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e73" : {
-"prov:entity" : "p31",
-"prov:activity" : "d29"
-}
-},
-
-"activity" : {
-"p32" : {
-"rdt:name" : "s1.ah.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.a",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "72.976",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "61"
-}
-},
-
-"wasInformedBy" : {
-"e74" : {
-"prov:informant" : "p31",
-"prov:informed" : "p32"
-}
-},
-
-"used" : {
-"e75" : {
-"prov:activity" : "d15",
-"prov:entity" : "p32"
-}
-},
-
-"entity" : {
 "d30" : {
 "rdt:name" : "s1.ah.lme",
 "rdt:value" : "./nineender-r_ddg/30-s1.ah.lme.txt",
@@ -1239,41 +1041,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e76" : {
-"prov:entity" : "p32",
-"prov:activity" : "d30"
-}
-},
-
-"activity" : {
-"p33" : {
-"rdt:name" : "s1.w1.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "73.188",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "62"
-}
-},
-
-"wasInformedBy" : {
-"e77" : {
-"prov:informant" : "p32",
-"prov:informed" : "p33"
-}
-},
-
-"used" : {
-"e78" : {
-"prov:activity" : "d2",
-"prov:entity" : "p33"
-}
-},
-
-"entity" : {
 "d31" : {
 "rdt:name" : "s1.w1.lme",
 "rdt:value" : "./nineender-r_ddg/31-s1.w1.lme.txt",
@@ -1282,41 +1051,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e79" : {
-"prov:entity" : "p33",
-"prov:activity" : "d31"
-}
-},
-
-"activity" : {
-"p34" : {
-"rdt:name" : "s1.w2.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "73.468",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "63"
-}
-},
-
-"wasInformedBy" : {
-"e80" : {
-"prov:informant" : "p33",
-"prov:informed" : "p34"
-}
-},
-
-"used" : {
-"e81" : {
-"prov:activity" : "d4",
-"prov:entity" : "p34"
-}
-},
-
-"entity" : {
 "d32" : {
 "rdt:name" : "s1.w2.lme",
 "rdt:value" : "./nineender-r_ddg/32-s1.w2.lme.txt",
@@ -1325,41 +1061,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e82" : {
-"prov:entity" : "p34",
-"prov:activity" : "d32"
-}
-},
-
-"activity" : {
-"p35" : {
-"rdt:name" : "s1.w3.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "74.4",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "64"
-}
-},
-
-"wasInformedBy" : {
-"e83" : {
-"prov:informant" : "p34",
-"prov:informed" : "p35"
-}
-},
-
-"used" : {
-"e84" : {
-"prov:activity" : "d6",
-"prov:entity" : "p35"
-}
-},
-
-"entity" : {
 "d33" : {
 "rdt:name" : "s1.w3.lme",
 "rdt:value" : "./nineender-r_ddg/33-s1.w3.lme.txt",
@@ -1368,41 +1071,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e85" : {
-"prov:entity" : "p35",
-"prov:activity" : "d33"
-}
-},
-
-"activity" : {
-"p36" : {
-"rdt:name" : "s1.w4.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "75.136",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "65"
-}
-},
-
-"wasInformedBy" : {
-"e86" : {
-"prov:informant" : "p35",
-"prov:informed" : "p36"
-}
-},
-
-"used" : {
-"e87" : {
-"prov:activity" : "d8",
-"prov:entity" : "p36"
-}
-},
-
-"entity" : {
 "d34" : {
 "rdt:name" : "s1.w4.lme",
 "rdt:value" : "./nineender-r_ddg/34-s1.w4.lme.txt",
@@ -1411,41 +1081,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e88" : {
-"prov:entity" : "p36",
-"prov:activity" : "d34"
-}
-},
-
-"activity" : {
-"p37" : {
-"rdt:name" : "s1.w5.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "76.264",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "66"
-}
-},
-
-"wasInformedBy" : {
-"e89" : {
-"prov:informant" : "p36",
-"prov:informed" : "p37"
-}
-},
-
-"used" : {
-"e90" : {
-"prov:activity" : "d10",
-"prov:entity" : "p37"
-}
-},
-
-"entity" : {
 "d35" : {
 "rdt:name" : "s1.w5.lme",
 "rdt:value" : "./nineender-r_ddg/35-s1.w5.lme.txt",
@@ -1454,41 +1091,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e91" : {
-"prov:entity" : "p37",
-"prov:activity" : "d35"
-}
-},
-
-"activity" : {
-"p38" : {
-"rdt:name" : "s1.w6.lme <- lmer(Meaning ~ NineEnd + (1 | Age), data = s1.w",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "77.416",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "67"
-}
-},
-
-"wasInformedBy" : {
-"e92" : {
-"prov:informant" : "p37",
-"prov:informed" : "p38"
-}
-},
-
-"used" : {
-"e93" : {
-"prov:activity" : "d12",
-"prov:entity" : "p38"
-}
-},
-
-"entity" : {
 "d36" : {
 "rdt:name" : "s1.w6.lme",
 "rdt:value" : "./nineender-r_ddg/36-s1.w6.lme.txt",
@@ -1497,181 +1101,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e94" : {
-"prov:entity" : "p38",
-"prov:activity" : "d36"
-}
-},
-
-"activity" : {
-"p39" : {
-"rdt:name" : "s1.results <- data.frame(type = c(rep(c(\"(A.1) Mean differen",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.46",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "70"
-}
-},
-
-"wasInformedBy" : {
-"e95" : {
-"prov:informant" : "p38",
-"prov:informed" : "p39"
-}
-},
-
-"used" : {
-"e96" : {
-"prov:activity" : "d16",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e97" : {
-"prov:activity" : "d17",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e98" : {
-"prov:activity" : "d18",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e99" : {
-"prov:activity" : "d19",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e100" : {
-"prov:activity" : "d20",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e101" : {
-"prov:activity" : "d21",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e102" : {
-"prov:activity" : "d22",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e103" : {
-"prov:activity" : "d23",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e104" : {
-"prov:activity" : "d24",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e105" : {
-"prov:activity" : "d25",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e106" : {
-"prov:activity" : "d26",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e107" : {
-"prov:activity" : "d27",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e108" : {
-"prov:activity" : "d28",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e109" : {
-"prov:activity" : "d29",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e110" : {
-"prov:activity" : "d30",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e111" : {
-"prov:activity" : "d31",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e112" : {
-"prov:activity" : "d32",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e113" : {
-"prov:activity" : "d33",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e114" : {
-"prov:activity" : "d34",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e115" : {
-"prov:activity" : "d35",
-"prov:entity" : "p39"
-}
-},
-
-"used" : {
-"e116" : {
-"prov:activity" : "d36",
-"prov:entity" : "p39"
-}
-},
-
-"entity" : {
 "d37" : {
 "rdt:name" : "s1.results",
 "rdt:value" : "./nineender-r_ddg/37-s1.results.csv",
@@ -1680,34 +1111,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e117" : {
-"prov:entity" : "p39",
-"prov:activity" : "d37"
-}
-},
-
-"activity" : {
-"p40" : {
-"rdt:name" : "s1.results <- ggplot(s1.results, aes(x = study, y = estimate",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.744",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "128"
-}
-},
-
-"wasInformedBy" : {
-"e118" : {
-"prov:informant" : "p39",
-"prov:informed" : "p40"
-}
-},
-
-"entity" : {
 "d38" : {
 "rdt:name" : "s1.results",
 "rdt:value" : "./nineender-r_ddg/38-s1.results.txt",
@@ -1716,34 +1121,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e119" : {
-"prov:entity" : "p40",
-"prov:activity" : "d38"
-}
-},
-
-"activity" : {
-"p41" : {
-"rdt:name" : "s4 <- read.csv(\"study-4-pnas-18987.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.86",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "144"
-}
-},
-
-"wasInformedBy" : {
-"e120" : {
-"prov:informant" : "p40",
-"prov:informed" : "p41"
-}
-},
-
-"entity" : {
 "d39" : {
 "rdt:name" : "study-4-pnas-18987.csv",
 "rdt:value" : "./nineender-r_ddg/39-study-4-pnas-18987.csv",
@@ -1752,17 +1131,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e121" : {
-"prov:activity" : "d39",
-"prov:entity" : "p41"
-}
-},
-
-"entity" : {
 "d40" : {
 "rdt:name" : "s4",
 "rdt:value" : "./nineender-r_ddg/40-s4.csv",
@@ -1771,34 +1141,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e122" : {
-"prov:entity" : "p41",
-"prov:activity" : "d40"
-}
-},
-
-"activity" : {
-"p42" : {
-"rdt:name" : "s4$RC.1 <- ifelse(s4$RegionCode == 1, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.888",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "147"
-}
-},
-
-"wasInformedBy" : {
-"e123" : {
-"prov:informant" : "p41",
-"prov:informed" : "p42"
-}
-},
-
-"entity" : {
 "d41" : {
 "rdt:name" : "s4",
 "rdt:value" : "./nineender-r_ddg/41-s4.csv",
@@ -1807,34 +1151,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e124" : {
-"prov:entity" : "p42",
-"prov:activity" : "d41"
-}
-},
-
-"activity" : {
-"p43" : {
-"rdt:name" : "s4$RC.2 <- ifelse(s4$RegionCode == 2, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.956",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "148"
-}
-},
-
-"wasInformedBy" : {
-"e125" : {
-"prov:informant" : "p42",
-"prov:informed" : "p43"
-}
-},
-
-"entity" : {
 "d42" : {
 "rdt:name" : "s4",
 "rdt:value" : "./nineender-r_ddg/42-s4-PARTIAL.csv",
@@ -1843,34 +1161,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e126" : {
-"prov:entity" : "p43",
-"prov:activity" : "d42"
-}
-},
-
-"activity" : {
-"p44" : {
-"rdt:name" : "s4$RC.3 <- ifelse(s4$RegionCode == 3, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "78.98",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "149"
-}
-},
-
-"wasInformedBy" : {
-"e127" : {
-"prov:informant" : "p43",
-"prov:informed" : "p44"
-}
-},
-
-"entity" : {
 "d43" : {
 "rdt:name" : "s4",
 "rdt:value" : "./nineender-r_ddg/43-s4-PARTIAL.csv",
@@ -1879,34 +1171,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e128" : {
-"prov:entity" : "p44",
-"prov:activity" : "d43"
-}
-},
-
-"activity" : {
-"p45" : {
-"rdt:name" : "s4$RC.4 <- ifelse(s4$RegionCode == 4, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.008",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "150"
-}
-},
-
-"wasInformedBy" : {
-"e129" : {
-"prov:informant" : "p44",
-"prov:informed" : "p45"
-}
-},
-
-"entity" : {
 "d44" : {
 "rdt:name" : "s4",
 "rdt:value" : "./nineender-r_ddg/44-s4-PARTIAL.csv",
@@ -1915,65 +1181,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e130" : {
-"prov:entity" : "p45",
-"prov:activity" : "d44"
-}
-},
-
-"activity" : {
-"p46" : {
-"rdt:name" : "rcorr(s4$SuicideRate, s4$NineEnd, type = \"spearman\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.064",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "153"
-}
-},
-
-"wasInformedBy" : {
-"e131" : {
-"prov:informant" : "p45",
-"prov:informed" : "p46"
-}
-},
-
-"used" : {
-"e132" : {
-"prov:activity" : "d44",
-"prov:entity" : "p46"
-}
-},
-
-"activity" : {
-"p47" : {
-"rdt:name" : "s4.ancova <- aov(SuicideRate ~ NineEnd + Age + RegionCode + ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.084",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "157"
-}
-},
-
-"wasInformedBy" : {
-"e133" : {
-"prov:informant" : "p46",
-"prov:informed" : "p47"
-}
-},
-
-"used" : {
-"e134" : {
-"prov:activity" : "d44",
-"prov:entity" : "p47"
-}
-},
-
-"entity" : {
 "d45" : {
 "rdt:name" : "s4.ancova",
 "rdt:value" : "./nineender-r_ddg/45-s4.ancova-PARTIAL.txt",
@@ -1982,65 +1191,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e135" : {
-"prov:entity" : "p47",
-"prov:activity" : "d45"
-}
-},
-
-"activity" : {
-"p48" : {
-"rdt:name" : "summary(s4.ancova)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.392",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "158"
-}
-},
-
-"wasInformedBy" : {
-"e136" : {
-"prov:informant" : "p47",
-"prov:informed" : "p48"
-}
-},
-
-"used" : {
-"e137" : {
-"prov:activity" : "d45",
-"prov:entity" : "p48"
-}
-},
-
-"activity" : {
-"p49" : {
-"rdt:name" : "s4.anova <- aov(SuicideRate ~ NineEnd, data = s4)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.404",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "161"
-}
-},
-
-"wasInformedBy" : {
-"e138" : {
-"prov:informant" : "p48",
-"prov:informed" : "p49"
-}
-},
-
-"used" : {
-"e139" : {
-"prov:activity" : "d44",
-"prov:entity" : "p49"
-}
-},
-
-"entity" : {
 "d46" : {
 "rdt:name" : "s4.anova",
 "rdt:value" : "./nineender-r_ddg/46-s4.anova-PARTIAL.txt",
@@ -2049,65 +1201,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e140" : {
-"prov:entity" : "p49",
-"prov:activity" : "d46"
-}
-},
-
-"activity" : {
-"p50" : {
-"rdt:name" : "summary(s4.anova)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.584",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "162"
-}
-},
-
-"wasInformedBy" : {
-"e141" : {
-"prov:informant" : "p49",
-"prov:informed" : "p50"
-}
-},
-
-"used" : {
-"e142" : {
-"prov:activity" : "d46",
-"prov:entity" : "p50"
-}
-},
-
-"activity" : {
-"p51" : {
-"rdt:name" : "s4.c <- s4[, c(\"NineEnd\", \"RC.1\", \"RC.2\", \"RC.3\", \"RC.4\", \"A",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.592",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "165"
-}
-},
-
-"wasInformedBy" : {
-"e143" : {
-"prov:informant" : "p50",
-"prov:informed" : "p51"
-}
-},
-
-"used" : {
-"e144" : {
-"prov:activity" : "d44",
-"prov:entity" : "p51"
-}
-},
-
-"entity" : {
 "d47" : {
 "rdt:name" : "s4.c",
 "rdt:value" : "./nineender-r_ddg/47-s4.c.csv",
@@ -2116,34 +1211,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e145" : {
-"prov:entity" : "p51",
-"prov:activity" : "d47"
-}
-},
-
-"activity" : {
-"p52" : {
-"rdt:name" : "s4.c <- as.matrix(s4.c)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.616",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "166"
-}
-},
-
-"wasInformedBy" : {
-"e146" : {
-"prov:informant" : "p51",
-"prov:informed" : "p52"
-}
-},
-
-"entity" : {
 "d48" : {
 "rdt:name" : "s4.c",
 "rdt:value" : "./nineender-r_ddg/48-s4.c-PARTIAL.csv",
@@ -2152,34 +1221,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e147" : {
-"prov:entity" : "p52",
-"prov:activity" : "d48"
-}
-},
-
-"activity" : {
-"p53" : {
-"rdt:name" : "s4.bma <- bicreg(s4.c, s4$SuicideRate)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.792",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "169"
-}
-},
-
-"wasInformedBy" : {
-"e148" : {
-"prov:informant" : "p52",
-"prov:informed" : "p53"
-}
-},
-
-"entity" : {
 "d49" : {
 "rdt:name" : "warning.msg",
 "rdt:value" : "\"In  leaps.setup(x, y, wt = weights, nbest = nbest, nvmax = nvmax,  :  1  linear dependencies found\",\"In      force.in = force.in, force.out = force.out, intercept = intercept) :  1  linear dependencies found\"",
@@ -2188,31 +1231,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e149" : {
-"prov:entity" : "p53",
-"prov:activity" : "d49"
-}
-},
-
-"used" : {
-"e150" : {
-"prov:activity" : "d48",
-"prov:entity" : "p53"
-}
-},
-
-"used" : {
-"e151" : {
-"prov:activity" : "d44",
-"prov:entity" : "p53"
-}
-},
-
-"entity" : {
 "d50" : {
 "rdt:name" : "s4.bma",
 "rdt:value" : "./nineender-r_ddg/50-s4.bma.txt",
@@ -2221,58 +1241,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e152" : {
-"prov:entity" : "p53",
-"prov:activity" : "d50"
-}
-},
-
-"activity" : {
-"p54" : {
-"rdt:name" : "s4.bma$probne0[[1]]",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.82",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "172"
-}
-},
-
-"wasInformedBy" : {
-"e153" : {
-"prov:informant" : "p53",
-"prov:informed" : "p54"
-}
-},
-
-"used" : {
-"e154" : {
-"prov:activity" : "d50",
-"prov:entity" : "p54"
-}
-},
-
-"activity" : {
-"p55" : {
-"rdt:name" : "s5 <- read.csv(\"study-5-pnas-19017.csv\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.832",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "176"
-}
-},
-
-"wasInformedBy" : {
-"e155" : {
-"prov:informant" : "p54",
-"prov:informed" : "p55"
-}
-},
-
-"entity" : {
 "d51" : {
 "rdt:name" : "study-5-pnas-19017.csv",
 "rdt:value" : "./nineender-r_ddg/51-study-5-pnas-19017.csv",
@@ -2281,17 +1251,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"used" : {
-"e156" : {
-"prov:activity" : "d51",
-"prov:entity" : "p55"
-}
-},
-
-"entity" : {
 "d52" : {
 "rdt:name" : "s5",
 "rdt:value" : "./nineender-r_ddg/52-s5.csv",
@@ -2300,34 +1261,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e157" : {
-"prov:entity" : "p55",
-"prov:activity" : "d52"
-}
-},
-
-"activity" : {
-"p56" : {
-"rdt:name" : "transform_data = function() {    s5.long <<- gather(s5, age,",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.892",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "178"
-}
-},
-
-"wasInformedBy" : {
-"e158" : {
-"prov:informant" : "p55",
-"prov:informed" : "p56"
-}
-},
-
-"entity" : {
 "d53" : {
 "rdt:name" : "transform_data",
 "rdt:value" : "#ddg.function",
@@ -2336,82 +1271,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e159" : {
-"prov:entity" : "p56",
-"prov:activity" : "d53"
-}
-},
-
-"activity" : {
-"p57" : {
-"rdt:name" : "transform_data()",
-"rdt:type" : "Start",
-"rdt:elapsedTime" : "79.9",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e160" : {
-"prov:informant" : "p56",
-"prov:informed" : "p57"
-}
-},
-
-"activity" : {
-"p58" : {
-"rdt:name" : "transform_data",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.904",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"used" : {
-"e161" : {
-"prov:activity" : "d53",
-"prov:entity" : "p58"
-}
-},
-
-"wasInformedBy" : {
-"e162" : {
-"prov:informant" : "p57",
-"prov:informed" : "p58"
-}
-},
-
-"activity" : {
-"p59" : {
-"rdt:name" : "s5.long <<- gather(s5, age, time, Time27:Time41)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.908",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e163" : {
-"prov:informant" : "p58",
-"prov:informed" : "p59"
-}
-},
-
-"used" : {
-"e164" : {
-"prov:activity" : "d52",
-"prov:entity" : "p59"
-}
-},
-
-"entity" : {
 "d54" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/54-s5.long.csv",
@@ -2420,41 +1281,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e165" : {
-"prov:entity" : "p59",
-"prov:activity" : "d54"
-}
-},
-
-"activity" : {
-"p60" : {
-"rdt:name" : "s5.long$age <<- as.numeric(sub(\"Time\", \"\", s5.long$age))",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "79.992",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e166" : {
-"prov:informant" : "p59",
-"prov:informed" : "p60"
-}
-},
-
-"used" : {
-"e167" : {
-"prov:activity" : "d54",
-"prov:entity" : "p60"
-}
-},
-
-"entity" : {
 "d55" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/55-s5.long.csv",
@@ -2463,41 +1291,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e168" : {
-"prov:entity" : "p60",
-"prov:activity" : "d55"
-}
-},
-
-"activity" : {
-"p61" : {
-"rdt:name" : "s5.long$nineend <<- ifelse(s5.long$age == 29 | s5.long$age ==     39, 1, 0)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.012",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e169" : {
-"prov:informant" : "p60",
-"prov:informed" : "p61"
-}
-},
-
-"used" : {
-"e170" : {
-"prov:activity" : "d55",
-"prov:entity" : "p61"
-}
-},
-
-"entity" : {
 "d56" : {
 "rdt:name" : "s5.long$nineend",
 "rdt:value" : "./nineender-r_ddg/56-s5.long$nineend.csv",
@@ -2506,17 +1301,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e171" : {
-"prov:entity" : "p61",
-"prov:activity" : "d56"
-}
-},
-
-"entity" : {
 "d57" : {
 "rdt:name" : "transform_data() return",
 "rdt:value" : "./nineender-r_ddg/57-transform_data() return.csv",
@@ -2525,75 +1311,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"activity" : {
-"p62" : {
-"rdt:name" : "return (s5.long$nineend <<- ifelse(s5.long$age == 29 | s5.)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.032",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e172" : {
-"prov:informant" : "p61",
-"prov:informed" : "p62"
-}
-},
-
-"used" : {
-"e173" : {
-"prov:activity" : "d55",
-"prov:entity" : "p62"
-}
-},
-
-"wasGeneratedBy" : {
-"e174" : {
-"prov:entity" : "p62",
-"prov:activity" : "d57"
-}
-},
-
-"activity" : {
-"p63" : {
-"rdt:name" : "transform_data()",
-"rdt:type" : "Finish",
-"rdt:elapsedTime" : "80.084",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "188"
-}
-},
-
-"wasInformedBy" : {
-"e175" : {
-"prov:informant" : "p62",
-"prov:informed" : "p63"
-}
-},
-
-"activity" : {
-"p64" : {
-"rdt:name" : "code_end_digit <- function() {    s5.long$enddigit <<- NA   ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.104",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "190"
-}
-},
-
-"wasInformedBy" : {
-"e176" : {
-"prov:informant" : "p63",
-"prov:informed" : "p64"
-}
-},
-
-"entity" : {
 "d58" : {
 "rdt:name" : "code_end_digit",
 "rdt:value" : "#ddg.function",
@@ -2602,82 +1321,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e177" : {
-"prov:entity" : "p64",
-"prov:activity" : "d58"
-}
-},
-
-"activity" : {
-"p65" : {
-"rdt:name" : "code_end_digit()",
-"rdt:type" : "Start",
-"rdt:elapsedTime" : "80.112",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e178" : {
-"prov:informant" : "p64",
-"prov:informed" : "p65"
-}
-},
-
-"activity" : {
-"p66" : {
-"rdt:name" : "code_end_digit",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.116",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"used" : {
-"e179" : {
-"prov:activity" : "d58",
-"prov:entity" : "p66"
-}
-},
-
-"wasInformedBy" : {
-"e180" : {
-"prov:informant" : "p65",
-"prov:informed" : "p66"
-}
-},
-
-"activity" : {
-"p67" : {
-"rdt:name" : "s5.long$enddigit <<- NA",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.12",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e181" : {
-"prov:informant" : "p66",
-"prov:informed" : "p67"
-}
-},
-
-"used" : {
-"e182" : {
-"prov:activity" : "d55",
-"prov:entity" : "p67"
-}
-},
-
-"entity" : {
 "d59" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/59-s5.long.csv",
@@ -2686,41 +1331,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e183" : {
-"prov:entity" : "p67",
-"prov:activity" : "d59"
-}
-},
-
-"activity" : {
-"p68" : {
-"rdt:name" : "s5.long$enddigit[s5.long$age == 27 | s5.long$age == 37] <<- ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.136",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e184" : {
-"prov:informant" : "p67",
-"prov:informed" : "p68"
-}
-},
-
-"used" : {
-"e185" : {
-"prov:activity" : "d59",
-"prov:entity" : "p68"
-}
-},
-
-"entity" : {
 "d60" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/60-s5.long.csv",
@@ -2729,41 +1341,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e186" : {
-"prov:entity" : "p68",
-"prov:activity" : "d60"
-}
-},
-
-"activity" : {
-"p69" : {
-"rdt:name" : "s5.long$enddigit[s5.long$age == 28 | s5.long$age == 38] <<- ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.16",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e187" : {
-"prov:informant" : "p68",
-"prov:informed" : "p69"
-}
-},
-
-"used" : {
-"e188" : {
-"prov:activity" : "d60",
-"prov:entity" : "p69"
-}
-},
-
-"entity" : {
 "d61" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/61-s5.long.csv",
@@ -2772,41 +1351,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e189" : {
-"prov:entity" : "p69",
-"prov:activity" : "d61"
-}
-},
-
-"activity" : {
-"p70" : {
-"rdt:name" : "s5.long$enddigit[s5.long$age == 29 | s5.long$age == 39] <<- ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.216",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e190" : {
-"prov:informant" : "p69",
-"prov:informed" : "p70"
-}
-},
-
-"used" : {
-"e191" : {
-"prov:activity" : "d61",
-"prov:entity" : "p70"
-}
-},
-
-"entity" : {
 "d62" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/62-s5.long.csv",
@@ -2815,41 +1361,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e192" : {
-"prov:entity" : "p70",
-"prov:activity" : "d62"
-}
-},
-
-"activity" : {
-"p71" : {
-"rdt:name" : "s5.long$enddigit[s5.long$age == 30 | s5.long$age == 40] <<- ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.24",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e193" : {
-"prov:informant" : "p70",
-"prov:informed" : "p71"
-}
-},
-
-"used" : {
-"e194" : {
-"prov:activity" : "d62",
-"prov:entity" : "p71"
-}
-},
-
-"entity" : {
 "d63" : {
 "rdt:name" : "s5.long",
 "rdt:value" : "./nineender-r_ddg/63-s5.long.csv",
@@ -2858,41 +1371,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e195" : {
-"prov:entity" : "p71",
-"prov:activity" : "d63"
-}
-},
-
-"activity" : {
-"p72" : {
-"rdt:name" : "s5.long$enddigit[s5.long$age == 31 | s5.long$age == 41] <<- 5",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.304",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e196" : {
-"prov:informant" : "p71",
-"prov:informed" : "p72"
-}
-},
-
-"used" : {
-"e197" : {
-"prov:activity" : "d63",
-"prov:entity" : "p72"
-}
-},
-
-"entity" : {
 "d64" : {
 "rdt:name" : "s5.long$enddigit[s5.long$age == 31 | s5.long$age == 41]",
 "rdt:value" : "5",
@@ -2901,17 +1381,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e198" : {
-"prov:entity" : "p72",
-"prov:activity" : "d64"
-}
-},
-
-"entity" : {
 "d65" : {
 "rdt:name" : "code_end_digit() return",
 "rdt:value" : "5",
@@ -2920,82 +1391,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"activity" : {
-"p73" : {
-"rdt:name" : "return (s5.long$enddigit[s5.long$age == 31 | s5.long$age =)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.312",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e199" : {
-"prov:informant" : "p72",
-"prov:informed" : "p73"
-}
-},
-
-"used" : {
-"e200" : {
-"prov:activity" : "d63",
-"prov:entity" : "p73"
-}
-},
-
-"wasGeneratedBy" : {
-"e201" : {
-"prov:entity" : "p73",
-"prov:activity" : "d65"
-}
-},
-
-"activity" : {
-"p74" : {
-"rdt:name" : "code_end_digit()",
-"rdt:type" : "Finish",
-"rdt:elapsedTime" : "80.324",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "198"
-}
-},
-
-"wasInformedBy" : {
-"e202" : {
-"prov:informant" : "p73",
-"prov:informed" : "p74"
-}
-},
-
-"activity" : {
-"p75" : {
-"rdt:name" : "s5.reg.nine <- lmer(time ~ nineend + (1 | Participant), data",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.356",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "201"
-}
-},
-
-"wasInformedBy" : {
-"e203" : {
-"prov:informant" : "p74",
-"prov:informed" : "p75"
-}
-},
-
-"used" : {
-"e204" : {
-"prov:activity" : "d63",
-"prov:entity" : "p75"
-}
-},
-
-"entity" : {
 "d66" : {
 "rdt:name" : "s5.reg.nine",
 "rdt:value" : "./nineender-r_ddg/66-s5.reg.nine.txt",
@@ -3004,41 +1401,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e205" : {
-"prov:entity" : "p75",
-"prov:activity" : "d66"
-}
-},
-
-"activity" : {
-"p76" : {
-"rdt:name" : "s5.reg.end <- lmer(time ~ as.factor(enddigit) + (1 | Partici",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.512",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "202"
-}
-},
-
-"wasInformedBy" : {
-"e206" : {
-"prov:informant" : "p75",
-"prov:informed" : "p76"
-}
-},
-
-"used" : {
-"e207" : {
-"prov:activity" : "d63",
-"prov:entity" : "p76"
-}
-},
-
-"entity" : {
 "d67" : {
 "rdt:name" : "s5.reg.end",
 "rdt:value" : "./nineender-r_ddg/67-s5.reg.end.txt",
@@ -3047,41 +1411,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e208" : {
-"prov:entity" : "p76",
-"prov:activity" : "d67"
-}
-},
-
-"activity" : {
-"p77" : {
-"rdt:name" : "s5.reg.age <- lmer(time ~ as.factor(age) + (1 | Participant)",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.628",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "203"
-}
-},
-
-"wasInformedBy" : {
-"e209" : {
-"prov:informant" : "p76",
-"prov:informed" : "p77"
-}
-},
-
-"used" : {
-"e210" : {
-"prov:activity" : "d63",
-"prov:entity" : "p77"
-}
-},
-
-"entity" : {
 "d68" : {
 "rdt:name" : "s5.reg.age",
 "rdt:value" : "./nineender-r_ddg/68-s5.reg.age.txt",
@@ -3090,41 +1421,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e211" : {
-"prov:entity" : "p77",
-"prov:activity" : "d68"
-}
-},
-
-"activity" : {
-"p78" : {
-"rdt:name" : "s5.fig.data.nine <- data.frame(nineend = c(\"7|8|0|1\", \"9\"), ",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "80.788",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "206"
-}
-},
-
-"wasInformedBy" : {
-"e212" : {
-"prov:informant" : "p77",
-"prov:informed" : "p78"
-}
-},
-
-"used" : {
-"e213" : {
-"prov:activity" : "d66",
-"prov:entity" : "p78"
-}
-},
-
-"entity" : {
 "d69" : {
 "rdt:name" : "s5.fig.data.nine",
 "rdt:value" : "./nineender-r_ddg/69-s5.fig.data.nine.csv",
@@ -3133,41 +1431,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e214" : {
-"prov:entity" : "p78",
-"prov:activity" : "d69"
-}
-},
-
-"activity" : {
-"p79" : {
-"rdt:name" : "s5.fig.data.end <- data.frame(digit = c(1:5), enddigit = c(\"",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "81.16",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "214"
-}
-},
-
-"wasInformedBy" : {
-"e215" : {
-"prov:informant" : "p78",
-"prov:informed" : "p79"
-}
-},
-
-"used" : {
-"e216" : {
-"prov:activity" : "d67",
-"prov:entity" : "p79"
-}
-},
-
-"entity" : {
 "d70" : {
 "rdt:name" : "s5.fig.data.end",
 "rdt:value" : "./nineender-r_ddg/70-s5.fig.data.end.csv",
@@ -3176,41 +1441,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e217" : {
-"prov:entity" : "p79",
-"prov:activity" : "d70"
-}
-},
-
-"activity" : {
-"p80" : {
-"rdt:name" : "s5.fig.data.age <- data.frame(digit = c(1:10), age = c(\"27\",",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "81.868",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "230"
-}
-},
-
-"wasInformedBy" : {
-"e218" : {
-"prov:informant" : "p79",
-"prov:informed" : "p80"
-}
-},
-
-"used" : {
-"e219" : {
-"prov:activity" : "d68",
-"prov:entity" : "p80"
-}
-},
-
-"entity" : {
 "d71" : {
 "rdt:name" : "s5.fig.data.age",
 "rdt:value" : "./nineender-r_ddg/71-s5.fig.data.age.csv",
@@ -3219,41 +1451,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e220" : {
-"prov:entity" : "p80",
-"prov:activity" : "d71"
-}
-},
-
-"activity" : {
-"p81" : {
-"rdt:name" : "s5.fig.nine <- ggplot(s5.fig.data.nine, aes(x = nineend, y =",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "81.964",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "258"
-}
-},
-
-"wasInformedBy" : {
-"e221" : {
-"prov:informant" : "p80",
-"prov:informed" : "p81"
-}
-},
-
-"used" : {
-"e222" : {
-"prov:activity" : "d69",
-"prov:entity" : "p81"
-}
-},
-
-"entity" : {
 "d72" : {
 "rdt:name" : "s5.fig.nine",
 "rdt:value" : "./nineender-r_ddg/72-s5.fig.nine.txt",
@@ -3262,41 +1461,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e223" : {
-"prov:entity" : "p81",
-"prov:activity" : "d72"
-}
-},
-
-"activity" : {
-"p82" : {
-"rdt:name" : "s5.fig.end <- ggplot(s5.fig.data.end, aes(x = digit, y = est",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "82.08",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "273"
-}
-},
-
-"wasInformedBy" : {
-"e224" : {
-"prov:informant" : "p81",
-"prov:informed" : "p82"
-}
-},
-
-"used" : {
-"e225" : {
-"prov:activity" : "d70",
-"prov:entity" : "p82"
-}
-},
-
-"entity" : {
 "d73" : {
 "rdt:name" : "s5.fig.end",
 "rdt:value" : "./nineender-r_ddg/73-s5.fig.end.txt",
@@ -3305,41 +1471,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e226" : {
-"prov:entity" : "p82",
-"prov:activity" : "d73"
-}
-},
-
-"activity" : {
-"p83" : {
-"rdt:name" : "s5.fig.age <- ggplot(s5.fig.data.age, aes(x = digit, y = est",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "82.212",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "289"
-}
-},
-
-"wasInformedBy" : {
-"e227" : {
-"prov:informant" : "p82",
-"prov:informed" : "p83"
-}
-},
-
-"used" : {
-"e228" : {
-"prov:activity" : "d71",
-"prov:entity" : "p83"
-}
-},
-
-"entity" : {
 "d74" : {
 "rdt:name" : "s5.fig.age",
 "rdt:value" : "./nineender-r_ddg/74-s5.fig.age.txt",
@@ -3348,96 +1481,8 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+} ,
 
-"wasGeneratedBy" : {
-"e229" : {
-"prov:entity" : "p83",
-"prov:activity" : "d74"
-}
-},
-
-"activity" : {
-"p84" : {
-"rdt:name" : "jpeg(\"results.jpeg\", height = 5, width = 7, units = \"in\", re",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "82.312",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "305"
-}
-},
-
-"wasInformedBy" : {
-"e230" : {
-"prov:informant" : "p83",
-"prov:informed" : "p84"
-}
-},
-
-"activity" : {
-"p85" : {
-"rdt:name" : "grid.arrange(s1.results, arrangeGrob(s5.fig.nine, s5.fig.end",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "83.464",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "306"
-}
-},
-
-"wasInformedBy" : {
-"e231" : {
-"prov:informant" : "p84",
-"prov:informed" : "p85"
-}
-},
-
-"used" : {
-"e232" : {
-"prov:activity" : "d38",
-"prov:entity" : "p85"
-}
-},
-
-"used" : {
-"e233" : {
-"prov:activity" : "d72",
-"prov:entity" : "p85"
-}
-},
-
-"used" : {
-"e234" : {
-"prov:activity" : "d73",
-"prov:entity" : "p85"
-}
-},
-
-"used" : {
-"e235" : {
-"prov:activity" : "d74",
-"prov:entity" : "p85"
-}
-},
-
-"activity" : {
-"p86" : {
-"rdt:name" : "dev.off()",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "83.744",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "307"
-}
-},
-
-"wasInformedBy" : {
-"e236" : {
-"prov:informant" : "p85",
-"prov:informed" : "p86"
-}
-},
-
-"entity" : {
 "d75" : {
 "rdt:name" : "results.jpeg",
 "rdt:value" : "./nineender-r_ddg/75-results.jpeg",
@@ -3446,48 +1491,1203 @@
 "rdt:fromEnv" : "FALSE",
 "rdt:timestamp" : "",
 "rdt:location" : ""
-}
-},
+}},
+"wasInformedBy":{
 
-"wasGeneratedBy" : {
-"e237" : {
-"prov:entity" : "p86",
-"prov:activity" : "d75"
-}
-},
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
 
-"activity" : {
-"p87" : {
-"rdt:name" : "writeLines(capture.output(sessionInfo()), \"sessionInfo.txt\")",
-"rdt:type" : "Operation",
-"rdt:elapsedTime" : "83.836",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "310"
-}
-},
+"e2" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
 
-"wasInformedBy" : {
+"e3" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+} ,
+
+"e4" : {
+"prov:informant" : "p4",
+"prov:informed" : "p5"
+} ,
+
+"e5" : {
+"prov:informant" : "p5",
+"prov:informed" : "p6"
+} ,
+
+"e6" : {
+"prov:informant" : "p6",
+"prov:informed" : "p7"
+} ,
+
+"e7" : {
+"prov:informant" : "p7",
+"prov:informed" : "p8"
+} ,
+
+"e8" : {
+"prov:informant" : "p8",
+"prov:informed" : "p9"
+} ,
+
+"e9" : {
+"prov:informant" : "p9",
+"prov:informed" : "p10"
+} ,
+
+"e12" : {
+"prov:informant" : "p10",
+"prov:informed" : "p11"
+} ,
+
+"e15" : {
+"prov:informant" : "p11",
+"prov:informed" : "p12"
+} ,
+
+"e18" : {
+"prov:informant" : "p12",
+"prov:informed" : "p13"
+} ,
+
+"e21" : {
+"prov:informant" : "p13",
+"prov:informed" : "p14"
+} ,
+
+"e24" : {
+"prov:informant" : "p14",
+"prov:informed" : "p15"
+} ,
+
+"e27" : {
+"prov:informant" : "p15",
+"prov:informed" : "p16"
+} ,
+
+"e30" : {
+"prov:informant" : "p16",
+"prov:informed" : "p17"
+} ,
+
+"e32" : {
+"prov:informant" : "p17",
+"prov:informed" : "p18"
+} ,
+
+"e35" : {
+"prov:informant" : "p18",
+"prov:informed" : "p19"
+} ,
+
+"e38" : {
+"prov:informant" : "p19",
+"prov:informed" : "p20"
+} ,
+
+"e41" : {
+"prov:informant" : "p20",
+"prov:informed" : "p21"
+} ,
+
+"e44" : {
+"prov:informant" : "p21",
+"prov:informed" : "p22"
+} ,
+
+"e47" : {
+"prov:informant" : "p22",
+"prov:informed" : "p23"
+} ,
+
+"e50" : {
+"prov:informant" : "p23",
+"prov:informed" : "p24"
+} ,
+
+"e53" : {
+"prov:informant" : "p24",
+"prov:informed" : "p25"
+} ,
+
+"e56" : {
+"prov:informant" : "p25",
+"prov:informed" : "p26"
+} ,
+
+"e59" : {
+"prov:informant" : "p26",
+"prov:informed" : "p27"
+} ,
+
+"e62" : {
+"prov:informant" : "p27",
+"prov:informed" : "p28"
+} ,
+
+"e65" : {
+"prov:informant" : "p28",
+"prov:informed" : "p29"
+} ,
+
+"e68" : {
+"prov:informant" : "p29",
+"prov:informed" : "p30"
+} ,
+
+"e71" : {
+"prov:informant" : "p30",
+"prov:informed" : "p31"
+} ,
+
+"e74" : {
+"prov:informant" : "p31",
+"prov:informed" : "p32"
+} ,
+
+"e77" : {
+"prov:informant" : "p32",
+"prov:informed" : "p33"
+} ,
+
+"e80" : {
+"prov:informant" : "p33",
+"prov:informed" : "p34"
+} ,
+
+"e83" : {
+"prov:informant" : "p34",
+"prov:informed" : "p35"
+} ,
+
+"e86" : {
+"prov:informant" : "p35",
+"prov:informed" : "p36"
+} ,
+
+"e89" : {
+"prov:informant" : "p36",
+"prov:informed" : "p37"
+} ,
+
+"e92" : {
+"prov:informant" : "p37",
+"prov:informed" : "p38"
+} ,
+
+"e95" : {
+"prov:informant" : "p38",
+"prov:informed" : "p39"
+} ,
+
+"e118" : {
+"prov:informant" : "p39",
+"prov:informed" : "p40"
+} ,
+
+"e120" : {
+"prov:informant" : "p40",
+"prov:informed" : "p41"
+} ,
+
+"e123" : {
+"prov:informant" : "p41",
+"prov:informed" : "p42"
+} ,
+
+"e125" : {
+"prov:informant" : "p42",
+"prov:informed" : "p43"
+} ,
+
+"e127" : {
+"prov:informant" : "p43",
+"prov:informed" : "p44"
+} ,
+
+"e129" : {
+"prov:informant" : "p44",
+"prov:informed" : "p45"
+} ,
+
+"e131" : {
+"prov:informant" : "p45",
+"prov:informed" : "p46"
+} ,
+
+"e133" : {
+"prov:informant" : "p46",
+"prov:informed" : "p47"
+} ,
+
+"e136" : {
+"prov:informant" : "p47",
+"prov:informed" : "p48"
+} ,
+
+"e138" : {
+"prov:informant" : "p48",
+"prov:informed" : "p49"
+} ,
+
+"e141" : {
+"prov:informant" : "p49",
+"prov:informed" : "p50"
+} ,
+
+"e143" : {
+"prov:informant" : "p50",
+"prov:informed" : "p51"
+} ,
+
+"e146" : {
+"prov:informant" : "p51",
+"prov:informed" : "p52"
+} ,
+
+"e148" : {
+"prov:informant" : "p52",
+"prov:informed" : "p53"
+} ,
+
+"e153" : {
+"prov:informant" : "p53",
+"prov:informed" : "p54"
+} ,
+
+"e155" : {
+"prov:informant" : "p54",
+"prov:informed" : "p55"
+} ,
+
+"e158" : {
+"prov:informant" : "p55",
+"prov:informed" : "p56"
+} ,
+
+"e160" : {
+"prov:informant" : "p56",
+"prov:informed" : "p57"
+} ,
+
+"e162" : {
+"prov:informant" : "p57",
+"prov:informed" : "p58"
+} ,
+
+"e163" : {
+"prov:informant" : "p58",
+"prov:informed" : "p59"
+} ,
+
+"e166" : {
+"prov:informant" : "p59",
+"prov:informed" : "p60"
+} ,
+
+"e169" : {
+"prov:informant" : "p60",
+"prov:informed" : "p61"
+} ,
+
+"e172" : {
+"prov:informant" : "p61",
+"prov:informed" : "p62"
+} ,
+
+"e175" : {
+"prov:informant" : "p62",
+"prov:informed" : "p63"
+} ,
+
+"e176" : {
+"prov:informant" : "p63",
+"prov:informed" : "p64"
+} ,
+
+"e178" : {
+"prov:informant" : "p64",
+"prov:informed" : "p65"
+} ,
+
+"e180" : {
+"prov:informant" : "p65",
+"prov:informed" : "p66"
+} ,
+
+"e181" : {
+"prov:informant" : "p66",
+"prov:informed" : "p67"
+} ,
+
+"e184" : {
+"prov:informant" : "p67",
+"prov:informed" : "p68"
+} ,
+
+"e187" : {
+"prov:informant" : "p68",
+"prov:informed" : "p69"
+} ,
+
+"e190" : {
+"prov:informant" : "p69",
+"prov:informed" : "p70"
+} ,
+
+"e193" : {
+"prov:informant" : "p70",
+"prov:informed" : "p71"
+} ,
+
+"e196" : {
+"prov:informant" : "p71",
+"prov:informed" : "p72"
+} ,
+
+"e199" : {
+"prov:informant" : "p72",
+"prov:informed" : "p73"
+} ,
+
+"e202" : {
+"prov:informant" : "p73",
+"prov:informed" : "p74"
+} ,
+
+"e203" : {
+"prov:informant" : "p74",
+"prov:informed" : "p75"
+} ,
+
+"e206" : {
+"prov:informant" : "p75",
+"prov:informed" : "p76"
+} ,
+
+"e209" : {
+"prov:informant" : "p76",
+"prov:informed" : "p77"
+} ,
+
+"e212" : {
+"prov:informant" : "p77",
+"prov:informed" : "p78"
+} ,
+
+"e215" : {
+"prov:informant" : "p78",
+"prov:informed" : "p79"
+} ,
+
+"e218" : {
+"prov:informant" : "p79",
+"prov:informed" : "p80"
+} ,
+
+"e221" : {
+"prov:informant" : "p80",
+"prov:informed" : "p81"
+} ,
+
+"e224" : {
+"prov:informant" : "p81",
+"prov:informed" : "p82"
+} ,
+
+"e227" : {
+"prov:informant" : "p82",
+"prov:informed" : "p83"
+} ,
+
+"e230" : {
+"prov:informant" : "p83",
+"prov:informed" : "p84"
+} ,
+
+"e231" : {
+"prov:informant" : "p84",
+"prov:informed" : "p85"
+} ,
+
+"e236" : {
+"prov:informant" : "p85",
+"prov:informed" : "p86"
+} ,
+
 "e238" : {
 "prov:informant" : "p86",
 "prov:informed" : "p87"
-}
-},
+} ,
 
-"activity" : {
-"p88" : {
-"rdt:name" : "nineender-r.R",
-"rdt:type" : "Finish",
-"rdt:elapsedTime" : "83.848",
-"rdt:scriptNum" : "0",
-"rdt:scriptLine" : "NA"
-}
-},
-
-"wasInformedBy" : {
 "e239" : {
 "prov:informant" : "p87",
 "prov:informed" : "p88"
-}
-}
+}},
+"wasGeneratedBy":{
 
+"e11" : {
+"prov:entity" : "d2",
+"prov:activity" : "p10"
+} ,
+
+"e14" : {
+"prov:entity" : "d4",
+"prov:activity" : "p11"
+} ,
+
+"e17" : {
+"prov:entity" : "d6",
+"prov:activity" : "p12"
+} ,
+
+"e20" : {
+"prov:entity" : "d8",
+"prov:activity" : "p13"
+} ,
+
+"e23" : {
+"prov:entity" : "d10",
+"prov:activity" : "p14"
+} ,
+
+"e26" : {
+"prov:entity" : "d12",
+"prov:activity" : "p15"
+} ,
+
+"e29" : {
+"prov:entity" : "d14",
+"prov:activity" : "p16"
+} ,
+
+"e31" : {
+"prov:entity" : "d15",
+"prov:activity" : "p17"
+} ,
+
+"e34" : {
+"prov:entity" : "d16",
+"prov:activity" : "p18"
+} ,
+
+"e37" : {
+"prov:entity" : "d17",
+"prov:activity" : "p19"
+} ,
+
+"e40" : {
+"prov:entity" : "d18",
+"prov:activity" : "p20"
+} ,
+
+"e43" : {
+"prov:entity" : "d19",
+"prov:activity" : "p21"
+} ,
+
+"e46" : {
+"prov:entity" : "d20",
+"prov:activity" : "p22"
+} ,
+
+"e49" : {
+"prov:entity" : "d21",
+"prov:activity" : "p23"
+} ,
+
+"e52" : {
+"prov:entity" : "d22",
+"prov:activity" : "p24"
+} ,
+
+"e55" : {
+"prov:entity" : "d23",
+"prov:activity" : "p25"
+} ,
+
+"e58" : {
+"prov:entity" : "d24",
+"prov:activity" : "p26"
+} ,
+
+"e61" : {
+"prov:entity" : "d25",
+"prov:activity" : "p27"
+} ,
+
+"e64" : {
+"prov:entity" : "d26",
+"prov:activity" : "p28"
+} ,
+
+"e67" : {
+"prov:entity" : "d27",
+"prov:activity" : "p29"
+} ,
+
+"e70" : {
+"prov:entity" : "d28",
+"prov:activity" : "p30"
+} ,
+
+"e73" : {
+"prov:entity" : "d29",
+"prov:activity" : "p31"
+} ,
+
+"e76" : {
+"prov:entity" : "d30",
+"prov:activity" : "p32"
+} ,
+
+"e79" : {
+"prov:entity" : "d31",
+"prov:activity" : "p33"
+} ,
+
+"e82" : {
+"prov:entity" : "d32",
+"prov:activity" : "p34"
+} ,
+
+"e85" : {
+"prov:entity" : "d33",
+"prov:activity" : "p35"
+} ,
+
+"e88" : {
+"prov:entity" : "d34",
+"prov:activity" : "p36"
+} ,
+
+"e91" : {
+"prov:entity" : "d35",
+"prov:activity" : "p37"
+} ,
+
+"e94" : {
+"prov:entity" : "d36",
+"prov:activity" : "p38"
+} ,
+
+"e117" : {
+"prov:entity" : "d37",
+"prov:activity" : "p39"
+} ,
+
+"e119" : {
+"prov:entity" : "d38",
+"prov:activity" : "p40"
+} ,
+
+"e122" : {
+"prov:entity" : "d40",
+"prov:activity" : "p41"
+} ,
+
+"e124" : {
+"prov:entity" : "d41",
+"prov:activity" : "p42"
+} ,
+
+"e126" : {
+"prov:entity" : "d42",
+"prov:activity" : "p43"
+} ,
+
+"e128" : {
+"prov:entity" : "d43",
+"prov:activity" : "p44"
+} ,
+
+"e130" : {
+"prov:entity" : "d44",
+"prov:activity" : "p45"
+} ,
+
+"e135" : {
+"prov:entity" : "d45",
+"prov:activity" : "p47"
+} ,
+
+"e140" : {
+"prov:entity" : "d46",
+"prov:activity" : "p49"
+} ,
+
+"e145" : {
+"prov:entity" : "d47",
+"prov:activity" : "p51"
+} ,
+
+"e147" : {
+"prov:entity" : "d48",
+"prov:activity" : "p52"
+} ,
+
+"e149" : {
+"prov:entity" : "d49",
+"prov:activity" : "p53"
+} ,
+
+"e152" : {
+"prov:entity" : "d50",
+"prov:activity" : "p53"
+} ,
+
+"e157" : {
+"prov:entity" : "d52",
+"prov:activity" : "p55"
+} ,
+
+"e159" : {
+"prov:entity" : "d53",
+"prov:activity" : "p56"
+} ,
+
+"e165" : {
+"prov:entity" : "d54",
+"prov:activity" : "p59"
+} ,
+
+"e168" : {
+"prov:entity" : "d55",
+"prov:activity" : "p60"
+} ,
+
+"e171" : {
+"prov:entity" : "d56",
+"prov:activity" : "p61"
+} ,
+
+"e174" : {
+"prov:entity" : "d57",
+"prov:activity" : "p62"
+} ,
+
+"e177" : {
+"prov:entity" : "d58",
+"prov:activity" : "p64"
+} ,
+
+"e183" : {
+"prov:entity" : "d59",
+"prov:activity" : "p67"
+} ,
+
+"e186" : {
+"prov:entity" : "d60",
+"prov:activity" : "p68"
+} ,
+
+"e189" : {
+"prov:entity" : "d61",
+"prov:activity" : "p69"
+} ,
+
+"e192" : {
+"prov:entity" : "d62",
+"prov:activity" : "p70"
+} ,
+
+"e195" : {
+"prov:entity" : "d63",
+"prov:activity" : "p71"
+} ,
+
+"e198" : {
+"prov:entity" : "d64",
+"prov:activity" : "p72"
+} ,
+
+"e201" : {
+"prov:entity" : "d65",
+"prov:activity" : "p73"
+} ,
+
+"e205" : {
+"prov:entity" : "d66",
+"prov:activity" : "p75"
+} ,
+
+"e208" : {
+"prov:entity" : "d67",
+"prov:activity" : "p76"
+} ,
+
+"e211" : {
+"prov:entity" : "d68",
+"prov:activity" : "p77"
+} ,
+
+"e214" : {
+"prov:entity" : "d69",
+"prov:activity" : "p78"
+} ,
+
+"e217" : {
+"prov:entity" : "d70",
+"prov:activity" : "p79"
+} ,
+
+"e220" : {
+"prov:entity" : "d71",
+"prov:activity" : "p80"
+} ,
+
+"e223" : {
+"prov:entity" : "d72",
+"prov:activity" : "p81"
+} ,
+
+"e226" : {
+"prov:entity" : "d73",
+"prov:activity" : "p82"
+} ,
+
+"e229" : {
+"prov:entity" : "d74",
+"prov:activity" : "p83"
+} ,
+
+"e237" : {
+"prov:entity" : "d75",
+"prov:activity" : "p86"
+}},
+"used":{
+
+"e10" : {
+"prov:activity" : "p10",
+"prov:entity" : "d1"
+} ,
+
+"e13" : {
+"prov:activity" : "p11",
+"prov:entity" : "d3"
+} ,
+
+"e16" : {
+"prov:activity" : "p12",
+"prov:entity" : "d5"
+} ,
+
+"e19" : {
+"prov:activity" : "p13",
+"prov:entity" : "d7"
+} ,
+
+"e22" : {
+"prov:activity" : "p14",
+"prov:entity" : "d9"
+} ,
+
+"e25" : {
+"prov:activity" : "p15",
+"prov:entity" : "d11"
+} ,
+
+"e28" : {
+"prov:activity" : "p16",
+"prov:entity" : "d13"
+} ,
+
+"e33" : {
+"prov:activity" : "p18",
+"prov:entity" : "d15"
+} ,
+
+"e36" : {
+"prov:activity" : "p19",
+"prov:entity" : "d2"
+} ,
+
+"e39" : {
+"prov:activity" : "p20",
+"prov:entity" : "d4"
+} ,
+
+"e42" : {
+"prov:activity" : "p21",
+"prov:entity" : "d6"
+} ,
+
+"e45" : {
+"prov:activity" : "p22",
+"prov:entity" : "d8"
+} ,
+
+"e48" : {
+"prov:activity" : "p23",
+"prov:entity" : "d10"
+} ,
+
+"e51" : {
+"prov:activity" : "p24",
+"prov:entity" : "d12"
+} ,
+
+"e54" : {
+"prov:activity" : "p25",
+"prov:entity" : "d15"
+} ,
+
+"e57" : {
+"prov:activity" : "p26",
+"prov:entity" : "d2"
+} ,
+
+"e60" : {
+"prov:activity" : "p27",
+"prov:entity" : "d4"
+} ,
+
+"e63" : {
+"prov:activity" : "p28",
+"prov:entity" : "d6"
+} ,
+
+"e66" : {
+"prov:activity" : "p29",
+"prov:entity" : "d8"
+} ,
+
+"e69" : {
+"prov:activity" : "p30",
+"prov:entity" : "d10"
+} ,
+
+"e72" : {
+"prov:activity" : "p31",
+"prov:entity" : "d12"
+} ,
+
+"e75" : {
+"prov:activity" : "p32",
+"prov:entity" : "d15"
+} ,
+
+"e78" : {
+"prov:activity" : "p33",
+"prov:entity" : "d2"
+} ,
+
+"e81" : {
+"prov:activity" : "p34",
+"prov:entity" : "d4"
+} ,
+
+"e84" : {
+"prov:activity" : "p35",
+"prov:entity" : "d6"
+} ,
+
+"e87" : {
+"prov:activity" : "p36",
+"prov:entity" : "d8"
+} ,
+
+"e90" : {
+"prov:activity" : "p37",
+"prov:entity" : "d10"
+} ,
+
+"e93" : {
+"prov:activity" : "p38",
+"prov:entity" : "d12"
+} ,
+
+"e96" : {
+"prov:activity" : "p39",
+"prov:entity" : "d16"
+} ,
+
+"e97" : {
+"prov:activity" : "p39",
+"prov:entity" : "d17"
+} ,
+
+"e98" : {
+"prov:activity" : "p39",
+"prov:entity" : "d18"
+} ,
+
+"e99" : {
+"prov:activity" : "p39",
+"prov:entity" : "d19"
+} ,
+
+"e100" : {
+"prov:activity" : "p39",
+"prov:entity" : "d20"
+} ,
+
+"e101" : {
+"prov:activity" : "p39",
+"prov:entity" : "d21"
+} ,
+
+"e102" : {
+"prov:activity" : "p39",
+"prov:entity" : "d22"
+} ,
+
+"e103" : {
+"prov:activity" : "p39",
+"prov:entity" : "d23"
+} ,
+
+"e104" : {
+"prov:activity" : "p39",
+"prov:entity" : "d24"
+} ,
+
+"e105" : {
+"prov:activity" : "p39",
+"prov:entity" : "d25"
+} ,
+
+"e106" : {
+"prov:activity" : "p39",
+"prov:entity" : "d26"
+} ,
+
+"e107" : {
+"prov:activity" : "p39",
+"prov:entity" : "d27"
+} ,
+
+"e108" : {
+"prov:activity" : "p39",
+"prov:entity" : "d28"
+} ,
+
+"e109" : {
+"prov:activity" : "p39",
+"prov:entity" : "d29"
+} ,
+
+"e110" : {
+"prov:activity" : "p39",
+"prov:entity" : "d30"
+} ,
+
+"e111" : {
+"prov:activity" : "p39",
+"prov:entity" : "d31"
+} ,
+
+"e112" : {
+"prov:activity" : "p39",
+"prov:entity" : "d32"
+} ,
+
+"e113" : {
+"prov:activity" : "p39",
+"prov:entity" : "d33"
+} ,
+
+"e114" : {
+"prov:activity" : "p39",
+"prov:entity" : "d34"
+} ,
+
+"e115" : {
+"prov:activity" : "p39",
+"prov:entity" : "d35"
+} ,
+
+"e116" : {
+"prov:activity" : "p39",
+"prov:entity" : "d36"
+} ,
+
+"e121" : {
+"prov:activity" : "p41",
+"prov:entity" : "d39"
+} ,
+
+"e132" : {
+"prov:activity" : "p46",
+"prov:entity" : "d44"
+} ,
+
+"e134" : {
+"prov:activity" : "p47",
+"prov:entity" : "d44"
+} ,
+
+"e137" : {
+"prov:activity" : "p48",
+"prov:entity" : "d45"
+} ,
+
+"e139" : {
+"prov:activity" : "p49",
+"prov:entity" : "d44"
+} ,
+
+"e142" : {
+"prov:activity" : "p50",
+"prov:entity" : "d46"
+} ,
+
+"e144" : {
+"prov:activity" : "p51",
+"prov:entity" : "d44"
+} ,
+
+"e150" : {
+"prov:activity" : "p53",
+"prov:entity" : "d48"
+} ,
+
+"e151" : {
+"prov:activity" : "p53",
+"prov:entity" : "d44"
+} ,
+
+"e154" : {
+"prov:activity" : "p54",
+"prov:entity" : "d50"
+} ,
+
+"e156" : {
+"prov:activity" : "p55",
+"prov:entity" : "d51"
+} ,
+
+"e161" : {
+"prov:activity" : "p58",
+"prov:entity" : "d53"
+} ,
+
+"e164" : {
+"prov:activity" : "p59",
+"prov:entity" : "d52"
+} ,
+
+"e167" : {
+"prov:activity" : "p60",
+"prov:entity" : "d54"
+} ,
+
+"e170" : {
+"prov:activity" : "p61",
+"prov:entity" : "d55"
+} ,
+
+"e173" : {
+"prov:activity" : "p62",
+"prov:entity" : "d55"
+} ,
+
+"e179" : {
+"prov:activity" : "p66",
+"prov:entity" : "d58"
+} ,
+
+"e182" : {
+"prov:activity" : "p67",
+"prov:entity" : "d55"
+} ,
+
+"e185" : {
+"prov:activity" : "p68",
+"prov:entity" : "d59"
+} ,
+
+"e188" : {
+"prov:activity" : "p69",
+"prov:entity" : "d60"
+} ,
+
+"e191" : {
+"prov:activity" : "p70",
+"prov:entity" : "d61"
+} ,
+
+"e194" : {
+"prov:activity" : "p71",
+"prov:entity" : "d62"
+} ,
+
+"e197" : {
+"prov:activity" : "p72",
+"prov:entity" : "d63"
+} ,
+
+"e200" : {
+"prov:activity" : "p73",
+"prov:entity" : "d63"
+} ,
+
+"e204" : {
+"prov:activity" : "p75",
+"prov:entity" : "d63"
+} ,
+
+"e207" : {
+"prov:activity" : "p76",
+"prov:entity" : "d63"
+} ,
+
+"e210" : {
+"prov:activity" : "p77",
+"prov:entity" : "d63"
+} ,
+
+"e213" : {
+"prov:activity" : "p78",
+"prov:entity" : "d66"
+} ,
+
+"e216" : {
+"prov:activity" : "p79",
+"prov:entity" : "d67"
+} ,
+
+"e219" : {
+"prov:activity" : "p80",
+"prov:entity" : "d68"
+} ,
+
+"e222" : {
+"prov:activity" : "p81",
+"prov:entity" : "d69"
+} ,
+
+"e225" : {
+"prov:activity" : "p82",
+"prov:entity" : "d70"
+} ,
+
+"e228" : {
+"prov:activity" : "p83",
+"prov:entity" : "d71"
+} ,
+
+"e232" : {
+"prov:activity" : "p85",
+"prov:entity" : "d38"
+} ,
+
+"e233" : {
+"prov:activity" : "p85",
+"prov:entity" : "d72"
+} ,
+
+"e234" : {
+"prov:activity" : "p85",
+"prov:entity" : "d73"
+} ,
+
+"e235" : {
+"prov:activity" : "p85",
+"prov:entity" : "d74"
+}}
 }

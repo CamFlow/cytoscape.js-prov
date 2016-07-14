@@ -61,7 +61,7 @@ $(function(){
 			{
 				selector: '.faded',
 				style: {
-					'opacity': 0.1
+					'opacity': 0.25
 				}
 			}
 			,
