@@ -98,32 +98,44 @@ $(function(){
 		
 		
 		if(showSuccessors){
-			successors = [node];
-			while(successors.length>0){
+			var successors = [node];
+			var visited = [node.id()];
+			while(successors.length>0 && successors.length<100){
 				current = successors.pop();
-				cy.elements('edge[source="'+current.id()+'"]').each(function(i, edge){
+				current.openNeighborhood('edge[source="'+current.id()+'"]').each(function(i, edge){
 					edge.removeClass('faded');
-					edge.target().each(function(i, node){
-						node.addClass('prov_successor');
-						this.removeClass('faded');
-						successors.push(node);
-					})
+					newNode = edge.target();
+					newNode.addClass('prov_successor');
+					newNode.removeClass('faded');
+					if(!visited.includes(newNode.id())){
+						visited.push(newNode.id());
+						successors.push(newNode);
+					}
 				});
+			}
+			if(successors.length>=5000){
+				alert("Something is wrong, check for cycle. Provenance graph MUST NOT contain cycle.");
 			}
 		}
 		
 		if(showAncestors){
-			ancestors = [node];
-			while(ancestors.length>0){
+			var ancestors = [node];
+			var visited = [node.id()];
+			while(ancestors.length>0 && ancestors.length<5000){
 				current = ancestors.pop();
-				cy.elements('edge[target="'+current.id()+'"]').each(function(i, edge){
+				current.openNeighborhood('edge[target="'+current.id()+'"]').each(function(i, edge){
 					edge.removeClass('faded');
-					edge.source().each(function(i, node){
-						node.addClass('prov_ancestor');
-						this.removeClass('faded');
-						ancestors.push(node);
-					})
+					newNode = edge.source();
+					newNode.addClass('prov_ancestor');
+					newNode.removeClass('faded');
+					if(!visited.includes(newNode.id())){
+						visited.push(newNode.id());
+						ancestors.push(newNode);
+					}
 				});
+			}
+			if(ancestors.length>=5000){
+				alert("Something is wrong, check for cycle. Provenance graph MUST NOT contain cycle.");
 			}
 		}
 	});
