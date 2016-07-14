@@ -2,15 +2,21 @@ function JSProvParseJSON(text){
 	var data = JSON.parse(text);
 	entities = data.entity;
 	for(key in entities){
+		if(entities[key]['rdt:name']!=undefined){
+			var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
+		}
 		if(entities[key]['prov:type']=='prov:agent'){
-			agent(key);
+			agent(key, label);
 		}else{
-			entity(key);
+			entity(key, label);
 		}
 	}
 	activities = data.activity;
 	for(key in activities){
-		activity(key);
+		if(activities[key]['rdt:name']!=undefined){
+			var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:scriptLine']+']';
+		}
+		activity(key, label);
 	}
 	agents = data.agent;
 	for(key in agents){

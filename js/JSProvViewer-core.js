@@ -2,6 +2,7 @@ var graphType = 'dagre';
 var previously_selected = undefined;
 var showAncestors=true;
 var showSuccessors=true;
+var ignoreControlFlow=false;
 
 $(function(){
 	var cy = window.cy = cytoscape({
@@ -17,7 +18,7 @@ $(function(){
 			{
 				selector: 'node',
 				style: {
-					'content': 'data(id)',
+					'content': 'data(label)',
 					'text-opacity': 0.5,
 					'text-valign': 'center',
 					'text-halign': 'right',
@@ -103,13 +104,17 @@ $(function(){
 			while(successors.length>0 && successors.length<100){
 				current = successors.pop();
 				current.openNeighborhood('edge[source="'+current.id()+'"]').each(function(i, edge){
-					edge.removeClass('faded');
-					newNode = edge.target();
-					newNode.addClass('prov_successor');
-					newNode.removeClass('faded');
-					if(!visited.includes(newNode.id())){
-						visited.push(newNode.id());
-						successors.push(newNode);
+					if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
+						
+					}else{
+						edge.removeClass('faded');
+						newNode = edge.target();
+						newNode.addClass('prov_successor');
+						newNode.removeClass('faded');
+						if(!visited.includes(newNode.id())){
+							visited.push(newNode.id());
+							successors.push(newNode);
+						}
 					}
 				});
 			}
@@ -124,13 +129,17 @@ $(function(){
 			while(ancestors.length>0 && ancestors.length<5000){
 				current = ancestors.pop();
 				current.openNeighborhood('edge[target="'+current.id()+'"]').each(function(i, edge){
-					edge.removeClass('faded');
-					newNode = edge.source();
-					newNode.addClass('prov_ancestor');
-					newNode.removeClass('faded');
-					if(!visited.includes(newNode.id())){
-						visited.push(newNode.id());
-						ancestors.push(newNode);
+					if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
+						// do nothing
+					}else{
+						edge.removeClass('faded');
+						newNode = edge.source();
+						newNode.addClass('prov_ancestor');
+						newNode.removeClass('faded');
+						if(!visited.includes(newNode.id())){
+							visited.push(newNode.id());
+							ancestors.push(newNode);
+						}
 					}
 				});
 			}
@@ -160,6 +169,10 @@ function JSProvSetShowAncestors(bool){
 	showAncestors=bool;
 }
 
+function JSProvSetIgnoreControlFlow(bool){
+	ignoreControlFlow=bool;
+}
+
 function JSProvSetShowSuccessors(bool){
 	showSuccessors=bool;
 }
@@ -168,25 +181,31 @@ function location(name){
 	cy.add([{ group: "nodes", data: { id: name, color: '#66B2FF', shape: 'rectangle'}}]);				
 }
 
-function activity(name, location){				
+function activity(id, label, location){			
+	if(typeof label === 'undefined')
+		label = id;
 	if (typeof location === 'undefined')
-		cy.add([{ group: "nodes", data: { id: name, color: '#66B2FF', shape: 'rectangle'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: name, parent: location, color: '#0000FF', shape: 'rectangle'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#0000FF', shape: 'rectangle'}}]);
 }
 
-function entity(name, location){
+function entity(id, label, location){
+	if(typeof label === 'undefined')
+		label = id;
 	if (typeof location === 'undefined')
-		cy.add([{ group: "nodes", data: { id: name, color: '#FFB266', shape: 'ellipse'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#FFB266', shape: 'ellipse'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: name, parent: location, color: '#FFB266', shape: 'ellipse'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#FFB266', shape: 'ellipse'}}]);
 }
 
-function agent(name, location){
+function agent(id, label, location){
+	if(typeof label === 'undefined')
+		label = id;
 	if (typeof location === 'undefined')
-		cy.add([{ group: "nodes", data: { id: name, color: '#66FF66', shape: 'octagon'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: name, parent: location, color: '#66FF66', shape: 'octagon'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#66FF66', shape: 'octagon'}}]);
 }
 
 function wasDerivedFrom(generatedEntity, usedEntity){

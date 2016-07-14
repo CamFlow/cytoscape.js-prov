@@ -108,10 +108,15 @@
 				var show = document.getElementById("successors").checked;
 				JSProvSetShowSuccessors(show);
 			}
+			function ignoreControl(){
+				var ignore = document.getElementById("control").checked;
+				JSProvSetIgnoreControlFlow(ignore);
+			}
 		</script>
 		<div>
 		  <input type="checkbox" id="ancestors" name="ancestors" value="ancestors" onclick="showAncestor();"checked>Show Ancestor<br>
-		  <input type="checkbox" id="successors" name="successors" value="successors" onclick="showSuccessor();" checked>Show Successor
+		  <input type="checkbox" id="successors" name="successors" value="successors" onclick="showSuccessor();" checked>Show Successor<br>
+		  <input type="checkbox" id="control" name="control" value="control" onclick="ignoreControl();">Ignore Control Flow
 		</div>
 		
 		<div id="cy"></div>
