@@ -58,15 +58,15 @@
 
 		  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 		</script>
-		</div>
-		
-		<div>
-		
+		</div>		
 		
 		<script type="text/javascript">
 		  function changeGraphType() {
 			switch(JSProvGetGraphType()){
 				case 'dagre':
+					JSProvSetGraphType('breadthfirst');
+					break;
+				case 'breadthfirst':
 					JSProvSetGraphType('circle');
 					break;
 				case 'circle':
@@ -94,10 +94,11 @@
 			JSProvDraw();
 		  }
 		</script>
+		<div>
+		<button type="button" onclick="changeGraphType();">Change</button>
 		<span>Graph type: 
 		<span id="graph_type">dagre</span>
-		</span>
-		<button type="button" onclick="changeGraphType();">Change</button>
+		</span>		
 		</div>
 		<script>
 			function showAncestor(){
