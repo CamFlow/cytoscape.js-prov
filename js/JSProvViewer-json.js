@@ -66,5 +66,11 @@ function JSProvParseJSON(text){
 	for(key in alternate){
 		alternateOf(alternate[key]['prov:entity'], alternate[key]['prov:alternate']);
 	}
+	edge = data.edge;
+	for(key in edge){
+		entity(edge[key]['cf:sender'], edge[key]['cf:sender']);
+		entity(edge[key]['cf:receiver'], edge[key]['cf:receiver']);
+		unknownEdge(edge[key]['cf:sender'], edge[key]['cf:receiver'])
+	}
 	JSProvDraw();
 }

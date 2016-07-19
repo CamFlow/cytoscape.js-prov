@@ -17,8 +17,10 @@
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.1.2/cytoscape-dagre.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.0.2/cytoscape-cose-bilkent.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
+		<script src="https://api.cloudmqtt.com/sso/js/mqttws31.js"></script>
 		<script src="./js/JSProvViewer-core.js"></script>
 		<script src="./js/JSProvViewer-json.js"></script>
+		<script src="./js/JSProvView-mqtt.js"></script>
 
 		<style>
 			#cy {
@@ -118,6 +120,9 @@
 		  <input type="checkbox" id="ancestors" name="ancestors" value="ancestors" onclick="showAncestor();"checked>Show Ancestor<br>
 		  <input type="checkbox" id="successors" name="successors" value="successors" onclick="showSuccessor();" checked>Show Successor<br>
 		  <input type="checkbox" id="control" name="control" value="control" onclick="ignoreControl();">Ignore Control Flow
+		</div>
+		<div>
+		<button type="button" onclick="JSProvMQTTConnect();">Start CamFlow MQTT</button>
 		</div>
 		
 		<div id="cy"></div>

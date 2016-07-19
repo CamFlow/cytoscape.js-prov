@@ -240,6 +240,10 @@ function derivedByInsertionFrom(before, after){
 	cy.add([{ group: "edges", data: { source: before, target: after, color: '#CC00CC', label: 'derivedByInsertionFrom'}}]);
 }
 
+function hadMember(collection, entry){
+	cy.add([{ group: "edges", data: { source: entry, target: collection, color: '#CC00CC', label: 'hadMember'}}]);
+}
+
 function hadDictionaryMember(dictionary, entry){
 	cy.add([{ group: "edges", data: { source: entry, target: dictionary, color: '#CC00CC', label: 'hadDictionaryMember'}}]);
 }
@@ -254,4 +258,8 @@ function alternateOf(entity, alternate){
 
 function hadPlan(agent, plan){
 	cy.add([{ group: "edges", data: { source: plan, target: agent, color: '#CC00CC', label: 'hadPlan'}}]);	
+}
+
+function unknownEdge(node1, node2){
+	cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#CC00CC', label: 'unknown'}}]);	
 }
