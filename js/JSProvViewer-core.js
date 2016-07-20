@@ -111,6 +111,7 @@ $(function(){
 						newNode = edge.target();
 						newNode.addClass('prov_successor');
 						newNode.removeClass('faded');
+						newNode.ancestors().removeClass('faded');
 						if(!visited.includes(newNode.id())){
 							visited.push(newNode.id());
 							successors.push(newNode);
@@ -136,6 +137,7 @@ $(function(){
 						newNode = edge.source();
 						newNode.addClass('prov_ancestor');
 						newNode.removeClass('faded');
+						newNode.ancestors().removeClass('faded');
 						if(!visited.includes(newNode.id())){
 							visited.push(newNode.id());
 							ancestors.push(newNode);
@@ -181,35 +183,35 @@ function location(name){
 	cy.add([{ group: "nodes", data: { id: name, color: '#66B2FF', shape: 'rectangle'}}]);				
 }
 
-function activity(id, label, location){			
+function activity(id, label, superNode){			
 	if(typeof label === 'undefined')
 		label = id;
-	if (typeof location === 'undefined')
+	if (typeof superNode === 'undefined')
 		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#0000FF', shape: 'rectangle'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#0000FF', shape: 'rectangle'}}]);
 }
 
-function entity(id, label, location){
+function entity(id, label, superNode){
 	if(typeof label === 'undefined')
 		label = id;
-	if (typeof location === 'undefined')
+	if (typeof superNode === 'undefined')
 		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#FFB266', shape: 'ellipse'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#FFB266', shape: 'ellipse'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#FFB266', shape: 'ellipse'}}]);
 }
 
-function agent(id, label, location){
+function agent(id, label, superNode){
 	if(typeof label === 'undefined')
 		label = id;
-	if (typeof location === 'undefined')
+	if (typeof superNode === 'undefined')
 		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon'}}]);
 	else
-		cy.add([{ group: "nodes", data: { id: id, label: label, parent: location, color: '#66FF66', shape: 'octagon'}}]);
+		cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#66FF66', shape: 'octagon'}}]);
 }
 
 function wasDerivedFrom(generatedEntity, usedEntity){
-	cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF0000', label: 'wasDerivedFrom'}}]);
+	cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF9933', label: 'wasDerivedFrom'}}]);
 }
 
 function wasGeneratedBy(entity, activity){
@@ -261,5 +263,5 @@ function hadPlan(agent, plan){
 }
 
 function unknownEdge(node1, node2){
-	cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#CC00CC', label: 'unknown'}}]);	
+	cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#FF0000', label: 'unknown'}}]);	
 }

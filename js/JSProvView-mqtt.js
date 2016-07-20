@@ -10,6 +10,7 @@ client.onMessageArrived = onMessageArrived;
 function onConnect() {
 	// Once a connection has been made, make a subscription and send a message.
 	console.log("Connected!");
+	document.getElementById("mqtt").innerHTML="Connected!";
 	client.subscribe("#");
 }
 
@@ -17,6 +18,7 @@ function onConnect() {
 function onConnectionLost(responseObject) {
 	if (responseObject.errorCode !== 0) {
 		console.log("onConnectionLost:", responseObject.errorMessage);
+		document.getElementById("mqtt").innerHTML="Lost connection!";
 		setTimeout(function() { client.connect() }, 5000);
 	}
 }
@@ -24,10 +26,13 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
 	JSProvParseJSON(message.payloadString);
+	console.log(message.payloadString);
+	document.getElementById("mqtt").innerHTML="Data received!";
 }
 
 function onFailure(invocationContext, errorCode, errorMessage) {
 	alert(errorMessage);
+	document.getElementById("mqtt").innerHTML=errorMessage;
 }
 
 function JSProvMQTTConnect(){	

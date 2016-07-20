@@ -3,330 +3,238 @@
       "prov":"http://www.w3.org/ns/prov",
       "cf":"http://www.camflow.org"
    },
+   "activity":{
+      "cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA=":{
+         "node_info":{
+            "cf:type":2,
+            "cf:id":66322,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":1
+         },
+         "user_id":1000,
+         "group_id":1000
+      },
+      "cf:AgAAAAAAAAAWAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "node_info":{
+            "cf:type":2,
+            "cf:id":66326,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "user_id":1000,
+         "group_id":1000
+      }
+   },
    "entity":{
-      "cf:DQAAAAAAAADo6QAAAAAAADaIFkAAAX8AAAAAAAAAAAA=":{
+      "cf:AwAAAAAAAADYOAAAAAAAAGAT0zMBAAAABAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":14552,
+            "cf:boot_id":869471072,
+            "cf:machine_id":1,
+            "cf:version":4
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:unknown",
+         "cf:mode":"0X0000",
+         "cf:uuid":"00000000-0000-0000-0000-000000000000"
+      },
+      "cf:DQAAAAAAAAAUAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
          "cf:node_info":{
             "cf:type":13,
-            "cf:id":59880,
-            "cf:boot_id":1075218486,
+            "cf:id":66324,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328,
             "cf:version":0
          },
          "cf:ifc":"TODO"
+      },
+      "cf:DQAAAAAAAAAVAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":13,
+            "cf:id":66325,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "cf:ifc":"TODO"
+      },
+      "cf:DQAAAAAAAAAXAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":13,
+            "cf:id":66327,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "cf:ifc":"TODO"
+      },
+      "cf:AwAAAAAAAAB9IwAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":9085,
+            "cf:boot_id":869471072,
+            "cf:machine_id":1,
+            "cf:version":0
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:unknown",
+         "cf:mode":"0X0000",
+         "cf:uuid":"00000000-0000-0000-0000-000000000000"
+      },
+      "cf:DAAAAAAAAAAYAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":12,
+            "cf:id":66328,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "cf:pathname":"/"
+      },
+      "cf:DQAAAAAAAAAZAwEAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":13,
+            "cf:id":66329,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "cf:ifc":"TODO"
+      },
+      "cf:AwAAAAAAAACCIwAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":9090,
+            "cf:boot_id":869471072,
+            "cf:machine_id":1,
+            "cf:version":0
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:unknown",
+         "cf:mode":"0X0000",
+         "cf:uuid":"adcd8735-d273-2734-302f-defe7c2d9965"
+      },
+      "cf:AwAAAAAAAABmIgAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":8806,
+            "cf:boot_id":869471072,
+            "cf:machine_id":1,
+            "cf:version":0
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:unknown",
+         "cf:mode":"0X0000",
+         "cf:uuid":"00000000-0000-0000-0000-000000000000"
+      },
+      "cf:AwAAAAAAAABvIgAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":8815,
+            "cf:boot_id":869471072,
+            "cf:machine_id":1,
+            "cf:version":0
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:unknown",
+         "cf:mode":"0X0000",
+         "cf:uuid":"ede95f8c-e328-7ecf-12e2-19036c49891f"
+      },
+      "cf:AwAAAAAAAACRjQAAAAAAAGAT0zMAAX8AAAAAAAAAAAA=":{
+         "cf:node_info":{
+            "cf:type":3,
+            "cf:id":36241,
+            "cf:boot_id":869471072,
+            "cf:machine_id":8323328,
+            "cf:version":0
+         },
+         "cf:user_id":0,
+         "cf:group_id":0,
+         "prov:type":"cf:fifo",
+         "cf:mode":"0X0080",
+         "cf:uuid":"5656e10e-018e-9415-ce35-7b3ecafc979d"
       }
    },
    "edge":{
-      "cf:AXJXCAAAAAALAAAAAAAAADaIFkAAAX8AgESvewCI//8=":{
+      "cf:AeQYHAAAAAABAAAAAAAAAGAT0zMAAX8AAwAAAAAAAAA=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":11,
-            "cf:boot_id":1075218486,
+            "cf:id":1,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"fork",
          "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAACCIwAAAAAAADaIFkABAAAAAAAAAAAAAAA=",
-         "cf:receiver":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA="
+         "cf:sender":"cf:AwAAAAAAAADYOAAAAAAAAGAT0zMBAAAABAAAAAAAAAA=",
+         "cf:receiver":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA="
       },
-      "cf:AQAAAAAAAAAOAAAAAAAAADaIFkAAAX8AQH5tLgCI//8=":{
+      "cf:AeQYHAAAAAACAAAAAAAAAGAT0zMAAX8AQD2gewCI//8=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":14,
-            "cf:boot_id":1075218486,
+            "cf:id":2,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"fork",
          "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
+         "cf:sender":"cf:AwAAAAAAAAB9IwAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=",
+         "cf:receiver":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA="
       },
-      "cf:AaxJgQEAAAAPAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
+      "cf:AeQYHAAAAAADAAAAAAAAAGAT0zMAAX8AQD2gewCI//8=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":15,
-            "cf:boot_id":1075218486,
+            "cf:id":3,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"fork",
          "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
+         "cf:sender":"cf:AwAAAAAAAACCIwAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=",
+         "cf:receiver":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA="
       },
-      "cf:AajTAADq//8QAAAAAAAAADaIFkAAAX8AonJXCAAAAAA=":{
+      "cf:ARAkgf////8EAAAAAAAAAGAT0zMAAX8AxAApAAAAAAA=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":16,
-            "cf:boot_id":1075218486,
+            "cf:id":4,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"fork",
          "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
+         "cf:sender":"cf:AwAAAAAAAABmIgAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=",
+         "cf:receiver":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA="
       },
-      "cf:AaxJgQEAAAARAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
+      "cf:ARAkgf////8FAAAAAAAAAGAT0zMAAX8AxAApAAAAAAA=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":17,
-            "cf:boot_id":1075218486,
+            "cf:id":5,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"fork",
          "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
+         "cf:sender":"cf:AwAAAAAAAABvIgAAAAAAAGAT0zMBAAAAAAAAAAAAAAA=",
+         "cf:receiver":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA="
       },
-      "cf:AaxJgQEAAAASAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
+      "cf:AbkVawCI//8GAAAAAAAAAGAT0zMAAX8AgLkVawCI//8=":{
          "cf:edge_info":{
             "cf:type":1,
-            "cf:id":18,
-            "cf:boot_id":1075218486,
+            "cf:id":6,
+            "cf:boot_id":869471072,
             "cf:machine_id":8323328
          },
-         "cf:type":"data",
+         "cf:type":"pass",
          "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAATAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":19,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAUAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":20,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:ARAkgf////8MAAAAAAAAADaIFkAAAX8AxAApAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":12,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAABlIgAAAAAAADaIFkABAAAAAAAAAAAAAAA=",
-         "cf:receiver":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA="
-      },
-      "cf:ARAkgf////8NAAAAAAAAADaIFkAAAX8AxAApAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":13,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAABuIgAAAAAAADaIFkABAAAAAAAAAAAAAAA=",
-         "cf:receiver":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA="
-      },
-      "cf:AXJXCAAAAAAKAAAAAAAAADaIFkAAAX8AgESvewCI//8=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":10,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAAB9IwAAAAAAADaIFkABAAAAAAAAAAAAAAA=",
-         "cf:receiver":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAVAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":21,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAWAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":22,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAXAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":23,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAYAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":24,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAZAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":25,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAaAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":26,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAbAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":27,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAcAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":28,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAdAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":29,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AR1QdwCI//8eAAAAAAAAADaIFkAAAX8AAORTLgCI//8=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":30,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"named",
-         "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAABgjgAAAAAAADaIFkAAAX8AAAAAAAAAAAA=",
-         "cf:receiver":"cf:DAAAAAAAAADl6QAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AQAAAAAAAABAAAAAAAAAADaIFkAAAX8AOkgkgf////8=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":64,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADj6QAAAAAAADaIFkAAAX8AAAAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAAAfAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":31,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAABgjgAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AQAAAAAAAABBAAAAAAAAADaIFkAAAX8AAgIAAAAAAAA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":65,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AwAAAAAAAABgjgAAAAAAADaIFkAAAX8AAAAAAAAAAAA=",
-         "cf:receiver":"cf:AgAAAAAAAADj6QAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AQAAAAAAAAAgAAAAAAAAADaIFkAAAX8AABJdVQCI//8=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":32,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADf6QAAAAAAADaIFkAAAX8AAQAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
-      },
-      "cf:AaxJgQEAAABCAAAAAAAAADaIFkAAAX8ANogWQAABfwA=":{
-         "cf:edge_info":{
-            "cf:type":1,
-            "cf:id":66,
-            "cf:boot_id":1075218486,
-            "cf:machine_id":8323328
-         },
-         "cf:type":"data",
-         "cf:allowed":true,
-         "cf:sender":"cf:AgAAAAAAAADj6QAAAAAAADaIFkAAAX8AAAAAAAAAAAA=",
-         "cf:receiver":"cf:AwAAAAAAAACsjAAAAAAAADaIFkAAAX8AAAAAAAAAAAA="
+         "cf:sender":"cf:AgAAAAAAAAASAwEAAAAAAGAT0zMAAX8AAQAAAAAAAAA=",
+         "cf:receiver":"cf:AwAAAAAAAACRjQAAAAAAAGAT0zMAAX8AAAAAAAAAAAA="
       }
    }
 }

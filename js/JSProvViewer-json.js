@@ -1,27 +1,61 @@
-function JSProvParseJSON(text){
-	var data = JSON.parse(text);
-	entities = data.entity;
+function parse_entities(entities){
 	for(key in entities){
 		if(entities[key]['rdt:name']!=undefined){
 			var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
-		}
-		if(entities[key]['prov:type']=='prov:agent'){
-			agent(key, label);
+		}else if(entities[key]['prov:type']!=undefined && entities[key]['cf:uuid']!=undefined){
+			var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:uuid']+' v'+entities[key]['cf:node_info']['cf:version'];
+		}else if( entities[key]['cf:pathname']!=undefined ){
+			var label = '[path]'+entities[key]['cf:pathname'];
 		}else{
-			entity(key, label);
+			var label = key;
+		}
+		
+		if(entities[key]['cf:node_info'] != undefined){
+			var node_info = entities[key]['cf:node_info'];
+			var parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
+			entity(parent_id, label);
+		}
+		
+		if(entities[key]['prov:type']=='prov:agent'){
+			agent(key, label, parent_id);
+		}else{
+			entity(key, label, parent_id);
 		}
 	}
-	activities = data.activity;
+}
+
+function parse_activities(activities){
 	for(key in activities){
 		if(activities[key]['rdt:name']!=undefined){
 			var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:scriptLine']+']';
+		}else{
+			var label = key;
 		}
-		activity(key, label);
+		
+		if(activities[key]['cf:node_info'] != undefined){
+			var node_info = activities[key]['cf:node_info'];
+			var parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
+			activity(parent_id, label);
+		}
+		
+		activity(key, label, parent_id);
 	}
-	agents = data.agent;
+}
+
+function parse_agents(agents){
 	for(key in agents){
 		agent(key);
 	}
+}
+
+
+
+function JSProvParseJSON(text){
+	var data = JSON.parse(text);
+	parse_entities(data.entity);
+	parse_activities(data.activity);
+	parse_agents(data.agent);
+	
 	generated = data.wasGeneratedBy;
 	for(key in generated){
 		wasGeneratedBy(generated[key]['prov:entity'], generated[key]['prov:activity']);
@@ -70,7 +104,7 @@ function JSProvParseJSON(text){
 	for(key in edge){
 		entity(edge[key]['cf:sender'], edge[key]['cf:sender']);
 		entity(edge[key]['cf:receiver'], edge[key]['cf:receiver']);
-		unknownEdge(edge[key]['cf:sender'], edge[key]['cf:receiver'])
+		unknownEdge(edge[key]['cf:receiver'], edge[key]['cf:sender'])
 	}
 	JSProvDraw();
 }
