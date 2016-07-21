@@ -1,19 +1,20 @@
 function parse_entities(entities){
-	for(key in entities){
+	for(key in entities){	
+		var parent_id = undefined;
 		if(entities[key]['rdt:name']!=undefined){
 			var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
-		}else if(entities[key]['prov:type']!=undefined && entities[key]['cf:uuid']!=undefined){
-			var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:uuid']+' v'+entities[key]['cf:node_info']['cf:version'];
 		}else if( entities[key]['cf:pathname']!=undefined ){
 			var label = '[path]'+entities[key]['cf:pathname'];
-		}else{
-			var label = key;
-		}
-		
-		if(entities[key]['cf:node_info'] != undefined){
+		}else if( entities[key]['cf:ifc']!=undefined ){
+			var label = '[ifc]'+entities[key]['cf:ifc'];
+		}else if(entities[key]['cf:node_info'] != undefined){
 			var node_info = entities[key]['cf:node_info'];
+			var label = '['+entities[key]['prov:type']+']'+node_info['cf:id'];
 			var parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
 			entity(parent_id, label);
+			label = label+' v'+node_info['cf:version'];
+		}else{
+			var label = key;
 		}
 		
 		if(entities[key]['prov:type']=='prov:agent'){
@@ -26,16 +27,17 @@ function parse_entities(entities){
 
 function parse_activities(activities){
 	for(key in activities){
+		var parent_id = undefined;
 		if(activities[key]['rdt:name']!=undefined){
 			var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:scriptLine']+']';
+		}else if(activities[key]['cf:node_info'] != undefined){
+			var node_info = activities[key]['cf:node_info'];
+			var label = node_info['cf:id'];
+			parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
+			activity(parent_id, label);
+			label = label+' v'+node_info['cf:version'];
 		}else{
 			var label = key;
-		}
-		
-		if(activities[key]['cf:node_info'] != undefined){
-			var node_info = activities[key]['cf:node_info'];
-			var parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
-			activity(parent_id, label);
 		}
 		
 		activity(key, label, parent_id);
@@ -102,8 +104,8 @@ function JSProvParseJSON(text){
 	}
 	edge = data.edge;
 	for(key in edge){
-		entity(edge[key]['cf:sender'], edge[key]['cf:sender']);
-		entity(edge[key]['cf:receiver'], edge[key]['cf:receiver']);
+		entity(edge[key]['cf:sender'], 'was missing');
+		entity(edge[key]['cf:receiver'], 'was missing');
 		unknownEdge(edge[key]['cf:receiver'], edge[key]['cf:sender'])
 	}
 	JSProvDraw();

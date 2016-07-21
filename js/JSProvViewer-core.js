@@ -95,6 +95,7 @@ $(function(){
 		cy.elements().removeClass('prov_successor');
 		cy.elements().removeClass('prov_ancestor');
 		node.removeClass('faded');
+		node.ancestors().removeClass('faded');
 		
 		
 		
