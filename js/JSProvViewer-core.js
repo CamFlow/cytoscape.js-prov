@@ -90,6 +90,7 @@ $(function(){
 	});
 	
 	cy.on('tap', 'node', function(evt){
+		cy.startBatch();
 		var node = evt.cyTarget;
 		cy.elements().addClass('faded');
 		cy.elements().removeClass('prov_successor');
@@ -150,6 +151,7 @@ $(function(){
 				alert("Something is wrong, check for cycle. Provenance graph MUST NOT contain cycle.");
 			}
 		}
+		cy.endBatch();
 	});
 });
 

@@ -40,6 +40,10 @@ function parse_activities(activities){
 			var label = key;
 		}
 		
+		if(activities[key]['cf:parent_id'] != undefined){
+			parent_id = activities[key]['cf:parent_id'];
+		}
+		
 		activity(key, label, parent_id);
 	}
 }
@@ -50,9 +54,10 @@ function parse_agents(agents){
 	}
 }
 
+var has_been_drawn = false;
 
-
-function JSProvParseJSON(text){
+function JSProvParseJSON(text){	
+	cy.startBatch();
 	var data = JSON.parse(text);
 	parse_entities(data.entity);
 	parse_activities(data.activity);
@@ -71,24 +76,34 @@ function JSProvParseJSON(text){
 	}	
 	_used = data.used;
 	for(key in _used){
+		entity(_used[key]['prov:activity'], 'was missing');
+		entity(_used[key]['prov:entity'], 'was missing');
 		used(_used[key]['prov:activity'], _used[key]['prov:entity']);
 	}
 	derived = data.wasDerivedFrom;
 	for(key in derived){
+		entity(derived[key]['prov:generatedEntity'], 'was missing');
+		entity(derived[key]['prov:usedEntity'], 'was missing');
 		wasDerivedFrom(derived[key]['prov:generatedEntity'], derived[key]['prov:usedEntity']);
 	}
 	attributed = data.wasAttributedTo;
 	for(key in attributed){
+		entity(attributed[key]['prov:entity'], 'was missing');
+		entity(attributed[key]['prov:agent'], 'was missing');
 		wasAttributedTo(attributed[key]['prov:entity'], attributed[key]['prov:agent']);
 	}
 	
 	informed = data.wasInformedBy;
 	for(key in informed){
+		entity(informed[key]['prov:informant'], 'was missing');
+		entity(informed[key]['prov:informed'], 'was missing');
 		wasInformedBy(informed[key]['prov:informant'], informed[key]['prov:informed']);
 	}
 	
 	derived = data.derivedByInsertionFrom;
 	for(key in derived){
+		entity(derived[key]['prov:before'], 'was missing');
+		entity(derived[key]['prov:before'], 'was missing');
 		derivedByInsertionFrom(derived[key]['prov:before'], derived[key]['prov:after']);
 		for(i=0; i < derived[key]['prov:key-entity-set'].length; i++){
 			hadDictionaryMember(derived[key]['prov:after'], derived[key]['prov:key-entity-set'][i][1]);
@@ -96,10 +111,14 @@ function JSProvParseJSON(text){
 	}
 	specialization = data.specializationOf;
 	for(key in specialization){
+		entity(specialization[key]['prov:entity'], 'was missing');
+		entity(specialization[key]['prov:specialization'], 'was missing');
 		specializationOf(specialization[key]['prov:entity'], specialization[key]['prov:specialization']);
 	}
 	alternate = data.alternateOf;
 	for(key in alternate){
+		entity(alternate[key]['prov:entity'], 'was missing');
+		entity(alternate[key]['prov:alternate'], 'was missing');
 		alternateOf(alternate[key]['prov:entity'], alternate[key]['prov:alternate']);
 	}
 	edge = data.edge;
@@ -108,5 +127,8 @@ function JSProvParseJSON(text){
 		entity(edge[key]['cf:receiver'], 'was missing');
 		unknownEdge(edge[key]['cf:receiver'], edge[key]['cf:sender'])
 	}
-	JSProvDraw();
+	cy.endBatch();
+	if(!has_been_drawn){
+		JSProvDraw();
+	}
 }
