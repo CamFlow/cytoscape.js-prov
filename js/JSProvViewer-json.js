@@ -54,50 +54,43 @@ function parse_agents(agents){
 	}
 }
 
-var has_been_drawn = false;
+function parse_edges(eles, fn, key1, key2){
+	for(key in eles){
+		if(cy.elements('node[id="'+eles[key][key1]+'"]').empty() || cy.elements('node[id="'+eles[key][key2]+'"]').empty() ){
+			console.log("missing node!");
+		}
+		fn(eles[key][key1], eles[key][key2]);
+	}
+}
 
-function JSProvParseJSON(text){	
-	cy.startBatch();
+function JSProvParseJSON(text){
 	var data = JSON.parse(text);
 	parse_entities(data.entity);
 	parse_activities(data.activity);
 	parse_agents(data.agent);
 	
-	generated = data.wasGeneratedBy;
-	for(key in generated){
-		wasGeneratedBy(generated[key]['prov:entity'], generated[key]['prov:activity']);
-	}
+	parse_edges(data.wasGeneratedBy, wasGeneratedBy, 'prov:entity', 'prov:activity');
+		
+	parse_edges(data.used, used, 'prov:activity', 'prov:entity');
+
+	parse_edges(data.wasDerivedFrom, wasDerivedFrom, 'prov:generatedEntity', 'prov:usedEntity');
+
+	parse_edges(data.wasAttributedTo, wasAttributedTo, 'prov:entity', 'prov:agent');
+	
+	parse_edges(data.wasInformedBy, wasInformedBy, 'prov:informant', 'prov:informed');
+	
+	parse_edges(data.specializationOf, specializationOf, 'prov:entity', 'prov:specialization');
+	
+	parse_edges(data.alternateOf, alternateOf, 'prov:entity', 'prov:alternate');
+	
+	parse_edges(data.edge, unknownEdge, 'prov:receiver', 'prov:sender');
+	
 	associated = data.wasAssociatedWith;
 	for(key in associated){
 		wasAssociatedWith(associated[key]['prov:activity'], associated[key]['prov:agent']);
 		if(associated[key]['prov:plan']!=undefined){
 			hadPlan(associated[key]['prov:agent'], associated[key]['prov:plan'])
 		}
-	}	
-	_used = data.used;
-	for(key in _used){
-		entity(_used[key]['prov:activity'], 'was missing');
-		entity(_used[key]['prov:entity'], 'was missing');
-		used(_used[key]['prov:activity'], _used[key]['prov:entity']);
-	}
-	derived = data.wasDerivedFrom;
-	for(key in derived){
-		entity(derived[key]['prov:generatedEntity'], 'was missing');
-		entity(derived[key]['prov:usedEntity'], 'was missing');
-		wasDerivedFrom(derived[key]['prov:generatedEntity'], derived[key]['prov:usedEntity']);
-	}
-	attributed = data.wasAttributedTo;
-	for(key in attributed){
-		entity(attributed[key]['prov:entity'], 'was missing');
-		entity(attributed[key]['prov:agent'], 'was missing');
-		wasAttributedTo(attributed[key]['prov:entity'], attributed[key]['prov:agent']);
-	}
-	
-	informed = data.wasInformedBy;
-	for(key in informed){
-		entity(informed[key]['prov:informant'], 'was missing');
-		entity(informed[key]['prov:informed'], 'was missing');
-		wasInformedBy(informed[key]['prov:informant'], informed[key]['prov:informed']);
 	}
 	
 	derived = data.derivedByInsertionFrom;
@@ -109,26 +102,6 @@ function JSProvParseJSON(text){
 			hadDictionaryMember(derived[key]['prov:after'], derived[key]['prov:key-entity-set'][i][1]);
 		}
 	}
-	specialization = data.specializationOf;
-	for(key in specialization){
-		entity(specialization[key]['prov:entity'], 'was missing');
-		entity(specialization[key]['prov:specialization'], 'was missing');
-		specializationOf(specialization[key]['prov:entity'], specialization[key]['prov:specialization']);
-	}
-	alternate = data.alternateOf;
-	for(key in alternate){
-		entity(alternate[key]['prov:entity'], 'was missing');
-		entity(alternate[key]['prov:alternate'], 'was missing');
-		alternateOf(alternate[key]['prov:entity'], alternate[key]['prov:alternate']);
-	}
-	edge = data.edge;
-	for(key in edge){
-		entity(edge[key]['cf:sender'], 'was missing');
-		entity(edge[key]['cf:receiver'], 'was missing');
-		unknownEdge(edge[key]['cf:receiver'], edge[key]['cf:sender'])
-	}
-	cy.endBatch();
-	if(!has_been_drawn){
-		JSProvDraw();
-	}
+	
+	JSProvDraw();
 }

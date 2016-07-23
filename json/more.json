@@ -191,17 +191,6 @@
          "cf:user_id":1,
          "cf:group_id":1000
       },
-      "cf:AgAAAAAAAAAhWAEAAAAAANxpp4AAAX8AIAAAAAAAAAA=":{
-         "cf:node_info":{
-            "cf:type":2,
-            "cf:id":88097,
-            "cf:boot_id":2158455260,
-            "cf:machine_id":8323328,
-            "cf:version":32
-         },
-         "cf:user_id":1,
-         "cf:group_id":1000
-      },
       "cf:AgAAAAAAAAAhWAEAAAAAANxpp4AAAX8AIQAAAAAAAAA=":{
          "cf:node_info":{
             "cf:type":2,

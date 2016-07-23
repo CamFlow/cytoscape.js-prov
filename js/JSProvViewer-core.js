@@ -189,6 +189,7 @@ function location(name){
 function activity(id, label, superNode){			
 	if(typeof label === 'undefined')
 		label = id;
+	
 	if (typeof superNode === 'undefined')
 		cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle'}}]);
 	else
