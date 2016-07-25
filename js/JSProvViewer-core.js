@@ -11,7 +11,8 @@ $(function(){
 		boxSelectionEnabled: false,
 
 		layout: {
-			name: 'dagre'
+			name: 'dagre',
+			rankDir: 'TB'
 		},
 
 		style: [
@@ -114,6 +115,7 @@ $(function(){
 						newNode.addClass('prov_successor');
 						newNode.removeClass('faded');
 						newNode.ancestors().removeClass('faded');
+						newNode.descendants().removeClass('faded');
 						if(!visited.includes(newNode.id())){
 							visited.push(newNode.id());
 							successors.push(newNode);
@@ -140,6 +142,7 @@ $(function(){
 						newNode.addClass('prov_ancestor');
 						newNode.removeClass('faded');
 						newNode.ancestors().removeClass('faded');
+						newNode.descendants().removeClass('faded');
 						if(!visited.includes(newNode.id())){
 							visited.push(newNode.id());
 							ancestors.push(newNode);
@@ -157,7 +160,21 @@ $(function(){
 
 function JSProvDraw(){
 	var layout = cy.makeLayout({
-		name: graphType
+		name: graphType,
+		rankDir: 'TB',
+		fit: false,
+		edgeWeight: function( edge ){
+			switch(edge.data("label")){
+				case "wasInformedBy":
+					return 5000;
+				case "wasDerivedFrom":
+					return 100;
+				case "used":
+					return 10;
+				default:
+					return 1;
+			}
+		}
 	});
 	layout.run();
 }
