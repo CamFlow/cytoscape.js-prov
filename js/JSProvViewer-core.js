@@ -162,11 +162,11 @@ function JSProvDraw(){
 	var layout = cy.makeLayout({
 		name: graphType,
 		rankDir: 'TB',
-		fit: false,
+		fit: true,
 		edgeWeight: function( edge ){
 			switch(edge.data("label")){
 				case "wasInformedBy":
-					return 5000;
+					return 1000000;
 				case "wasDerivedFrom":
 					return 100;
 				case "used":

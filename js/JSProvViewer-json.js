@@ -7,12 +7,11 @@ function parse_entities(entities){
 			var label = '[path]'+entities[key]['cf:pathname'];
 		}else if( entities[key]['cf:ifc']!=undefined ){
 			var label = '[ifc]'+entities[key]['cf:ifc'];
-		}else if(entities[key]['cf:node_info'] != undefined){
-			var node_info = entities[key]['cf:node_info'];
-			var label = '['+entities[key]['prov:type']+']'+node_info['cf:id'];
-			var parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
+		}else if(entities[key]['prov:type'] != undefined){
+			var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:id'];
+			var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
 			entity(parent_id, label);
-			label = label+' v'+node_info['cf:version'];
+			label = label+' v'+entities[key]['cf:version'];
 		}else{
 			var label = key;
 		}
@@ -31,12 +30,11 @@ function parse_activities(activities){
 		var parent_id = undefined;
 		if(activities[key]['rdt:name']!=undefined){
 			var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:scriptLine']+']';
-		}else if(activities[key]['cf:node_info'] != undefined){
-			var node_info = activities[key]['cf:node_info'];
-			var label = node_info['cf:id'];
-			parent_id = node_info['cf:type'] + node_info['cf:id'] + node_info['cf:boot_id'] + node_info['cf:machine_id'];
+		}else if(activities[key]['cf:id'] != undefined){
+			var label = activities[key]['cf:id'];
+			parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
 			activity(parent_id, label);
-			label = label+' v'+node_info['cf:version'];
+			label = label+' v'+activities[key]['cf:version'];
 		}else{
 			var label = key;
 		}
@@ -45,6 +43,7 @@ function parse_activities(activities){
 			parent_id = activities[key]['cf:parent_id'];
 			if(cy.elements('node[id="'+parent_id+'"]').empty()){ // parent does not exist yet
 				tryNodeAgain.push({fn: activity, key: key, label: label, parent_id: parent_id});
+				continue;
 			}
 			
 		}		
