@@ -35,7 +35,7 @@ function onFailure(invocationContext, errorCode, errorMessage) {
 	document.getElementById("mqtt").innerHTML=errorMessage;
 }
 
-function JSProvMQTTConnect(){	
+function JSProvMQTTConnect(){
 	client.connect({
 					useSSL: true,
 					userName: "camflow",
@@ -44,4 +44,3 @@ function JSProvMQTTConnect(){
 					onFailure: onFailure
 				});
 }
-

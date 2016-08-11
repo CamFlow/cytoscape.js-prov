@@ -18,9 +18,9 @@
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.0.2/cytoscape-cose-bilkent.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
 		<script src="https://api.cloudmqtt.com/sso/js/mqttws31.js"></script>
-		<script src="./js/cytoscape-prov-core.js"></script>
-		<script src="./js/cytoscape-prov-json.js"></script>
-		<script src="./js/JSProvView-mqtt.js"></script>
+		<script src="cytoscape-prov-core.js"></script>
+		<script src="cytoscape-prov-json.js"></script>
+		<script src="cytoscape-prov-mqtt.js"></script>
 		<script>
 		$(function(){
 			var cy = window.cy = cytoscape({
@@ -143,7 +143,7 @@
 		  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 		</script>
 		</div>
-		
+
 		<script>
 			function showAncestor(){
 				var show = document.getElementById("ancestors").checked;
