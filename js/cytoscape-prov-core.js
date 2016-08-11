@@ -12,6 +12,10 @@
 		cytoscape('core', 'prov_core', function (opts) {
 			var cy = this;
 
+			var showSuccessors = true;
+			var showAncestors = true;
+			var ignoreControlFlow = false;
+
 			cy.on('tap', function(evt){
 				cy.elements().removeClass('faded');
 				cy.elements().removeClass('prov_successor');
@@ -31,13 +35,13 @@
 					var successors = [node];
 					var visited = [node.id()];
 					while(successors.length>0 && successors.length<100){
-						current = successors.pop();
+						var current = successors.pop();
 						current.openNeighborhood('edge[source="'+current.id()+'"]').each(function(i, edge){
 							if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
 								// do nothing
 							}else{
 								edge.removeClass('faded');
-								newNode = edge.target();
+								var newNode = edge.target();
 								newNode.addClass('prov_successor');
 								newNode.removeClass('faded');
 								newNode.ancestors().removeClass('faded');
@@ -58,13 +62,13 @@
 					var ancestors = [node];
 					var visited = [node.id()];
 					while(ancestors.length>0 && ancestors.length<5000){
-						current = ancestors.pop();
+						var current = ancestors.pop();
 						current.openNeighborhood('edge[target="'+current.id()+'"]').each(function(i, edge){
 							if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
 								// do nothing
 							}else{
 								edge.removeClass('faded');
-								newNode = edge.source();
+								var newNode = edge.source();
 								newNode.addClass('prov_ancestor');
 								newNode.removeClass('faded');
 								newNode.ancestors().removeClass('faded');
@@ -102,6 +106,17 @@
 				var clipboard = {};
 
 				_instance = {
+					setShowSuccessors: function (bool){
+						showSuccessors = bool;
+					},
+
+					setShowAncestors: function(bool){
+						showAncestors = bool;
+					},
+
+					setIgnoreControlFlow: function(bool){
+						ignoreControlFlow = bool;
+					},
 
 					entity: function (id, label, superNode){
 						if(typeof label === 'undefined')

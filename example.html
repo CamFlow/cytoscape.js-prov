@@ -143,59 +143,19 @@
 		  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 		</script>
 		</div>
-
-		<script type="text/javascript">
-		  function changeGraphType() {
-			switch(JSProvGetGraphType()){
-				case 'dagre':
-					JSProvSetGraphType('breadthfirst');
-					break;
-				case 'breadthfirst':
-					JSProvSetGraphType('circle');
-					break;
-				case 'circle':
-					JSProvSetGraphType('concentric');
-					break;
-				case 'concentric':
-					JSProvSetGraphType('cose');
-					break;
-				case 'cose':
-					JSProvSetGraphType('cose-bilkent');
-					break;
-				case 'cose-bilkent':
-					JSProvSetGraphType('grid');
-					break;
-				case 'grid':
-					JSProvSetGraphType('spread');
-					break;
-				case 'spread':
-					JSProvSetGraphType('dagre');
-					break;
-				default:
-					JSProvSetGraphType('dagre');
-			}
-			document.getElementById("graph_type").innerHTML=JSProvGetGraphType();
-			JSProvDraw();
-		  }
-		</script>
-		<div>
-		<button type="button" onclick="changeGraphType();">Change</button>
-		<span>Graph type:
-		<span id="graph_type">dagre</span>
-		</span>
-		</div>
+		
 		<script>
 			function showAncestor(){
 				var show = document.getElementById("ancestors").checked;
-				JSProvSetShowAncestors(show);
+				cy.prov_core().setShowAncestors(show);
 			}
 			function showSuccessor(){
 				var show = document.getElementById("successors").checked;
-				JSProvSetShowSuccessors(show);
+				cy.prov_core().setShowSuccessors(show);
 			}
 			function ignoreControl(){
 				var ignore = document.getElementById("control").checked;
-				JSProvSetIgnoreControlFlow(ignore);
+				cy.prov_core().setIgnoreControlFlow(ignore);
 			}
 		</script>
 		<div>
