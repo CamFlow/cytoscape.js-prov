@@ -102,9 +102,6 @@
 				var clipboard = {};
 
 				_instance = {
-					prov_test: function (eles, _id) {
-						alert("Test!");
-					},
 
 					entity: function (id, label, superNode){
 						if(typeof label === 'undefined')
@@ -213,7 +210,6 @@
 			}
 			return _instance; // chainability
 		});
-
 	};
 
 

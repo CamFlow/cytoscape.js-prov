@@ -130,9 +130,9 @@
 			if (f) {
 			  var r = new FileReader();
 			  r.onload = function(e) {
-				var contents = e.target.result;
-				document.getElementById('area').value=  contents;
-				JSProvParseJSON(contents);
+					var contents = e.target.result;
+					document.getElementById('area').value=  contents;
+					cy.prov_json().parse_json(contents);
 			  }
 			  r.readAsText(f);
 			} else {
