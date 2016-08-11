@@ -7,7 +7,7 @@ function parse_entities(entities){
 			var label = '[path]'+entities[key]['cf:pathname'];
 		}else if( entities[key]['cf:ifc']!=undefined ){
 			var label = '[ifc]'+entities[key]['cf:ifc'];
-		}else if(entities[key]['prov:type'] != undefined){
+		}else if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 			var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:id'];
 			var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
 			cy.prov_core().entity(parent_id, label);

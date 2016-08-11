@@ -124,6 +124,15 @@
 							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#0000FF', shape: 'rectangle'}}]);
 					},
 
+					agent: function(id, label, superNode){
+						if(typeof label === 'undefined')
+							label = id;
+						if (typeof superNode === 'undefined')
+							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon'}}]);
+						else
+							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#66FF66', shape: 'octagon'}}]);
+					},
+
 					wasDerivedFrom: function (generatedEntity, usedEntity){
 						cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF9933', label: 'wasDerivedFrom'}}]);
 					},
