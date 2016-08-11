@@ -18,9 +18,91 @@
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cose-bilkent/1.0.2/cytoscape-cose-bilkent.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
 		<script src="https://api.cloudmqtt.com/sso/js/mqttws31.js"></script>
-		<script src="./js/JSProvViewer-core.js"></script>
+		<script src="./js/cytoscape-prov-core.js"></script>
 		<script src="./js/JSProvViewer-json.js"></script>
 		<script src="./js/JSProvView-mqtt.js"></script>
+		<script>
+		$(function(){
+			var cy = window.cy = cytoscape({
+				container: document.getElementById('cy'),
+
+				boxSelectionEnabled: false,
+
+				layout: {
+					name: 'dagre',
+					rankDir: 'TB'
+				},
+
+				style: [
+					{
+						selector: 'node',
+						style: {
+							'content': 'data(label)',
+							'text-opacity': 0.5,
+							'text-valign': 'center',
+							'text-halign': 'right',
+							'background-color': 'data(color)',
+							'shape': 'data(shape)'
+						}
+					},
+
+					{
+						selector: 'edge',
+						style: {
+							'label': 'data(label)',
+							'edge-text-rotation': 'autorotate',
+							'text-wrap': 'wrap',
+							'width': 3,
+							'length': 100,
+							'source-arrow-shape': 'triangle',
+							'line-color': 'data(color)',
+							'source-arrow-color': 'data(color)',
+							'curve-style': 'bezier',
+							'control-point-step-size': 40,
+							'font-size': 6,
+							'text-outline-color': '#FFFFFF',
+							'text-outline-width': 1,
+						}
+					},
+					{
+					  selector: ':parent',
+					  style: {
+						'background-opacity': 0.333
+					  }
+					},
+					{
+						selector: ':selected',
+						style: {
+							'border-width': 3,
+							'border-color': '#333'
+						}
+					},
+					{
+						selector: '.faded',
+						style: {
+							'opacity': 0.25
+						}
+					}
+					,
+					{
+						selector: 'node.prov_successor',
+						style: {
+							'border-width': 3,
+							'border-color': 'blue'
+						}
+					}
+					,
+					{
+						selector: 'node.prov_ancestor',
+						style: {
+							'border-width': 3,
+							'border-color': 'red'
+						}
+					}
+				]
+			});
+		});
+		</script>
 
 		<style>
 			#cy {
@@ -43,25 +125,25 @@
 		<script type="text/javascript">
 		  function readSingleFile(evt) {
 			//Retrieve the first (and only!) File from the FileList object
-			var f = evt.target.files[0]; 
+			var f = evt.target.files[0];
 
 			if (f) {
 			  var r = new FileReader();
-			  r.onload = function(e) { 
+			  r.onload = function(e) {
 				var contents = e.target.result;
 				document.getElementById('area').value=  contents;
 				JSProvParseJSON(contents);
 			  }
 			  r.readAsText(f);
-			} else { 
+			} else {
 			  alert("Failed to load file");
 			}
 		  }
 
 		  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
 		</script>
-		</div>		
-		
+		</div>
+
 		<script type="text/javascript">
 		  function changeGraphType() {
 			switch(JSProvGetGraphType()){
@@ -92,15 +174,15 @@
 				default:
 					JSProvSetGraphType('dagre');
 			}
-			document.getElementById("graph_type").innerHTML=JSProvGetGraphType(); 
+			document.getElementById("graph_type").innerHTML=JSProvGetGraphType();
 			JSProvDraw();
 		  }
 		</script>
 		<div>
 		<button type="button" onclick="changeGraphType();">Change</button>
-		<span>Graph type: 
+		<span>Graph type:
 		<span id="graph_type">dagre</span>
-		</span>		
+		</span>
 		</div>
 		<script>
 			function showAncestor(){
