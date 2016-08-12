@@ -185,6 +185,16 @@
 			<button type="button" onclick="exportPNG();">Export as PNG</button>
 			<img src="" id="png-export">
 		</div>
+		<script>
+			function exportJSON(){
+				var json = cy.prov_json().exportProvJSON();
+				document.getElementById('export-json').value=  JSON.stringify(json);
+			}
+		</script>
+		<div>
+		<button type="button" onclick="exportJSON();">Export Prov JSON</button>
+		</div>
+		<textarea rows="5" cols="50" id="export-json"></textarea>
 		<div id="cy"></div>
 	</body>
 

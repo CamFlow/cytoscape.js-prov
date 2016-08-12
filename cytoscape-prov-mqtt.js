@@ -1,6 +1,11 @@
 ;(function () {
 	'use strict';
 
+	// Create a client instance
+	var client;
+	var elementID;
+	var channel;
+
 	// registers the extension on a cytoscape lib ref
 	var register = function (cytoscape) {
 		if (!cytoscape) {
@@ -15,11 +20,6 @@
 			var options = {
 				clipboardSize: 0
 			};
-
-			// Create a client instance
-			var client;
-			var elementID;
-			var channel;
 
 			// called when the client connects
 			function onConnect() {

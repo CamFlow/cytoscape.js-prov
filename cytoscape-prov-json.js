@@ -1,6 +1,10 @@
 ;(function () {
 	'use strict';
 
+	var tryNodeAgain = new Array();
+	var tryEdgeAgain = new Array();
+	var json = {};
+
 	// registers the extension on a cytoscape lib ref
 	var register = function (cytoscape) {
 		if (!cytoscape) {
@@ -24,9 +28,6 @@
 				}
 				return cy.scratch("_prov_json");
 			}
-
-			var tryNodeAgain = new Array();
-			var tryEdgeAgain = new Array();
 
 			function parse_entities(entities){
 				for(var key in entities){
@@ -171,8 +172,13 @@
 				getScratch().isInitialized = true;
 
 				_instance = {
+					exportProvJSON: function () {
+						return json;
+					},
+
 					parse: function (text){
 						var data = JSON.parse(text);
+						json = $.merge(json, data);
 
 						cy.startBatch();
 

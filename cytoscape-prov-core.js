@@ -1,6 +1,10 @@
 ;(function () {
 	'use strict';
 
+	var showSuccessors = true;
+	var showAncestors = true;
+	var ignoreControlFlow = false;
+
 	// registers the extension on a cytoscape lib ref
 	var register = function (cytoscape) {
 		if (!cytoscape) {
@@ -12,9 +16,7 @@
 		cytoscape('core', 'prov_core', function (opts) {
 			var cy = this;
 
-			var showSuccessors = true;
-			var showAncestors = true;
-			var ignoreControlFlow = false;
+
 
 			cy.on('tap', function(evt){
 				cy.elements().removeClass('faded');
