@@ -178,7 +178,12 @@
 
 					parse: function (text){
 						var data = JSON.parse(text);
-						json = $.merge(json, data);
+						console.log(data);
+						console.log(json);
+						var tmp = {};
+						$.extend(true, tmp, json, data);
+						console.log(tmp);
+						json = tmp;
 
 						cy.startBatch();
 
