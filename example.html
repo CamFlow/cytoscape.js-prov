@@ -175,6 +175,16 @@
 		<button type="button" onclick="startMQTT();">Start CamFlow MQTT</button><span id="mqtt"></span>
 		</div>
 		<textarea rows="5" cols="50" id="camflow-message"></textarea>
+		<script>
+			function exportPNG(){
+				var png64 = cy.png();
+				$('#png-export').attr('src', png64);
+			}
+		</script>
+		<div>
+			<button type="button" onclick="exportPNG();">Export as PNG</button>
+			<img src="" id="png-export">
+		</div>
 		<div id="cy"></div>
 	</body>
 
