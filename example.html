@@ -132,7 +132,7 @@
 			  r.onload = function(e) {
 					var contents = e.target.result;
 					document.getElementById('area').value=  contents;
-					cy.prov_json().parse_json(contents);
+					cy.prov_json().parse(contents);
 			  }
 			  r.readAsText(f);
 			} else {
@@ -163,8 +163,16 @@
 		  <input type="checkbox" id="successors" name="successors" value="successors" onclick="showSuccessor();" checked>Show Successor<br>
 		  <input type="checkbox" id="control" name="control" value="control" onclick="ignoreControl();">Ignore Control Flow
 		</div>
+		<script>
+			function startMQTT(){
+				cy.prov_mqtt().init('m12.cloudmqtt.com', 37065, 'ws' + Math.random());
+				cy.prov_mqtt().setOutputElement('mqtt');
+				cy.prov_mqtt().setChannel('#');
+				cy.prov_mqtt().connect(true, 'camflow', 'test');
+			}
+		</script>
 		<div>
-		<button type="button" onclick="JSProvMQTTConnect();">Start CamFlow MQTT</button><span id="mqtt"></span>
+		<button type="button" onclick="startMQTT();">Start CamFlow MQTT</button><span id="mqtt"></span>
 		</div>
 		<textarea rows="5" cols="50" id="camflow-message"></textarea>
 		<div id="cy"></div>

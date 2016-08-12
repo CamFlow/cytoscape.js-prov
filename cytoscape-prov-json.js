@@ -171,7 +171,7 @@
 				getScratch().isInitialized = true;
 
 				_instance = {
-					parse_json: function (text){
+					parse: function (text){
 						var data = JSON.parse(text);
 
 						cy.startBatch();
