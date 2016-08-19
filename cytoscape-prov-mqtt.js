@@ -20,6 +20,20 @@
 			var options = {
 				clipboardSize: 0
 			};
+			
+			function inflateB64(str){
+				/* convert from B64 to byteArray */
+				var byteCharacters = atob(str);
+				var byteNumbers = new Array(byteCharacters.length);
+				for (var i = 0; i < byteCharacters.length; i++) {
+					byteNumbers[i] = byteCharacters.charCodeAt(i);
+				}
+				var byteArray = new Uint8Array(byteNumbers);
+				/* decompress */
+				var data = pako.inflate(byteArray);
+				var strData = String.fromCharCode.apply(null, new Uint16Array(data));
+				return strData;
+			}
 
 			// called when the client connects
 			function onConnect() {
@@ -40,8 +54,9 @@
 
 			// called when a message arrives
 			function onMessageArrived(message) {
-				cy.prov_json().parse(message.payloadString);
-				console.log(message.payloadString);
+				var json = inflateB64(message.payloadString);
+				cy.prov_json().parse(json);				
+				console.log(json);
 				document.getElementById(elementID).innerHTML="Data received!";
 			}
 
