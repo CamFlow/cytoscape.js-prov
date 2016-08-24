@@ -4,6 +4,9 @@
 	var showSuccessors = true;
 	var showAncestors = true;
 	var ignoreControlFlow = false;
+	var event_is_on = false;
+	var __node_id='';
+	var ___node_id='';
 
 	// registers the extension on a cytoscape lib ref
 	var register = function (cytoscape) {
@@ -16,15 +19,31 @@
 		cytoscape('core', 'prov_core', function (opts) {
 			var cy = this;
 
-
-
 			cy.on('tap', function(evt){
+				/* nasty fix to avoid being called several time */
+				if(evt.cyTarget.id != undefined){
+					var node_id = evt.cyTarget.id();
+					if(node_id==__node_id){
+						return;
+					}else{
+						__node_id=node_id;
+					}
+				}
+				/* nasty fix to avoid being called several time */
 				cy.elements().removeClass('faded');
 				cy.elements().removeClass('prov_successor');
 				cy.elements().removeClass('prov_ancestor');
 			});
 
 			cy.on('tap', 'node', function(evt){
+				/* nasty fix to avoid being called several time */
+				var node_id = evt.cyTarget.id();
+				if(node_id==___node_id){
+					return;
+				}else{
+					___node_id=node_id;
+				}
+				/* nasty fix to avoid being called several time */
 				cy.startBatch();
 				var node = evt.cyTarget;
 				cy.elements().addClass('faded');
@@ -33,56 +52,57 @@
 				node.removeClass('faded');
 				node.ancestors().removeClass('faded');
 
+				var start = new Date().getTime();
 				if(showSuccessors){
 					var successors = [node];
 					var visited = [node.id()];
 					while(successors.length>0 && successors.length<100){
 						var current = successors.pop();
-						current.openNeighborhood('edge[source="'+current.id()+'"]').each(function(i, edge){
+						current.outgoers().each(function(i, edge){
 							if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
 								// do nothing
 							}else{
 								edge.removeClass('faded');
 								var newNode = edge.target();
+								if(visited.includes(newNode.id())) // we already saw that node
+									return;
 								newNode.addClass('prov_successor');
 								newNode.removeClass('faded');
 								newNode.ancestors().removeClass('faded');
 								newNode.descendants().removeClass('faded');
-								if(!visited.includes(newNode.id())){
-									visited.push(newNode.id());
-									successors.push(newNode);
-								}
+								visited.push(newNode.id());
+								successors.push(newNode);
 							}
 						});
 					}
-					if(successors.length>=5000){
-						alert("Something is wrong, check for cycle. Provenance graph MUST NOT contain cycle.");
-					}
 				}
+				var end = new Date().getTime();
+				var time = end - start;
+				console.log('Execution time: ' + time);
 
 				if(showAncestors){
 					var ancestors = [node];
 					var visited = [node.id()];
-					while(ancestors.length>0 && ancestors.length<5000){
+					while(ancestors.length>0 && ancestors.length<100){
 						var current = ancestors.pop();
-						current.openNeighborhood('edge[target="'+current.id()+'"]').each(function(i, edge){
+						current.incomers().each(function(i, edge){
 							if(ignoreControlFlow==true && edge.data('label')=='wasInformedBy'){
 								// do nothing
 							}else{
 								edge.removeClass('faded');
 								var newNode = edge.source();
+								if(visited.includes(newNode.id())) // we already saw that node
+									return;
 								newNode.addClass('prov_ancestor');
 								newNode.removeClass('faded');
 								newNode.ancestors().removeClass('faded');
 								newNode.descendants().removeClass('faded');
-								if(!visited.includes(newNode.id())){
-									visited.push(newNode.id());
-									ancestors.push(newNode);
-								}
+								visited.push(newNode.id());
+								ancestors.push(newNode);
 							}
 						});
 					}
-					if(ancestors.length>=5000){
+					if(ancestors.length>=100){
 						alert("Something is wrong, check for cycle. Provenance graph MUST NOT contain cycle.");
 					}
 				}
