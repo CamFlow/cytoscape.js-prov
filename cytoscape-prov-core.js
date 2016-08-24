@@ -52,7 +52,6 @@
 				node.removeClass('faded');
 				node.ancestors().removeClass('faded');
 
-				var start = new Date().getTime();
 				if(showSuccessors){
 					var successors = [node];
 					var visited = [node.id()];
@@ -76,9 +75,6 @@
 						});
 					}
 				}
-				var end = new Date().getTime();
-				var time = end - start;
-				console.log('Execution time: ' + time);
 
 				if(showAncestors){
 					var ancestors = [node];
