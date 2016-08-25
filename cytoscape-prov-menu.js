@@ -29,6 +29,7 @@ var prov_menu = {
 		  fillColor: 'rgba(90,40,106, 0.9)', // optional: custom background color for item
 		  content: '<img src="http://image.flaticon.com/icons/svg/149/149184.svg" alt="collapse" height="42" width="42">', // html/text content to be displayed in the menu
 		  select: function(ele){ // a function to execute when the command is selected
+			cy.startBatch();
 			var nodes = ele.children();
 			if(nodes.empty()){
 				return;
@@ -38,13 +39,15 @@ var prov_menu = {
 				n.outgoers().each(function(i, e){
 					if(e.target().id()!=undefined){
 						e = cy.add([{ group: "edges",  data: { source: ele.id(), target: e.target().id(), color: e.data('color'), label: e.data('label')}}]);
-						added.push(e);
+						if(!added.includes(e))
+							added.push(e);
 					}
 				});
 				n.incomers().each(function(i, e){
 					if(e.source().id()!=undefined){
 						e = cy.add([{ group: "edges",  data: { source: e.source().id(), target: ele.id(), color: e.data('color'), label: e.data('label')}}]);
-						added.push(e);
+						if(!added.includes(e))
+							added.push(e);
 					}
 				});
 			});
@@ -52,6 +55,7 @@ var prov_menu = {
 			ele.data('removed', removed);
 			ele.data('added', added);
 			ele.edgesTo(ele).remove();
+			cy.endBatch();
 		  },
 		  disabled: false // disables the item on true
 		},
@@ -59,6 +63,7 @@ var prov_menu = {
 		  fillColor: 'rgba(40,106,90, 0.9)', // optional: custom background color for item
 		  content: '<img src="http://image.flaticon.com/icons/svg/149/149185.svg" alt="collapse" height="42" width="42">', // html/text content to be displayed in the menu
 		  select: function(ele){ // a function to execute when the command is selected
+			cy.startBatch();
 			var removed = ele.data('removed');
 			if(removed==undefined){
 				return;
@@ -69,7 +74,8 @@ var prov_menu = {
 			ele.edgesTo(ele.children()).remove();
 			ele.children().edgesTo(ele).remove();
 			ele.data('removed', undefined);
-			ele.data('added', undefined);			
+			ele.data('added', undefined);
+			cy.endBatch();
 		  },
 		  disabled: false // disables the item on true
 		}
