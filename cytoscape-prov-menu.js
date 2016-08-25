@@ -1,3 +1,4 @@
+var __last_removed;
 var prov_menu = {
 	  selector: 'node', // elements matching this Cytoscape.js selector will trigger cxtmenus
 	  commands: [ // an array of commands to list in the menu or a function that returns the array
