@@ -213,7 +213,24 @@
 		<div>
 		<button type="button" onclick="undoDelete();">Undo last delete</button>
 		</div>
-		<textarea rows="5" cols="50" id="export-json"></textarea>
+		<textarea rows="5" cols="50" id="export-json"></textarea><br/>
+		
+		<div id="tfheader">
+		
+		<form id="tfnewsearch" action="javascript:search()">
+			<input type="text" id="search" size="21" maxlength="120" placeholder="Search..."></input>
+		</form>
+		<script>
+			function search() {
+				var b = document.getElementById('search').value;
+				var eles = cy.nodes("[label*='"+b+"']");
+				eles.each(function(i, node){
+					node.select();
+				});
+				cy.fit(eles, 10);
+			}
+		</script>
+		
 		<div id="cy" style="background-color: #cccccc;"></div>
 	</body>
 
