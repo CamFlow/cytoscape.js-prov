@@ -28,6 +28,9 @@
 					}else{
 						__node_id=node_id;
 					}
+				}else{
+					__node_id='';
+					___node_id='';
 				}
 				// nasty fix to avoid being called several time
 				cy.elements().removeClass('faded');
