@@ -15,7 +15,12 @@ var prov_menu = {
 		  content: '<img src="http://image.flaticon.com/icons/svg/33/33634.svg" alt="Smiley face" height="42" width="42">', // html/text content to be displayed in the menu
 		  select: function(ele){ // a function to execute when the command is selected
 			// TODO complexify.
-			vex.dialog.alert(ele.data("label"));
+			var txt = '<h3>' + ele.data("label") + '</h3>';
+			json = ele.data("json");
+			for (var key in json){
+				txt += '<b>'+key+'</b>='+JSON.stringify(json[key])+'<br/>';
+			}
+			vex.dialog.alert({ unsafeMessage: txt});
 		  },
 		  disabled: false // disables the item on true
 		}

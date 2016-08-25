@@ -41,16 +41,16 @@
 					}else if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 						var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:id'];
 						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
-						cy.prov_core().entity(parent_id, label);
+						cy.prov_core().entity(entities[key], parent_id, label);
 						label = label+' v'+entities[key]['cf:version'];
 					}else{
 						var label = key;
 					}
 
 					if(entities[key]['prov:type']=='prov:agent'){
-						cy.prov_core().agent(key, label, parent_id);
+						cy.prov_core().agent(entities[key], key, label, parent_id);
 					}else{
-						cy.prov_core().entity(key, label, parent_id);
+						cy.prov_core().entity(entities[key], key, label, parent_id);
 					}
 				}
 			}
@@ -64,7 +64,7 @@
 					}else if(activities[key]['cf:id'] != undefined){
 						var label = activities[key]['cf:id'];
 						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
-						cy.prov_core().activity(parent_id, label);
+						cy.prov_core().activity(activities[key], parent_id, label);
 						label = label+' v'+activities[key]['cf:version'];
 					}else{
 						var label = key;
@@ -73,18 +73,18 @@
 					if(activities[key]['cf:parent_id'] != undefined){
 						parent_id = activities[key]['cf:parent_id'];
 						if(cy.elements('node[id="'+parent_id+'"]').empty()){ // parent does not exist yet
-							tryNodeAgain.push({fn: cy.prov_core().activity, key: key, label: label, parent_id: parent_id});
+							tryNodeAgain.push({fn: cy.prov_core().activity, json: activities[key], key: key, label: label, parent_id: parent_id});
 							continue;
 						}
 
 					}
-					cy.prov_core().activity(key, label, parent_id);
+					cy.prov_core().activity(activities[key], key, label, parent_id);
 				}
 			}
 
 			function parse_agents(agents){
 				for(var key in agents){
-					cy.prov_core().agent(key);
+					cy.prov_core().agent(agents[key], key);
 				}
 			}
 
@@ -155,7 +155,7 @@
 						again.push(node);
 						continue;
 					}
-					node.fn(node.key, node.label, node.parent_id);
+					node.fn(node.json, node.key, node.label, node.parent_id);
 				}
 				tryNodeAgain = again;
 			}

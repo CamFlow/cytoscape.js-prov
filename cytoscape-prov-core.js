@@ -140,31 +140,31 @@
 						ignoreControlFlow = bool;
 					},
 
-					entity: function (id, label, superNode){
+					entity: function (json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#FFB266', shape: 'ellipse'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#FFB266', shape: 'ellipse', json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#FFB266', shape: 'ellipse'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#FFB266', shape: 'ellipse', json: json}}]);
 					},
 
-					activity: function (id, label, superNode){
+					activity: function (json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle', json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#0000FF', shape: 'rectangle'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#0000FF', shape: 'rectangle', json: json}}]);
 					},
 
-					agent: function(id, label, superNode){
+					agent: function(json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon', json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#66FF66', shape: 'octagon'}}]);
+							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#66FF66', shape: 'octagon', json: json}}]);
 					},
 
 					wasDerivedFrom: function (generatedEntity, usedEntity){
