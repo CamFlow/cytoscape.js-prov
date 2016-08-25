@@ -109,7 +109,7 @@
 					if(missing(fn, eles[key][key1], eles[key][key2]))
 						continue;
 					fn(eles[key][key1], eles[key][key2]);
-					for(i=0; i < eles[key][neston].length; i++){
+					for(var i=0; i < eles[key][neston].length; i++){
 						if(!missing(fn2, eles[key][nest1], eles[key][nest2][i][1]))
 							fn2(eles[key][nest1], eles[key][nest2][i][1]);
 					}

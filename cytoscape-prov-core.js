@@ -20,7 +20,7 @@
 			var cy = this;
 
 			cy.on('tap', function(evt){
-				/* nasty fix to avoid being called several time */
+				// nasty fix to avoid being called several time
 				if(evt.cyTarget.id != undefined){
 					var node_id = evt.cyTarget.id();
 					if(node_id==__node_id){
@@ -29,21 +29,21 @@
 						__node_id=node_id;
 					}
 				}
-				/* nasty fix to avoid being called several time */
+				// nasty fix to avoid being called several time
 				cy.elements().removeClass('faded');
 				cy.elements().removeClass('prov_successor');
 				cy.elements().removeClass('prov_ancestor');
 			});
 
 			cy.on('tap', 'node', function(evt){
-				/* nasty fix to avoid being called several time */
+				// nasty fix to avoid being called several time
 				var node_id = evt.cyTarget.id();
 				if(node_id==___node_id){
 					return;
 				}else{
 					___node_id=node_id;
 				}
-				/* nasty fix to avoid being called several time */
+				// nasty fix to avoid being called several time
 				cy.startBatch();
 				var node = evt.cyTarget;
 				cy.elements().addClass('faded');
@@ -103,6 +103,10 @@
 					}
 				}
 				cy.endBatch();
+			});
+			
+			cy.on('tap', 'node', function(evt){
+					
 			});
 
 			var options = {

@@ -9,6 +9,11 @@
 
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
+		
+		<script src="https://cdn.rawgit.com/HubSpot/vex/master/dist/js/vex.combined.min.js"></script>
+		<script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
+		<link rel="stylesheet" href="https://cdn.rawgit.com/HubSpot/vex/master/dist/css/vex.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/HubSpot/vex/master/dist/css/vex-theme-flat-attack.css" />
 
 		<!-- for testing with local version of cytoscape.js -->
 		<!--<script src="../cytoscape.js/build/cytoscape.js"></script>-->
@@ -19,10 +24,14 @@
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-spread/1.0.9/cytoscape-spread.js"></script>
 		<script src="https://api.cloudmqtt.com/sso/js/mqttws31.js"></script>
 		<script src="https://cdn.rawgit.com/nodeca/pako/master/dist/pako.js"></script>
+		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cxtmenu/master/cytoscape-cxtmenu.js"></script>
 		<script src="cytoscape-prov-core.js"></script>
 		<script src="cytoscape-prov-json.js"></script>
 		<script src="cytoscape-prov-mqtt.js"></script>
+		<script src="cytoscape-prov-menu.js"></script>
 		<script>
+		var __last_removed;
+		
 		$(function(){
 			var cy = window.cy = cytoscape({
 				container: document.getElementById('cy'),
@@ -101,8 +110,12 @@
 						}
 					}
 				]
-			});
+			});			
+
+			var cxtmenuApi = cy.cxtmenu( prov_menu );
 		});
+		
+		
 		</script>
 
 		<style>
@@ -117,7 +130,7 @@
 		</style>
 	</head>
 
-	<body>
+	<body oncontextmenu="return false">
 		<div>
 		<div>
 		<textarea rows="20" cols="50" id="area"></textarea>
@@ -194,9 +207,16 @@
 		</script>
 		<div>
 		<button type="button" onclick="exportJSON();">Export Prov JSON</button>
+		<script>
+			function undoDelete(){
+				__last_removed.restore()
+			}
+		</script>
+		<div>
+		<button type="button" onclick="undoDelete();">Undo last delete</button>
 		</div>
 		<textarea rows="5" cols="50" id="export-json"></textarea>
-		<div id="cy"></div>
+		<div id="cy" style="background-color: #cccccc;"></div>
 	</body>
 
 </html>
