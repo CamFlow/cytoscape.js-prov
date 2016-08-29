@@ -245,6 +245,56 @@
 							}
 						});
 						layout.run();
+					},
+					
+					collapse: function(node){
+						if(node.data('removed')!=null){ // the node has already been collapsed
+							return;
+						}
+						var nodes = node.children();
+						if(nodes.empty()){
+							return;
+						}
+						var added = new Array();
+						
+						cy.startBatch();
+						nodes.each(function(i, n){
+							n.outgoers().each(function(i, e){
+								if(e.target().id()!=undefined){
+									e = cy.add([{ group: "edges",  data: { source: node.id(), target: e.target().id(), color: e.data('color'), label: e.data('label')}}]);
+									if(!added.includes(e))
+										added.push(e);
+								}
+							});
+							n.incomers().each(function(i, e){
+								if(e.source().id()!=undefined){
+									e = cy.add([{ group: "edges",  data: { source: e.source().id(), target: node.id(), color: e.data('color'), label: e.data('label')}}]);
+									if(!added.includes(e))
+										added.push(e);
+								}
+							});
+						});
+						var removed = nodes.remove();
+						node.data('removed', removed);
+						node.data('added', added);
+						node.edgesTo(node).remove();
+						cy.endBatch();						
+					},
+					
+					uncollapse: function(node){
+						cy.startBatch();
+						var removed = node.data('removed');
+						if(removed==undefined || removed==null){
+							return;
+						}
+						var added = node.data('added');
+						removed.restore();
+						added.forEach(function(e, i){e.remove()});
+						node.edgesTo(node.children()).remove();
+						node.children().edgesTo(node).remove();
+						node.data('removed', null);
+						node.data('added', null);
+						cy.endBatch();
 					}
 				};
 			}
