@@ -147,27 +147,27 @@
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#FFB266', shape: 'ellipse', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#FFB266', shape: 'ellipse', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, parent: superNode, json: json}}]);
 					},
 
 					activity: function (json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66B2FF', shape: 'rectangle', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'activity', label: label, json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#0000FF', shape: 'rectangle', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'activity', label: label, parent: superNode, json: json}}]);
 					},
 
 					agent: function(json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
 						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, label: label, color: '#66FF66', shape: 'octagon', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'agent', label: label, json: json}}]);
 						else
-							cy.add([{ group: "nodes", data: { id: id, label: label, parent: superNode, color: '#66FF66', shape: 'octagon', json: json}}]);
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'agent', label: label, parent: superNode, json: json}}]);
 					},
 
 					wasDerivedFrom: function (generatedEntity, usedEntity){
@@ -295,6 +295,48 @@
 						node.data('removed', null);
 						node.data('added', null);
 						cy.endBatch();
+					},
+					
+					average: function(attribute_name){
+						var count = 1;
+						var time=0;
+						cy.nodes().each(function(i, node){
+							var json = node.data('json');
+							if(json[attribute_name]!=undefined){
+								time+=parseFloat(json[attribute_name]);
+								count++;
+							}
+						});
+						return time/count;
+					},
+					
+					max: function(attribute_name){
+						var time=undefined;
+						cy.nodes().each(function(i, node){
+							var json = node.data('json');
+							if(json[attribute_name]!=undefined){
+								var tmp = parseFloat(json[attribute_name]);
+								if(time==undefined){
+									time = tmp;
+								}
+								if(tmp > time){
+									time = tmp;
+								}
+							}
+						});
+						return time;
+					},
+					
+					weight: function(attribute_name, factor){
+						var max = this.max(attribute_name);
+						cy.nodes().each(function(i, node){
+							var json = node.data('json');
+							if(json[attribute_name]!=undefined){
+								var time=parseFloat(json[attribute_name]);
+								var weight = (1 + factor * (time / max)) * node.data('weight');
+								node.data('weight', weight);
+							}
+						});
 					}
 				};
 			}
