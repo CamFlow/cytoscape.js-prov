@@ -190,7 +190,7 @@
 					var contents = e.target.result;
 					document.getElementById('area').value=  contents;
 					cy.prov_json().parse(contents);					
-					cy.prov_core().weight('rdt:elapsedTime', 1);
+					cy.prov_core().weight('rdt:duration', 1);
 			  }
 			  r.readAsText(f);
 			} else {
