@@ -60,7 +60,7 @@
 				for(var key in activities){
 					var parent_id = undefined;
 					if(activities[key]['rdt:name']!=undefined){
-						var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:scriptLine']+']';
+						var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:startLine']+']';
 					}else if(activities[key]['cf:id'] != undefined){
 						var label = activities[key]['cf:id'];
 						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
