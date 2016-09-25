@@ -231,7 +231,7 @@
 			function startMQTT(){
 				cy.prov_mqtt().init('m12.cloudmqtt.com', 37065, 'ws' + Math.random());
 				cy.prov_mqtt().setOutputElement('mqtt');
-				cy.prov_mqtt().setChannel('camflow/#');
+				cy.prov_mqtt().setTopic('camflow/#');
 				cy.prov_mqtt().connect(true, 'camflow', 'test');
 			}
 		</script>

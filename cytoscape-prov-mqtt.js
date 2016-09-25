@@ -4,7 +4,7 @@
 	// Create a client instance
 	var client;
 	var elementID;
-	var channel;
+	var topic;
 
 	// registers the extension on a cytoscape lib ref
 	var register = function (cytoscape) {
@@ -20,7 +20,7 @@
 			var options = {
 				clipboardSize: 0
 			};
-			
+
 			function inflateB64(str){
 				/* convert from B64 to byteArray */
 				var byteCharacters = atob(str);
@@ -40,7 +40,7 @@
 				// Once a connection has been made, make a subscription and send a message.
 				console.log("Connected!");
 				document.getElementById(elementID).innerHTML="Connected!";
-				client.subscribe(channel);
+				client.subscribe(topic);
 			}
 
 			// called when the client loses its connection
@@ -55,7 +55,7 @@
 			// called when a message arrives
 			function onMessageArrived(message) {
 				var json = inflateB64(message.payloadString);
-				cy.prov_json().parse(json);				
+				cy.prov_json().parse(json);
 				console.log(json);
 				document.getElementById(elementID).innerHTML="Data received!";
 			}
@@ -90,8 +90,8 @@
 						elementID = id;
 					},
 
-					setChannel: function(name){
-						channel = name;
+					setTopic: function(name){
+						topic = name;
 					},
 
 					connect: function(ssl, userName, password){
