@@ -9,7 +9,7 @@
 
 		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script src="http://cytoscape.github.io/cytoscape.js/api/cytoscape.js-latest/cytoscape.min.js"></script>
-		
+
 		<script src="https://cdn.rawgit.com/HubSpot/vex/master/dist/js/vex.combined.min.js"></script>
 		<script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
 		<link rel="stylesheet" href="https://cdn.rawgit.com/HubSpot/vex/master/dist/css/vex.css" />
@@ -29,7 +29,7 @@
 		<script src="cytoscape-prov-json.js"></script>
 		<script src="cytoscape-prov-mqtt.js"></script>
 		<script src="cytoscape-prov-menu.js"></script>
-		<script>		
+		<script>
 		$(function(){
 			var cy = window.cy = cytoscape({
 				container: document.getElementById('cy'),
@@ -49,11 +49,11 @@
 							'text-opacity': 0.5,
 							'text-valign': 'center',
 							'text-halign': 'right',
-							'width': 'data(weight)',							
+							'width': 'data(weight)',
 							'height': 'data(weight)'
 						}
 					},
-					
+
 					{
 						selector: 'node[type="entity"]',
 						style: {
@@ -61,7 +61,7 @@
 							'shape': 'ellipse'
 						}
 					},
-					
+
 					{
 						selector: 'node[type="agent"]',
 						style: {
@@ -69,7 +69,7 @@
 							'shape': 'octagon'
 						}
 					},
-					
+
 					{
 						selector: 'node[type="activity"]',
 						style: {
@@ -77,21 +77,21 @@
 							'shape': 'rectangle'
 						}
 					},
-					
+
 					{
 						selector: 'node[weight>40][type="activity"]',
 						style: {
 							'background-color': '#809fff'
 						}
 					},
-					
+
 					{
 						selector: 'node[weight>50][type="activity"]',
 						style: {
 							'background-color': '#3366ff'
 						}
 					},
-					
+
 					{
 						selector: 'node[weight>60][type="activity"]',
 						style: {
@@ -116,13 +116,13 @@
 							'text-outline-color': '#FFFFFF',
 							'text-outline-width': 1,
 						}
-					},					
+					},
 					{
 						selector: 'edge[label="wasInformedBy"]',
 						style: {
 							'length': '50',
 						}
-					},					
+					},
 					{
 					  selector: ':parent',
 					  style: {
@@ -159,12 +159,12 @@
 						}
 					}
 				]
-			});			
+			});
 
 			var cxtmenuApi = cy.cxtmenu( prov_menu );
 		});
-		
-		
+
+
 		</script>
 
 		<style>
@@ -195,7 +195,7 @@
 			  r.onload = function(e) {
 					var contents = e.target.result;
 					document.getElementById('area').value=  contents;
-					cy.prov_json().parse(contents);					
+					cy.prov_json().parse(contents);
 					cy.prov_core().weight('rdt:duration', 1);
 			  }
 			  r.readAsText(f);
@@ -231,7 +231,7 @@
 			function startMQTT(){
 				cy.prov_mqtt().init('m12.cloudmqtt.com', 37065, 'ws' + Math.random());
 				cy.prov_mqtt().setOutputElement('mqtt');
-				cy.prov_mqtt().setChannel('#');
+				cy.prov_mqtt().setChannel('camflow/#');
 				cy.prov_mqtt().connect(true, 'camflow', 'test');
 			}
 		</script>
@@ -266,9 +266,9 @@
 		<button type="button" onclick="undoDelete();">Undo last delete</button>
 		</div>
 		<textarea rows="5" cols="50" id="export-json"></textarea><br/>
-		
+
 		<div id="tfheader">
-		
+
 		<form id="tfnewsearch" action="javascript:search()">
 			<input type="text" id="search" size="21" maxlength="120" placeholder="Search..."></input>
 		</form>
@@ -287,7 +287,7 @@
 				cy.fit(eles, 10);
 			}
 		</script>
-		
+
 		<div id="cy" style="background-color: #cccccc;"></div>
 	</body>
 
