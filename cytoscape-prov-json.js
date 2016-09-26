@@ -32,19 +32,18 @@
 			function parse_entities(entities){
 				for(var key in entities){
 					var parent_id = undefined;
-					if(entities[key]['rdt:name']!=undefined){
+					if(entities[key]['prov:label']!=undefined){
+						var label = entities[key]['prov:label'];
+					} else if(entities[key]['rdt:name']!=undefined){
 						var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
-					}else if( entities[key]['cf:pathname']!=undefined ){
-						var label = '[path]'+entities[key]['cf:pathname'];
-					}else if( entities[key]['cf:ifc']!=undefined ){
-						var label = '[ifc]'+entities[key]['cf:ifc'];
-					}else if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
-						var label = '['+entities[key]['prov:type']+']'+entities[key]['cf:id'];
-						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
-						cy.prov_core().entity(entities[key], parent_id, label);
-						label = label+' v'+entities[key]['cf:version'];
 					}else{
 						var label = key;
+					}
+
+					if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
+						var parent_label = entities[key]['cf:id'];
+						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
+						cy.prov_core().entity(entities[key], parent_id, parent_label);
 					}
 
 					if(entities[key]['prov:type']=='prov:agent'){
@@ -59,15 +58,19 @@
 			function parse_activities(activities){
 				for(var key in activities){
 					var parent_id = undefined;
-					if(activities[key]['rdt:name']!=undefined){
+
+					if(activities[key]['prov:label']!=undefined){
+						var label = activities[key]['prov:label'];
+					} else if(activities[key]['rdt:name']!=undefined){
 						var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:startLine']+']';
-					}else if(activities[key]['cf:id'] != undefined){
-						var label = activities[key]['cf:id'];
-						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
-						cy.prov_core().activity(activities[key], parent_id, label);
-						label = label+' v'+activities[key]['cf:version'];
 					}else{
 						var label = key;
+					}
+
+					if(activities[key]['cf:id'] != undefined){
+						var parent_label = activities[key]['cf:id'];
+						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
+						cy.prov_core().activity(activities[key], parent_id, parent_label);
 					}
 
 					if(activities[key]['cf:parent_id'] != undefined){
