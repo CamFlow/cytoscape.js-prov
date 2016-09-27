@@ -170,60 +170,115 @@
 							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'agent', label: label, parent: superNode, json: json}}]);
 					},
 
-					wasDerivedFrom: function (generatedEntity, usedEntity){
-						cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF9933', label: 'wasDerivedFrom'}}]);
+					wasDerivedFrom: function (generatedEntity, usedEntity, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF9933', label: 'wasDerivedFrom - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: usedEntity, target: generatedEntity, color: '#FF9933', label: 'wasDerivedFrom'}}]);
+						}
 					},
 
-					wasGeneratedBy: function (entity, activity){
-						cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#0000FF', label: 'wasGeneratedBy'}}]);
+					wasGeneratedBy: function (entity, activity, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#0000FF', label: 'wasGeneratedBy - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#0000FF', label: 'wasGeneratedBy'}}]);
+						}
 					},
 
-					wasAssociatedWith: function (activity, agent){
-						cy.add([{ group: "edges", data: { source: agent, target: activity, color: '#00CCCC', label: 'wasAssociatedWith'}}]);
+					wasAssociatedWith: function (activity, agent, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: agent, target: activity, color: '#00CCCC', label: 'wasAssociatedWith - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: agent, target: activity, color: '#00CCCC', label: 'wasAssociatedWith'}}]);
+						}
 					},
 
-					used: function (entity, activity){
-						cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#00FF00', label: 'used'}}]);
+					used: function (entity, activity, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#00FF00', label: 'used - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: activity, target: entity, color: '#00FF00', label: 'used'}}]);
+						}
 					},
 
-					wasAttributedTo: function (entity, agent){
-						cy.add([{ group: "edges", data: { source: agent, target: entity, color: '#00CCCC', label: 'wasAttributedTo'}}]);
+					wasAttributedTo: function (entity, agent, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: agent, target: entity, color: '#00CCCC', label: 'wasAttributedTo - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: agent, target: entity, color: '#00CCCC', label: 'wasAttributedTo'}}]);
+						}
 					},
 
-					actedOnBehalfOf: function (acted, of){
-						cy.add([{ group: "edges", data: { source: acted, target: of, color: '#CC00CC', label: 'actedOnBehalfOf'}}]);
+					actedOnBehalfOf: function (acted, of, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: acted, target: of, color: '#CC00CC', label: 'actedOnBehalfOf - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: acted, target: of, color: '#CC00CC', label: 'actedOnBehalfOf'}}]);
+						}
 					},
 
-					wasInformedBy: function (entityInformant, entityInformed){
-						cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: '#CC00CC', label: 'wasInformedBy'}}]);
+					wasInformedBy: function (entityInformant, entityInformed, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: '#CC00CC', label: 'wasInformedBy - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: '#CC00CC', label: 'wasInformedBy'}}]);
+						}
 					},
 
-					derivedByInsertionFrom: function (before, after){
-						cy.add([{ group: "edges", data: { source: before, target: after, color: '#CC00CC', label: 'derivedByInsertionFrom'}}]);
+					derivedByInsertionFrom: function (before, after, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: before, target: after, color: '#CC00CC', label: 'derivedByInsertionFrom - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: before, target: after, color: '#CC00CC', label: 'derivedByInsertionFrom'}}]);
+						}
 					},
 
-					hadMember: function (collection, entry){
-						cy.add([{ group: "edges", data: { source: entry, target: collection, color: '#CC00CC', label: 'hadMember'}}]);
+					hadMember: function (collection, entry, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: entry, target: collection, color: '#CC00CC', label: 'hadMember - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: entry, target: collection, color: '#CC00CC', label: 'hadMember'}}]);
+						}
 					},
 
-					hadDictionaryMember: function (dictionary, entry){
-						cy.add([{ group: "edges", data: { source: entry, target: dictionary, color: '#CC00CC', label: 'hadDictionaryMember'}}]);
+					hadDictionaryMember: function (dictionary, entry, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: entry, target: dictionary, color: '#CC00CC', label: 'hadDictionaryMember - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: entry, target: dictionary, color: '#CC00CC', label: 'hadDictionaryMember'}}]);
+						}
 					},
 
-					specializationOf: function (entity, specialization){
-						cy.add([{ group: "edges", data: { source: entity, target: specialization, color: '#CC00CC', label: 'specializationOf'}}]);
+					specializationOf: function (entity, specialization, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: entity, target: specialization, color: '#CC00CC', label: 'specializationOf - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: entity, target: specialization, color: '#CC00CC', label: 'specializationOf'}}]);
+						}
 					},
 
-					alternateOf: function (entity, alternate){
-						cy.add([{ group: "edges", data: { source: entity, target: alternate, color: '#CC00CC', label: 'alternateOf'}}]);
+					alternateOf: function (entity, alternate, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: entity, target: alternate, color: '#CC00CC', label: 'alternateOf - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: entity, target: alternate, color: '#CC00CC', label: 'alternateOf'}}]);						}
 					},
 
-					hadPlan: function (agent, plan){
-						cy.add([{ group: "edges", data: { source: plan, target: agent, color: '#CC00CC', label: 'hadPlan'}}]);
+					hadPlan: function (agent, plan, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: plan, target: agent, color: '#CC00CC', label: 'hadPlan - '+label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: plan, target: agent, color: '#CC00CC', label: 'hadPlan'}}]);
+						}
 					},
 
-					unknownEdge: function (node1, node2){
-						cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#FF0000', label: 'unknown'}}]);
+					genericRelation: function (node1, node2, label){
+						if(label!=undefined){
+							cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#FF0000', label: label}}]);
+						}else{
+							cy.add([{ group: "edges", data: { source: node1, target: node2, color: '#FF0000', label: 'unknown'}}]);
+						}
 					},
 
 					draw: function (){

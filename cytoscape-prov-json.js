@@ -103,7 +103,11 @@
 				for(var key in eles){
 					if(missing(fn, eles[key][key1], eles[key][key2]))
 						continue;
-					fn(eles[key][key1], eles[key][key2]);
+					if(eles[key]['prov:label']!=undefined){
+						fn(eles[key][key1], eles[key][key2], eles[key]['prov:label']);
+					}else{
+						fn(eles[key][key1], eles[key][key2]);
+					}
 				}
 			}
 
@@ -212,7 +216,7 @@
 
 						parse_edges(data.alternateOf, cy.prov_core().alternateOf, 'prov:entity', 'prov:alternate');
 
-						parse_edges(data.relation, cy.prov_core().unknownEdge, 'cf:receiver', 'cf:sender');
+						parse_edges(data.relation, cy.prov_core().genericRelation, 'cf:receiver', 'cf:sender');
 
 						parse_double_edges(data.wasAssociatedWith,
 											cy.prov_core().wasAssociatedWith,
