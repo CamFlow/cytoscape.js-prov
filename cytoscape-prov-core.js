@@ -107,9 +107,9 @@
 				}
 				cy.endBatch();
 			});
-			
+
 			cy.on('tap', 'node', function(evt){
-					
+
 			});
 
 			var options = {
@@ -246,7 +246,7 @@
 						});
 						layout.run();
 					},
-					
+
 					collapse: function(node){
 						if(node.data('removed')!=null){ // the node has already been collapsed
 							return;
@@ -256,7 +256,7 @@
 							return;
 						}
 						var added = new Array();
-						
+
 						cy.startBatch();
 						nodes.each(function(i, n){
 							n.outgoers().each(function(i, e){
@@ -278,9 +278,9 @@
 						node.data('removed', removed);
 						node.data('added', added);
 						node.edgesTo(node).remove();
-						cy.endBatch();						
+						cy.endBatch();
 					},
-					
+
 					uncollapse: function(node){
 						cy.startBatch();
 						var removed = node.data('removed');
@@ -296,7 +296,7 @@
 						node.data('added', null);
 						cy.endBatch();
 					},
-					
+
 					average: function(attribute_name){
 						var count = 1;
 						var time=0;
@@ -309,7 +309,7 @@
 						});
 						return time/count;
 					},
-					
+
 					max: function(attribute_name){
 						var time=undefined;
 						cy.nodes().each(function(i, node){
@@ -326,7 +326,7 @@
 						});
 						return time;
 					},
-					
+
 					weight: function(attribute_name, factor){
 						var max = this.max(attribute_name);
 						cy.nodes().each(function(i, node){

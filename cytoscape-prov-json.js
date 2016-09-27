@@ -212,7 +212,7 @@
 
 						parse_edges(data.alternateOf, cy.prov_core().alternateOf, 'prov:entity', 'prov:alternate');
 
-						parse_edges(data.edge, cy.prov_core().unknownEdge, 'prov:receiver', 'prov:sender');
+						parse_edges(data.relation, cy.prov_core().unknownEdge, 'prov:receiver', 'prov:sender');
 
 						parse_double_edges(data.wasAssociatedWith,
 											cy.prov_core().wasAssociatedWith,
