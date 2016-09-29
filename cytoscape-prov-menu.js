@@ -17,11 +17,12 @@ var prov_menu = {
 		  select: function(ele){ // a function to execute when the command is selected
 			// TODO complexify.
 			var txt = '<h3>' + ele.data("label") + '</h3>';
-			json = ele.data("json");
+			txt += '<b>id</b>='+ele.data('id')+'<br/>';
+			json = ele.data('json');
 			for (var key in json){
 				txt += '<b>'+key+'</b>='+JSON.stringify(json[key])+'<br/>';
 			}
-			vex.dialog.alert({ unsafeMessage: txt});
+			vex.dialog.alert({ unsafeMessage: '<div style="word-break: break-all;">'+txt+'</div>'});
 		  },
 		  disabled: false // disables the item on true
 		},
