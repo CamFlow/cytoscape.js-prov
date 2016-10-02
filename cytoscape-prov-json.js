@@ -40,7 +40,13 @@
 						var label = key;
 					}
 
-					if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
+					if(entities[key]['cf:hasParent'] != undefined){
+						parent_id = entities[key]['cf:hasParent'];
+						if(cy.elements('node[id="'+parent_id+'"]').empty()){ // parent does not exist yet
+							tryNodeAgain.push({fn: cy.prov_core().entity, json: entities[key], key: key, label: label, parent_id: parent_id});
+							continue;
+						}
+					}else	if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 						var parent_label = entities[key]['cf:id'];
 						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
 						cy.prov_core().entity(entities[key], parent_id, parent_label);
@@ -67,20 +73,18 @@
 						var label = key;
 					}
 
-					if(activities[key]['cf:id'] != undefined){
+					if(activities[key]['cf:hasParent'] != undefined){
+						parent_id = activities[key]['cf:hasParent'];
+						if(cy.elements('node[id="'+parent_id+'"]').empty()){ // parent does not exist yet
+							tryNodeAgain.push({fn: cy.prov_core().activity, json: activities[key], key: key, label: label, parent_id: parent_id});
+							continue;
+						}
+					}else if(activities[key]['cf:id'] != undefined){
 						var parent_label = activities[key]['cf:id'];
 						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
 						cy.prov_core().activity(activities[key], parent_id, parent_label);
 					}
 
-					if(activities[key]['cf:parent_id'] != undefined){
-						parent_id = activities[key]['cf:parent_id'];
-						if(cy.elements('node[id="'+parent_id+'"]').empty()){ // parent does not exist yet
-							tryNodeAgain.push({fn: cy.prov_core().activity, json: activities[key], key: key, label: label, parent_id: parent_id});
-							continue;
-						}
-
-					}
 					cy.prov_core().activity(activities[key], key, label, parent_id);
 				}
 			}
