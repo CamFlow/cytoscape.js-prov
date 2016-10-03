@@ -49,7 +49,9 @@
 					}else	if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 						var parent_label = entities[key]['cf:id'];
 						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
-						cy.prov_core().entity(entities[key], parent_id, parent_label);
+						cy.prov_core().entity(entities[key], parent_id, parent_label, entities[key]['cf:machine_id']);
+					}else if(entities[key]['cf:machine_id'] != undefined){
+						var parent_id = entities[key]['cf:machine_id'];
 					}
 
 					if(entities[key]['prov:type']=='prov:agent'){
@@ -82,7 +84,7 @@
 					}else if(activities[key]['cf:id'] != undefined){
 						var parent_label = activities[key]['cf:id'];
 						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
-						cy.prov_core().activity(activities[key], parent_id, parent_label);
+						cy.prov_core().activity(activities[key], parent_id, parent_label, activities[key]['cf:machine_id']);
 					}
 
 					cy.prov_core().activity(activities[key], key, label, parent_id);
