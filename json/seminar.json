@@ -1,0 +1,1100 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "R_REU_S1-clean.r",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "0.039999999999992",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "`?`(seq)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0900000000000034",
+"rdt:duration" : "0.0500000000000114",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "15"
+} ,
+
+"p3" : {
+"rdt:name" : "treeID <- seq(1, 10)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0900000000000034",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "22"
+} ,
+
+"p4" : {
+"rdt:name" : "treeID",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.0999999999999943",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "26"
+} ,
+
+"p5" : {
+"rdt:name" : "species <- rep(\"QURU\", 10)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.11999999999999",
+"rdt:duration" : "0.019999999999996",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "33"
+} ,
+
+"p6" : {
+"rdt:name" : "species",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.11999999999999",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "34"
+} ,
+
+"p7" : {
+"rdt:name" : "plotID <- c(rep(\"A\", 5), rep(\"B\", 5))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.140000000000001",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "40"
+} ,
+
+"p8" : {
+"rdt:name" : "plotID",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.140000000000001",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "41"
+} ,
+
+"p9" : {
+"rdt:name" : "dbh <- c(24.4, 18.4, 31.7, 34, 38, 30.5, 46.4, 43.8, 46.2, 3",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.149999999999991",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "46"
+} ,
+
+"p10" : {
+"rdt:name" : "dbh",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.170000000000002",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "47"
+} ,
+
+"p11" : {
+"rdt:name" : "data <- data.frame(treeID, species, plotID, dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.170000000000002",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "53"
+} ,
+
+"p12" : {
+"rdt:name" : "data",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.200000000000003",
+"rdt:duration" : "0.0300000000000011",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "57"
+} ,
+
+"p13" : {
+"rdt:name" : "summary(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.209999999999994",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "61"
+} ,
+
+"p14" : {
+"rdt:name" : "str(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.230000000000004",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "66"
+} ,
+
+"p15" : {
+"rdt:name" : "dim(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.230000000000004",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "73"
+} ,
+
+"p16" : {
+"rdt:name" : "nrow(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.239999999999995",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "74"
+} ,
+
+"p17" : {
+"rdt:name" : "ncol(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.259999999999991",
+"rdt:duration" : "0.019999999999996",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "75"
+} ,
+
+"p18" : {
+"rdt:name" : "names(data)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.259999999999991",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "76"
+} ,
+
+"p19" : {
+"rdt:name" : "head(data, 4)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.280000000000001",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "77"
+} ,
+
+"p20" : {
+"rdt:name" : "tail(data, 2)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.280000000000001",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "78"
+} ,
+
+"p21" : {
+"rdt:name" : "subset(data, plotID == \"B\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.289999999999992",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "83"
+} ,
+
+"p22" : {
+"rdt:name" : "subset(data, dbh > 25)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.310000000000002",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "87"
+} ,
+
+"p23" : {
+"rdt:name" : "dir()",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.319999999999993",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "98"
+} ,
+
+"p24" : {
+"rdt:name" : "data2 <- read.csv(\"reu_r_data1.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.319999999999993",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "103"
+} ,
+
+"p25" : {
+"rdt:name" : "data2",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.349999999999994",
+"rdt:duration" : "0.0300000000000011",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "107"
+} ,
+
+"p26" : {
+"rdt:name" : "all <- rbind(data, data2)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.349999999999994",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "114"
+} ,
+
+"p27" : {
+"rdt:name" : "all",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.390000000000001",
+"rdt:duration" : "0.0400000000000063",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "115"
+} ,
+
+"p28" : {
+"rdt:name" : "summary(all)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.390000000000001",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "116"
+} ,
+
+"p29" : {
+"rdt:name" : "all$dbh",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.399999999999991",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "122"
+} ,
+
+"p30" : {
+"rdt:name" : "max(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.420000000000002",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "126"
+} ,
+
+"p31" : {
+"rdt:name" : "min(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.429999999999993",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "127"
+} ,
+
+"p32" : {
+"rdt:name" : "median(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.429999999999993",
+"rdt:duration" : "0",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "128"
+} ,
+
+"p33" : {
+"rdt:name" : "mean(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.450000000000003",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "129"
+} ,
+
+"p34" : {
+"rdt:name" : "summary(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.459999999999994",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "133"
+} ,
+
+"p35" : {
+"rdt:name" : "sd(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.480000000000004",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "138"
+} ,
+
+"p36" : {
+"rdt:name" : "par(mfrow = c(1, 2))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.489999999999995",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "147"
+} ,
+
+"p37" : {
+"rdt:name" : "hist(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.509999999999991",
+"rdt:duration" : "0.019999999999996",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "152"
+} ,
+
+"p38" : {
+"rdt:name" : "hist(all$dbh, xlab = \"DBH\", main = \"Histogram of DBH\", col =",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.530000000000001",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "153"
+} ,
+
+"p39" : {
+"rdt:name" : "par(mfrow = c(1, 2))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.539999999999992",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "158"
+} ,
+
+"p40" : {
+"rdt:name" : "boxplot(all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.560000000000002",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "159"
+} ,
+
+"p41" : {
+"rdt:name" : "boxplot(all$dbh, horizontal = T, xlab = \"DBH\", main = \"Boxpl",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.569999999999993",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "160"
+} ,
+
+"p42" : {
+"rdt:name" : "par(mfrow = c(1, 2))",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.590000000000003",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "166"
+} ,
+
+"p43" : {
+"rdt:name" : "plot(all$plotID, all$dbh)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.61999999999999",
+"rdt:duration" : "0.0299999999999869",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "167"
+} ,
+
+"p44" : {
+"rdt:name" : "plot(all$plotID, all$dbh, xlab = \"Plot\", ylab = \"DBH\", main ",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.649999999999991",
+"rdt:duration" : "0.0300000000000011",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "168"
+} ,
+
+"p45" : {
+"rdt:name" : "write.table(all, \"reu.r.data2.csv\")",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "0.670000000000002",
+"rdt:duration" : "0.0200000000000102",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "172"
+} ,
+
+"p46" : {
+"rdt:name" : "R_REU_S1-clean.r",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "0.679999999999993",
+"rdt:duration" : "0.00999999999999091",
+"rdt:scriptNum" : "0",
+"rdt:scriptLine" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "windows",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
+"rdt:script" : "C:/Users/Thomas/Documents/GitHub/RDataTracker/examples/seminars/seminar1/R_REU_S1-clean.r",
+"rdt:sourcedScripts" : "",
+"rdt:scriptTimeStamp" : "2016-08-30T15.20.40EDT",
+"rdt:workingDirectory" : "C:/Users/Thomas/Documents/GitHub/RDataTracker/examples/seminars/seminar1",
+"rdt:ddgDirectory" : "./R_REU_S1-clean_ddg",
+"rdt:ddgTimeStamp" : "2016-08-30T19.31.40EDT",
+"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:InstalledPackages": [
+	{"package":"devtools", "version":"1.12.0"},
+	{"package":"lattice", "version":"0.20-33"},
+	{"package":"latticeExtra", "version":"0.6-28"},
+	{"package":"raster", "version":"2.5-8"},
+	{"package":"rasterVis", "version":"0.40"},
+	{"package":"RColorBrewer", "version":"1.1-2"},
+	{"package":"RDataTracker", "version":"2.24.1"},
+	{"package":"sp", "version":"1.2-3"}]
+}},
+"entity":{
+
+"d1" : {
+"rdt:name" : "treeID",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/1-treeID.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d2" : {
+"rdt:name" : "species",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/2-species.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d3" : {
+"rdt:name" : "plotID",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/3-plotID.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d4" : {
+"rdt:name" : "dbh",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/4-dbh.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d5" : {
+"rdt:name" : "data",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/5-data.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d6" : {
+"rdt:name" : "reu_r_data1.csv",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/6-reu_r_data1.csv",
+"rdt:type" : "File",
+"rdt:scope" : "undefined",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d7" : {
+"rdt:name" : "data2",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/7-data2.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d8" : {
+"rdt:name" : "all",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/8-all.csv",
+"rdt:type" : "Snapshot",
+"rdt:scope" : "R_GlobalEnv",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d9" : {
+"rdt:name" : "reu.r.data2.csv",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/9-reu.r.data2.csv",
+"rdt:type" : "File",
+"rdt:scope" : "undefined",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+} ,
+
+"d10" : {
+"rdt:name" : "dev.off.10.pdf",
+"rdt:value" : "./R_REU_S1-clean_ddg/data/10-dev.off.10.pdf",
+"rdt:type" : "File",
+"rdt:scope" : "undefined",
+"rdt:fromEnv" : "FALSE",
+"rdt:timestamp" : "",
+"rdt:location" : ""
+}},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e2" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
+
+"e4" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+} ,
+
+"e6" : {
+"prov:informant" : "p4",
+"prov:informed" : "p5"
+} ,
+
+"e8" : {
+"prov:informant" : "p5",
+"prov:informed" : "p6"
+} ,
+
+"e10" : {
+"prov:informant" : "p6",
+"prov:informed" : "p7"
+} ,
+
+"e12" : {
+"prov:informant" : "p7",
+"prov:informed" : "p8"
+} ,
+
+"e14" : {
+"prov:informant" : "p8",
+"prov:informed" : "p9"
+} ,
+
+"e16" : {
+"prov:informant" : "p9",
+"prov:informed" : "p10"
+} ,
+
+"e18" : {
+"prov:informant" : "p10",
+"prov:informed" : "p11"
+} ,
+
+"e24" : {
+"prov:informant" : "p11",
+"prov:informed" : "p12"
+} ,
+
+"e26" : {
+"prov:informant" : "p12",
+"prov:informed" : "p13"
+} ,
+
+"e28" : {
+"prov:informant" : "p13",
+"prov:informed" : "p14"
+} ,
+
+"e30" : {
+"prov:informant" : "p14",
+"prov:informed" : "p15"
+} ,
+
+"e32" : {
+"prov:informant" : "p15",
+"prov:informed" : "p16"
+} ,
+
+"e34" : {
+"prov:informant" : "p16",
+"prov:informed" : "p17"
+} ,
+
+"e36" : {
+"prov:informant" : "p17",
+"prov:informed" : "p18"
+} ,
+
+"e38" : {
+"prov:informant" : "p18",
+"prov:informed" : "p19"
+} ,
+
+"e40" : {
+"prov:informant" : "p19",
+"prov:informed" : "p20"
+} ,
+
+"e42" : {
+"prov:informant" : "p20",
+"prov:informed" : "p21"
+} ,
+
+"e45" : {
+"prov:informant" : "p21",
+"prov:informed" : "p22"
+} ,
+
+"e48" : {
+"prov:informant" : "p22",
+"prov:informed" : "p23"
+} ,
+
+"e49" : {
+"prov:informant" : "p23",
+"prov:informed" : "p24"
+} ,
+
+"e52" : {
+"prov:informant" : "p24",
+"prov:informed" : "p25"
+} ,
+
+"e54" : {
+"prov:informant" : "p25",
+"prov:informed" : "p26"
+} ,
+
+"e58" : {
+"prov:informant" : "p26",
+"prov:informed" : "p27"
+} ,
+
+"e60" : {
+"prov:informant" : "p27",
+"prov:informed" : "p28"
+} ,
+
+"e62" : {
+"prov:informant" : "p28",
+"prov:informed" : "p29"
+} ,
+
+"e65" : {
+"prov:informant" : "p29",
+"prov:informed" : "p30"
+} ,
+
+"e68" : {
+"prov:informant" : "p30",
+"prov:informed" : "p31"
+} ,
+
+"e71" : {
+"prov:informant" : "p31",
+"prov:informed" : "p32"
+} ,
+
+"e74" : {
+"prov:informant" : "p32",
+"prov:informed" : "p33"
+} ,
+
+"e77" : {
+"prov:informant" : "p33",
+"prov:informed" : "p34"
+} ,
+
+"e80" : {
+"prov:informant" : "p34",
+"prov:informed" : "p35"
+} ,
+
+"e83" : {
+"prov:informant" : "p35",
+"prov:informed" : "p36"
+} ,
+
+"e84" : {
+"prov:informant" : "p36",
+"prov:informed" : "p37"
+} ,
+
+"e87" : {
+"prov:informant" : "p37",
+"prov:informed" : "p38"
+} ,
+
+"e90" : {
+"prov:informant" : "p38",
+"prov:informed" : "p39"
+} ,
+
+"e91" : {
+"prov:informant" : "p39",
+"prov:informed" : "p40"
+} ,
+
+"e94" : {
+"prov:informant" : "p40",
+"prov:informed" : "p41"
+} ,
+
+"e97" : {
+"prov:informant" : "p41",
+"prov:informed" : "p42"
+} ,
+
+"e98" : {
+"prov:informant" : "p42",
+"prov:informed" : "p43"
+} ,
+
+"e102" : {
+"prov:informant" : "p43",
+"prov:informed" : "p44"
+} ,
+
+"e106" : {
+"prov:informant" : "p44",
+"prov:informed" : "p45"
+} ,
+
+"e109" : {
+"prov:informant" : "p45",
+"prov:informed" : "p46"
+}},
+"wasGeneratedBy":{
+
+"e3" : {
+"prov:entity" : "d1",
+"prov:activity" : "p3"
+} ,
+
+"e7" : {
+"prov:entity" : "d2",
+"prov:activity" : "p5"
+} ,
+
+"e11" : {
+"prov:entity" : "d3",
+"prov:activity" : "p7"
+} ,
+
+"e15" : {
+"prov:entity" : "d4",
+"prov:activity" : "p9"
+} ,
+
+"e23" : {
+"prov:entity" : "d5",
+"prov:activity" : "p11"
+} ,
+
+"e51" : {
+"prov:entity" : "d7",
+"prov:activity" : "p24"
+} ,
+
+"e57" : {
+"prov:entity" : "d8",
+"prov:activity" : "p26"
+} ,
+
+"e108" : {
+"prov:entity" : "d9",
+"prov:activity" : "p45"
+} ,
+
+"e110" : {
+"prov:entity" : "d10",
+"prov:activity" : "p46"
+}},
+"used":{
+
+"e5" : {
+"prov:activity" : "p4",
+"prov:entity" : "d1"
+} ,
+
+"e9" : {
+"prov:activity" : "p6",
+"prov:entity" : "d2"
+} ,
+
+"e13" : {
+"prov:activity" : "p8",
+"prov:entity" : "d3"
+} ,
+
+"e17" : {
+"prov:activity" : "p10",
+"prov:entity" : "d4"
+} ,
+
+"e19" : {
+"prov:activity" : "p11",
+"prov:entity" : "d1"
+} ,
+
+"e20" : {
+"prov:activity" : "p11",
+"prov:entity" : "d2"
+} ,
+
+"e21" : {
+"prov:activity" : "p11",
+"prov:entity" : "d3"
+} ,
+
+"e22" : {
+"prov:activity" : "p11",
+"prov:entity" : "d4"
+} ,
+
+"e25" : {
+"prov:activity" : "p12",
+"prov:entity" : "d5"
+} ,
+
+"e27" : {
+"prov:activity" : "p13",
+"prov:entity" : "d5"
+} ,
+
+"e29" : {
+"prov:activity" : "p14",
+"prov:entity" : "d5"
+} ,
+
+"e31" : {
+"prov:activity" : "p15",
+"prov:entity" : "d5"
+} ,
+
+"e33" : {
+"prov:activity" : "p16",
+"prov:entity" : "d5"
+} ,
+
+"e35" : {
+"prov:activity" : "p17",
+"prov:entity" : "d5"
+} ,
+
+"e37" : {
+"prov:activity" : "p18",
+"prov:entity" : "d5"
+} ,
+
+"e39" : {
+"prov:activity" : "p19",
+"prov:entity" : "d5"
+} ,
+
+"e41" : {
+"prov:activity" : "p20",
+"prov:entity" : "d5"
+} ,
+
+"e43" : {
+"prov:activity" : "p21",
+"prov:entity" : "d5"
+} ,
+
+"e44" : {
+"prov:activity" : "p21",
+"prov:entity" : "d3"
+} ,
+
+"e46" : {
+"prov:activity" : "p22",
+"prov:entity" : "d5"
+} ,
+
+"e47" : {
+"prov:activity" : "p22",
+"prov:entity" : "d4"
+} ,
+
+"e50" : {
+"prov:activity" : "p24",
+"prov:entity" : "d6"
+} ,
+
+"e53" : {
+"prov:activity" : "p25",
+"prov:entity" : "d7"
+} ,
+
+"e55" : {
+"prov:activity" : "p26",
+"prov:entity" : "d5"
+} ,
+
+"e56" : {
+"prov:activity" : "p26",
+"prov:entity" : "d7"
+} ,
+
+"e59" : {
+"prov:activity" : "p27",
+"prov:entity" : "d8"
+} ,
+
+"e61" : {
+"prov:activity" : "p28",
+"prov:entity" : "d8"
+} ,
+
+"e63" : {
+"prov:activity" : "p29",
+"prov:entity" : "d8"
+} ,
+
+"e64" : {
+"prov:activity" : "p29",
+"prov:entity" : "d4"
+} ,
+
+"e66" : {
+"prov:activity" : "p30",
+"prov:entity" : "d8"
+} ,
+
+"e67" : {
+"prov:activity" : "p30",
+"prov:entity" : "d4"
+} ,
+
+"e69" : {
+"prov:activity" : "p31",
+"prov:entity" : "d8"
+} ,
+
+"e70" : {
+"prov:activity" : "p31",
+"prov:entity" : "d4"
+} ,
+
+"e72" : {
+"prov:activity" : "p32",
+"prov:entity" : "d8"
+} ,
+
+"e73" : {
+"prov:activity" : "p32",
+"prov:entity" : "d4"
+} ,
+
+"e75" : {
+"prov:activity" : "p33",
+"prov:entity" : "d8"
+} ,
+
+"e76" : {
+"prov:activity" : "p33",
+"prov:entity" : "d4"
+} ,
+
+"e78" : {
+"prov:activity" : "p34",
+"prov:entity" : "d8"
+} ,
+
+"e79" : {
+"prov:activity" : "p34",
+"prov:entity" : "d4"
+} ,
+
+"e81" : {
+"prov:activity" : "p35",
+"prov:entity" : "d8"
+} ,
+
+"e82" : {
+"prov:activity" : "p35",
+"prov:entity" : "d4"
+} ,
+
+"e85" : {
+"prov:activity" : "p37",
+"prov:entity" : "d8"
+} ,
+
+"e86" : {
+"prov:activity" : "p37",
+"prov:entity" : "d4"
+} ,
+
+"e88" : {
+"prov:activity" : "p38",
+"prov:entity" : "d8"
+} ,
+
+"e89" : {
+"prov:activity" : "p38",
+"prov:entity" : "d4"
+} ,
+
+"e92" : {
+"prov:activity" : "p40",
+"prov:entity" : "d8"
+} ,
+
+"e93" : {
+"prov:activity" : "p40",
+"prov:entity" : "d4"
+} ,
+
+"e95" : {
+"prov:activity" : "p41",
+"prov:entity" : "d8"
+} ,
+
+"e96" : {
+"prov:activity" : "p41",
+"prov:entity" : "d4"
+} ,
+
+"e99" : {
+"prov:activity" : "p43",
+"prov:entity" : "d8"
+} ,
+
+"e100" : {
+"prov:activity" : "p43",
+"prov:entity" : "d3"
+} ,
+
+"e101" : {
+"prov:activity" : "p43",
+"prov:entity" : "d4"
+} ,
+
+"e103" : {
+"prov:activity" : "p44",
+"prov:entity" : "d8"
+} ,
+
+"e104" : {
+"prov:activity" : "p44",
+"prov:entity" : "d3"
+} ,
+
+"e105" : {
+"prov:activity" : "p44",
+"prov:entity" : "d4"
+} ,
+
+"e107" : {
+"prov:activity" : "p45",
+"prov:entity" : "d8"
+}}
+}
