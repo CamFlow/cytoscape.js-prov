@@ -48,7 +48,7 @@
 						}
 					}else	if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 						var parent_label = entities[key]['cf:id'];
-						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
+						var parent_id = entities[key]['cf:type'].toString() + entities[key]['cf:id'].toString() + entities[key]['cf:boot_id'].toString() + entities[key]['cf:machine_id'].toString();
 						cy.prov_core().entity(entities[key], parent_id, parent_label, entities[key]['cf:machine_id']);
 					}else if(entities[key]['cf:machine_id'] != undefined){
 						var parent_id = entities[key]['cf:machine_id'];
@@ -83,7 +83,7 @@
 						}
 					}else if(activities[key]['cf:id'] != undefined){
 						var parent_label = activities[key]['cf:id'];
-						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
+						parent_id = activities[key]['cf:type'].toString() + activities[key]['cf:id'].toString() + activities[key]['cf:boot_id'].toString() + activities[key]['cf:machine_id'].toString();
 						cy.prov_core().activity(activities[key], parent_id, parent_label, activities[key]['cf:machine_id']);
 					}
 
