@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="https://cdn.rawgit.com/HubSpot/vex/master/dist/css/vex-theme-flat-attack.css" />
 		<link rel="stylesheet" href="https://rawgit.com/cytoscape/cytoscape.js-panzoom/master/cytoscape.js-panzoom.css" />
 		<link rel="stylesheet" href="https://rawgit.com/cytoscape/cytoscape.js-panzoom/master/font-awesome-4.0.3/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://cdn.rawgit.com/cytoscape/cytoscape.js-navigator/master/cytoscape.js-navigator.css" />
 
 		<!-- for testing with local version of cytoscape.js -->
 		<!--<script src="../cytoscape.js/build/cytoscape.js"></script>-->
@@ -28,6 +29,7 @@
 		<script src="https://cdn.rawgit.com/nodeca/pako/master/dist/pako.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-cxtmenu/master/cytoscape-cxtmenu.js"></script>
 		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-panzoom/master/cytoscape-panzoom.js"></script>
+		<script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-navigator/master/cytoscape-navigator.js"></script>
 		<script src="cytoscape-prov-core.js"></script>
 		<script src="cytoscape-prov-json.js"></script>
 		<script src="cytoscape-prov-mqtt.js"></script>
@@ -166,7 +168,8 @@
 
 			var cxtmenuApi = cy.cxtmenu( prov_menu );
 
-			cy.panzoom({});
+			cy.panzoom({zoomOnly: true});
+			cy.navigator({});
 		});
 
 
