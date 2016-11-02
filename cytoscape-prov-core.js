@@ -220,9 +220,9 @@
 
 					wasInformedBy: function (entityInformant, entityInformed, label){
 						if(label!=undefined){
-							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: type: 'wasInformedBy', '#CC00CC', label: 'wasInformedBy - '+label}}]);
+							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, type: 'wasInformedBy', color: '#CC00CC', label: 'wasInformedBy - '+label}}]);
 						}else{
-							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, color: type: 'wasInformedBy', '#CC00CC', label: 'wasInformedBy'}}]);
+							cy.add([{ group: "edges", data: { source: entityInformant, target: entityInformed, type: 'wasInformedBy', color: '#CC00CC', label: 'wasInformedBy'}}]);
 						}
 					},
 
