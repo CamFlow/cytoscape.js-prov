@@ -70,7 +70,11 @@
 					if(activities[key]['prov:label']!=undefined){
 						var label = activities[key]['prov:label'];
 					} else if(activities[key]['rdt:name']!=undefined){
-						var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:startLine']+']';
+						if(activities[key]['rdt:startLine']!='NA'){
+							var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:type']+'](Line: '+activities[key]['rdt:startLine']+')';
+						}else{
+							var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:type']+']';
+						}
 					}else{
 						var label = key;
 					}
