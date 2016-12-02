@@ -85,7 +85,7 @@
 							tryNodeAgain.push({fn: cy.prov_core().activity, json: activities[key], key: key, label: label, parent_id: parent_id});
 							continue;
 						}
-					}else if(activities[key]['cf:id'] != undefined){
+					}else if(activities[key]['prov:type'] != undefined && activities[key]['cf:id'] != undefined){
 						var parent_label = activities[key]['cf:id'];
 						parent_id = activities[key]['prov:type'].toString() + activities[key]['cf:id'].toString() + activities[key]['cf:boot_id'].toString() + activities[key]['cf:machine_id'].toString();
 						cy.prov_core().activity(activities[key], parent_id, parent_label, activities[key]['cf:machine_id']);
