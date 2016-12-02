@@ -48,7 +48,7 @@
 						}
 					}else	if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
 						var parent_label = entities[key]['cf:id'];
-						var parent_id = entities[key]['cf:type'] + entities[key]['cf:id'] + entities[key]['cf:boot_id'] + entities[key]['cf:machine_id'];
+						var parent_id = entities[key]['prov:type'].toString() + entities[key]['cf:id'].toString() + entities[key]['cf:boot_id'].toString() + entities[key]['cf:machine_id'].toString();
 						cy.prov_core().entity(entities[key], parent_id, parent_label, entities[key]['cf:machine_id']);
 					}else if(entities[key]['cf:machine_id'] != undefined){
 						var parent_id = entities[key]['cf:machine_id'];
@@ -70,7 +70,11 @@
 					if(activities[key]['prov:label']!=undefined){
 						var label = activities[key]['prov:label'];
 					} else if(activities[key]['rdt:name']!=undefined){
-						var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:startLine']+']';
+						if(activities[key]['rdt:startLine']!='NA'){
+							var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:type']+'](Line: '+activities[key]['rdt:startLine']+')';
+						}else{
+							var label = activities[key]['rdt:name']+' ['+activities[key]['rdt:type']+']';
+						}
 					}else{
 						var label = key;
 					}
@@ -83,7 +87,7 @@
 						}
 					}else if(activities[key]['cf:id'] != undefined){
 						var parent_label = activities[key]['cf:id'];
-						parent_id = activities[key]['cf:type'] + activities[key]['cf:id'] + activities[key]['cf:boot_id'] + activities[key]['cf:machine_id'];
+						parent_id = activities[key]['prov:type'].toString() + activities[key]['cf:id'].toString() + activities[key]['cf:boot_id'].toString() + activities[key]['cf:machine_id'].toString();
 						cy.prov_core().activity(activities[key], parent_id, parent_label, activities[key]['cf:machine_id']);
 					}
 
@@ -203,10 +207,10 @@
 
 						parse_messages(data.message);
 
-						//	try edges that could not be inserted earlier
-						edge_again();
 						//	try nodes that could not be inserted earlier
 						node_again();
+						//	try edges that could not be inserted earlier
+						edge_again();
 
 						parse_edges(data.wasGeneratedBy, cy.prov_core().wasGeneratedBy, 'prov:entity', 'prov:activity');
 
@@ -242,6 +246,11 @@
 											'prov:after',
 											'prov:key-entity-set');
 						cy.endBatch();
+						console.log('Unmatched edge :'+tryEdgeAgain.length);
+						tryEdgeAgain.forEach(function(element) {
+							console.log(element);
+						});
+						console.log('Unmatched edge :'+tryEdgeAgain.length);
 						cy.prov_core().draw();
 					}
 				};

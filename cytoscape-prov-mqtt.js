@@ -55,8 +55,8 @@
 			// called when a message arrives
 			function onMessageArrived(message) {
 				var json = inflateB64(message.payloadString);
-				cy.prov_json().parse(json);
 				console.log(json);
+				cy.prov_json().parse(json);				
 				document.getElementById(elementID).innerHTML="Data received!";
 			}
 
