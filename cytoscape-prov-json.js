@@ -46,7 +46,9 @@
 							tryNodeAgain.push({fn: cy.prov_core().entity, json: entities[key], key: key, label: label, parent_id: parent_id});
 							continue;
 						}
-					}else	if(entities[key]['prov:type'] != undefined && entities[key]['cf:id']!=undefined){
+					}else	if(entities[key]['prov:type'] != undefined
+					&& entities[key]['cf:id']!=undefined
+					&& entities[key]['cf:seq'] == undefined){
 						var parent_label = entities[key]['cf:id'];
 						var parent_id = entities[key]['prov:type'].toString() + entities[key]['cf:id'].toString() + entities[key]['cf:boot_id'].toString() + entities[key]['cf:machine_id'].toString();
 						cy.prov_core().entity(entities[key], parent_id, parent_label, entities[key]['cf:machine_id']);
