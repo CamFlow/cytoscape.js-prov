@@ -1,0 +1,105 @@
+{
+
+"prefix" : {
+"prov" : "http://www.w3.org/ns/prov#",
+"rdt" : "http://rdatatracker.org/"
+},
+"activity":{
+
+"p1" : {
+"rdt:name" : "test.R",
+"rdt:type" : "Start",
+"rdt:elapsedTime" : "8.87",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"p2" : {
+"rdt:name" : "library(CamFlow)",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "8.87400000000001",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "2",
+"rdt:startCol" : "1",
+"rdt:endLine" : "2",
+"rdt:endCol" : "16"
+} ,
+
+"p3" : {
+"rdt:name" : "CamFlowVisualiser(\"~/Projects/HF/projects/Dprov/projects/dev",
+"rdt:type" : "Operation",
+"rdt:elapsedTime" : "8.88300000000001",
+"rdt:scriptNum" : "0",
+"rdt:startLine" : "4",
+"rdt:startCol" : "1",
+"rdt:endLine" : "4",
+"rdt:endCol" : "97"
+} ,
+
+"p4" : {
+"rdt:name" : "test.R",
+"rdt:type" : "Finish",
+"rdt:elapsedTime" : "8.88800000000001",
+"rdt:scriptNum" : "NA",
+"rdt:startLine" : "NA",
+"rdt:startCol" : "NA",
+"rdt:endLine" : "NA",
+"rdt:endCol" : "NA"
+} ,
+
+"environment" : {
+"rdt:name" : "environment",
+"rdt:architecture" : "x86_64",
+"rdt:operatingSystem" : "unix",
+"rdt:language" : "R",
+"rdt:rVersion" : "R version 3.3.1 (2016-06-21)",
+"rdt:script" : "/Users/hermes/Desktop/test.R",
+"rdt:sourcedScripts" : ""
+,
+"rdt:scriptTimeStamp" : "2016-10-07T17.19.21EDT",
+"rdt:workingDirectory" : "/Users/hermes/Desktop",
+"rdt:ddgDirectory" : "./test_ddg",
+"rdt:ddgTimeStamp" : "2016-10-07T17.19.50EDT",
+"rdt:rdatatrackerVersion" : "2.24.1",
+"rdt:InstalledPackages": [
+    {"package":"akima", "version":"0.5-12"},
+    {"package":"CamFlow", "version":"0.0.0.9000"},
+    {"package":"cowplot", "version":"0.6.2"},
+    {"package":"ggplot2", "version":"2.1.0"},
+    {"package":"lattice", "version":"0.20-33"},
+    {"package":"MASS", "version":"7.3-45"},
+    {"package":"permute", "version":"0.9-0"},
+    {"package":"plyr", "version":"1.8.4"},
+    {"package":"png", "version":"0.1-7"},
+    {"package":"RColorBrewer", "version":"1.1-2"},
+    {"package":"RDataTracker", "version":"2.24.1"},
+    {"package":"reshape", "version":"0.8.5"},
+    {"package":"scatterplot3d", "version":"0.3-37"},
+    {"package":"vegan", "version":"2.4-0"}]
+}},
+"entity":{
+},
+"wasInformedBy":{
+
+"e1" : {
+"prov:informant" : "p1",
+"prov:informed" : "p2"
+} ,
+
+"e2" : {
+"prov:informant" : "p2",
+"prov:informed" : "p3"
+} ,
+
+"e3" : {
+"prov:informant" : "p3",
+"prov:informed" : "p4"
+}},
+"wasGeneratedBy":{
+},
+"used":{
+}
+}
