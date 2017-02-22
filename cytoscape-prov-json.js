@@ -179,14 +179,6 @@
 				tryNodeAgain = again;
 			}
 
-			function parse_messages(messages){
-				var div = document.getElementById('camflow-message');
-
-				for(key in messages){
-					div.innerHTML = div.innerHTML + '['+messages[key]['cf:machine_id']+':'+messages[key]['cf:boot_id']+':'+messages[key]['cf:id']+']'+' '+messages[key]['cf:message'];
-				}
-			}
-
 			if (!getScratch().isInitialized) {
 				getScratch().isInitialized = true;
 
@@ -206,8 +198,6 @@
 						parse_entities(data.entity);
 						parse_activities(data.activity);
 						parse_agents(data.agent);
-
-						parse_messages(data.message);
 
 						//	try nodes that could not be inserted earlier
 						node_again();
