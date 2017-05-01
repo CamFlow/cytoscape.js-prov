@@ -146,10 +146,15 @@
 					entity: function (json, id, label, superNode){
 						if(typeof label === 'undefined')
 							label = id;
-						if (typeof superNode === 'undefined')
-							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, json: json}}]);
-						else
-							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, parent: superNode, json: json}}]);
+						if (typeof superNode === 'undefined'){
+							var test = cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, json: json}}]);
+							cy.getElementById(id).numeric=5;
+							cy.getElementById(id).vector=2;
+							cy.getElementById(id).string=1;
+							console.log();
+						} else {
+							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, parent: superNode, json: json}}])
+						}
 					},
 
 					activity: function (json, id, label, superNode){

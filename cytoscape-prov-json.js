@@ -36,6 +36,7 @@
 						var label = entities[key]['prov:label'];
 					} else if(entities[key]['rdt:name']!=undefined){
 						var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
+						
 					}else{
 						var label = key;
 					}
@@ -60,6 +61,10 @@
 						cy.prov_core().agent(entities[key], key, label, parent_id);
 					}else{
 						cy.prov_core().entity(entities[key], key, label, parent_id);
+					}
+					// TODO check if RDT data
+					if(true){
+						cy.getElementById(key).data({vector:5, numeric:4, string:1});
 					}
 				}
 			}
