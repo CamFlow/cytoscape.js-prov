@@ -36,7 +36,7 @@
 						var label = entities[key]['prov:label'];
 					} else if(entities[key]['rdt:name']!=undefined){
 						var label = entities[key]['rdt:name']+' ['+entities[key]['rdt:type']+']';
-						
+
 					}else{
 						var label = key;
 					}
@@ -64,7 +64,13 @@
 					}
 					// TODO check if RDT data
 					if(true){
-						cy.getElementById(key).data({vector:5, numeric:4, string:1});
+						// count the number of elements of each type
+						// normalize i.e. numelementX/totalelement
+						// *100
+						// set the data bellow
+						// (may need to add all possible elements in the style bit in
+						// demo.html from line 68)
+						cy.getElementById(key).data({vector:50, numeric:40, string:10});
 					}
 				}
 			}
