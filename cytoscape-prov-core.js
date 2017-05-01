@@ -148,10 +148,6 @@
 							label = id;
 						if (typeof superNode === 'undefined'){
 							var test = cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, json: json}}]);
-							cy.getElementById(id).numeric=5;
-							cy.getElementById(id).vector=2;
-							cy.getElementById(id).string=1;
-							console.log();
 						} else {
 							cy.add([{ group: "nodes", data: { id: id, weight: 30, type: 'entity', label: label, parent: superNode, json: json}}])
 						}
