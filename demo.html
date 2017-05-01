@@ -258,17 +258,17 @@
 		<script>
 			function exportPNG(){
 				var png64 = cy.png();
-				$('#png-export').attr('src', png64);
+				window.open(png64);
 			}
 		</script>
 		<div>
 			<button type="button" onclick="exportPNG();">Export as PNG</button>
-			<img src="" id="png-export">
 		</div>
 		<script>
 			function exportJSON(){
 				var json = cy.prov_json().exportProvJSON();
-				document.getElementById('export-json').value=  JSON.stringify(json);
+				var blob = new Blob([JSON.stringify(json)], {type: "text/plain;charset=utf-8"});
+				saveAs(blob, "provenance.json");
 			}
 		</script>
 		<div>
