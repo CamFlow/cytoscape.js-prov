@@ -64,13 +64,47 @@
 					}
 					// TODO check if RDT data
 					if(true){
+						var valtypes = entities[key]['rdt:valType'];
+						// begin counters for each valtype
+						var count_all = 0;
+						var count_fact = 0;
+						var count_int = 0;
+						var count_char = 0;
+
+						for (String word : valtypes.split(/[\s,]+/)) {
+							// check for data frame
+							if word.contains("frame") {
+								cy.getElementById(key).data({typecolor: '#B74242'});
+							}
+							if word.contains("matrix") {
+								cy.getElementById(key).data({typecolor: '#225E84'});
+							}
+
+							// count the valtypes
+							if word.contains("factor") {
+								count_fact = count_fact + 1;
+								count_all = count_all + 1;
+							}
+							if word.contains("integer") {
+								count_int = count_int + 1;
+								count_all = count_all + 1;
+							}
+							if word.contains("character") {
+								count_char = count_char + 1;
+								count_all = count_all + 1;
+							}
+						}
+						// find percentage of each valtype
+						var int_frac = (count_int/count_all) * 100;
+						var char_frac = (count_char/count_all) * 100;
+						var fact_frac = (count_fact/count_all) * 100;
 						// count the number of elements of each type
 						// normalize i.e. numelementX/totalelement
 						// *100
 						// set the data bellow
 						// (may need to add all possible elements in the style bit in
 						// demo.html from line 68)
-						cy.getElementById(key).data({vector:50, numeric:40, string:10});
+						cy.getElementById(key).data({integer:60, character:30, factor:10});
 					}
 				}
 			}

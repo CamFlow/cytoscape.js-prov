@@ -65,13 +65,19 @@
 						style: {
 							'background-color': '#FFB266',
 							'shape': 'ellipse',
+							'border-width': 3,
+							'border-color': 'data(typecolor)'
 							'pie-size': '80%',
+							// character
 							'pie-1-background-color': '#E8747C',
-							'pie-1-background-size': 'mapData(numeric, 0, 100, 0, 100)',
+							'pie-1-background-size': 'mapData(character, 0, 100, 0, 100)',
+							// integer
 							'pie-2-background-color': '#74CBE8',
-							'pie-2-background-size': 'mapData(vector, 0, 100, 0, 100)',
+							'pie-2-background-size': 'mapData(integer, 0, 100, 0, 100)',
+							// factor
 							'pie-3-background-color': '#74E883',
-							'pie-3-background-size': 'mapData(string, 0, 100, 0, 100)'
+							'pie-3-background-size': 'mapData(factor, 0, 100, 0, 100)'
+
 						}
 					},
 
@@ -304,7 +310,7 @@
 			}
 		</script>
 
-		<div id="cy" style="background-color: #cccccc;"></div>
+		<div id="cy" style="background-color: #EEEEEE;"></div>
 	</body>
 
 </html>
