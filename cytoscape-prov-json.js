@@ -71,7 +71,7 @@
 						var count_int = 0;
 						var count_char = 0;
 
-						for (String word : valtypes.split(/[\s,]+/)) {
+						/*for (var word : valtypes.split(/[\s,]+/)) {
 							// check for data frame
 							if word.contains("frame") {
 								cy.getElementById(key).data({typecolor: '#B74242'});
@@ -97,10 +97,11 @@
 						// find percentage of each valtype
 						var int_frac = (count_int/count_all) * 100;
 						var char_frac = (count_char/count_all) * 100;
-						var fact_frac = (count_fact/count_all) * 100;
+						var fact_frac = (count_fact/count_all) * 100;*/
 						
 						// move percentages to demo.html
-						cy.getElementById(key).data({integer:int_frac, character:char_frac, factor:fact_frac});
+						//cy.getElementById(key).data({integer:int_frac, character:char_frac, factor:fact_frac});
+						cy.getElementById(key).data({integer:20, character:40, factor:40});
 					}
 				}
 			}
