@@ -98,13 +98,9 @@
 						var int_frac = (count_int/count_all) * 100;
 						var char_frac = (count_char/count_all) * 100;
 						var fact_frac = (count_fact/count_all) * 100;
-						// count the number of elements of each type
-						// normalize i.e. numelementX/totalelement
-						// *100
-						// set the data bellow
-						// (may need to add all possible elements in the style bit in
-						// demo.html from line 68)
-						cy.getElementById(key).data({integer:60, character:30, factor:10});
+						
+						// move percentages to demo.html
+						cy.getElementById(key).data({integer:int_frac, character:char_frac, factor:fact_frac});
 					}
 				}
 			}
